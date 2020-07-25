@@ -1,0 +1,127 @@
+body{
+    background-image: url('Space Satellite.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+h2{
+    text-align: center;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 35pt;
+}
+
+div.background {
+    background: url(klematis.jpg) repeat;
+    border: 2px solid black;
+}
+  
+div.transbox {
+    /*margin: 30px;*/
+    background-color: #ffffff;
+    border: 1px solid black;
+    opacity: 0.6;
+	width: 98%;
+	top: 15px;
+	bottom: 1px;
+}
+  
+div.transbox p {
+    margin: 5%
+    font-weight: bold;
+    color: #000000;
+}
+
+.column {
+    float: left;
+    width: 33%;
+}
+  
+  /* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.button {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+	width: 98%;
+}
+
+.button1 {
+    background-color: rgba(255, 0, 0, 0.781);
+    color: black;
+    border: 2px solid red;
+}
+
+.button1:hover {
+    background-color: red;
+    color: white;
+}
+
+.button2 {
+    background-color: rgba(255, 0, 0, 0.781);
+    color: black;
+    border: 2px solid red;
+	left: 5%;
+	width: 70%;
+}
+  
+.button2:hover {
+    background-color: red;
+    color: white;
+}
+.button3 {
+    background-color: rgba(128, 0, 128, 0.781);
+    color: black;
+    border: 2px solid purple;
+}
+
+.button3:hover {
+    background-color: purple;
+    color: white;
+}
+
+.button4 {
+    background-color: rgba(128, 0, 128, 0.781);
+    color: black;
+    border: 2px solid purple;
+	width: 70%;
+}
+  
+.button4:hover {
+    background-color: purple;
+    color: white;
+}
+.button5 {
+    background-color: rgba(0, 128, 0, 0.781);
+    color: black;
+    border: 2px solid green;
+}
+
+.button5:hover {
+    background-color: green;
+    color: white;
+}
+
+.button6 {
+    background-color: rgba(0, 128, 0, 0.781);
+    color: black;
+    border: 2px solid green;
+	width: 70%;
+}
+  
+.button6:hover {
+    background-color: green;
+    color: white;
+}
