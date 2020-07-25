@@ -1,0 +1,68 @@
+body{
+    background-image: url('Space Satellite.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+h2{
+    text-align: center;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 35pt;
+}
+
+div.background {
+    background: url(klematis.jpg) repeat;
+    border: 2px solid black;
+}
+  
+div.transbox {
+    margin: 30px;
+    background-color: #ffffff;
+    border: 1px solid black;
+    opacity: 0.6;
+}
+  
+div.transbox p {
+    margin: 5%;
+    font-weight: bold;
+    color: #000000;
+}
+
+.column {
+    float: left;
+    width: 33%;
+}
+  
+  /* Clear floats after the columns */
+ .row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.button {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  
+.button1 {
+    background-color: red;
+    align-items: center;
+} /* Green */
+.button2 {
+    background-color: purple;
+    align-items: center;
+} /* Green */
+.button3 {
+    background-color: forestgreen;
+    align-items: center;
+} /* Green */
