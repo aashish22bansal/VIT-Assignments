@@ -37,6 +37,8 @@ body
 {
     width: 900px;
     margin: auto;
+    border: orange;
+    border-radius: 10%;
 }
 
 section h1, footer h1, nav a
@@ -51,6 +53,8 @@ section h1, footer h1, nav a
 header
 {
     background: url('images/line.png') repeat-x bottom;
+    border: red;
+    border-radius: 10%;
 }
 
 #main_title
