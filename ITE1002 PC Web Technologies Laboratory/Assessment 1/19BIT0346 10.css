@@ -28,7 +28,7 @@ div.transbox {
 }
   
 div.transbox p {
-    margin: 5%
+    margin: 5%;
     font-weight: bold;
     color: #000000;
 }
@@ -59,7 +59,7 @@ div.transbox p {
 }
 
 .button1 {
-    background-color: rgba(255, 0, 0, 0.781);
+    background-color: rgba(255, 0, 0, 1);
     color: black;
     border: 2px solid red;
 }
@@ -70,7 +70,7 @@ div.transbox p {
 }
 
 .button2 {
-    background-color: rgba(255, 0, 0, 0.781);
+    background-color: rgba(255, 0, 0, 1);
     color: black;
     border: 2px solid red;
 	left: 5%;
@@ -82,7 +82,7 @@ div.transbox p {
     color: white;
 }
 .button3 {
-    background-color: rgba(128, 0, 128, 0.781);
+    background-color: rgba(128, 0, 128, 1);
     color: black;
     border: 2px solid purple;
 }
@@ -93,7 +93,7 @@ div.transbox p {
 }
 
 .button4 {
-    background-color: rgba(128, 0, 128, 0.781);
+    background-color: rgba(128, 0, 128, 1);
     color: black;
     border: 2px solid purple;
 	width: 70%;
@@ -104,7 +104,7 @@ div.transbox p {
     color: white;
 }
 .button5 {
-    background-color: rgba(0, 128, 0, 0.781);
+    background-color: rgba(0, 128, 0, 1);
     color: black;
     border: 2px solid green;
 }
@@ -115,7 +115,7 @@ div.transbox p {
 }
 
 .button6 {
-    background-color: rgba(0, 128, 0, 0.781);
+    background-color: rgba(0, 128, 0, 1);
     color: black;
     border: 2px solid green;
 	width: 70%;
