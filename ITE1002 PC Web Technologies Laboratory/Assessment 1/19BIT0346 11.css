@@ -294,7 +294,9 @@ footer h1
 
 /* To activate inline-block positioning */
 
-.old_ie #main_title, .old_ie #logo, .old_ie header h1, .old_ie nav, .old_ie nav li, .old_ie .red_button, .old_ie article, .old_ie aside, .old_ie #tweet, .old_ie #my_pictures, .old_ie #my_friends, .old_ie #my_friends ul
+.old_ie #main_title, .old_ie #logo, .old_ie header h1, .old_ie nav, .old_ie nav li, 
+.old_ie .red_button, .old_ie article, .old_ie aside, .old_ie #tweet, .old_ie #my_pictures, 
+.old_ie #my_friends, .old_ie #my_friends ul
 {
     display: inline;
     zoom: 1;
