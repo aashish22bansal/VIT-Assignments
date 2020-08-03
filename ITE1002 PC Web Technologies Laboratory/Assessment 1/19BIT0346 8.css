@@ -3,8 +3,8 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    filter: grayscale(100%);
 }
-
 h1{
     size: 2;
 }
