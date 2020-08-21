@@ -23,12 +23,12 @@
             }
             else{
                 if(hours<=3.0){
-                    amount = minimum_charge + (hours*charge_per_hr);
+                    amount = 2.00;
                     document.write("<br>");
                     document.write("Total Amount: "+amount);
                 }
                 else if(hours>3.0 && hours<16.0){
-                    cal_hours = hours - 3.0;
+                    cal_hours = hours - 3;
                     amount = minimum_charge + (cal_hours*charge_per_hr);
                     document.write("<br>");
                     document.write("Total Amount: "+amount);
