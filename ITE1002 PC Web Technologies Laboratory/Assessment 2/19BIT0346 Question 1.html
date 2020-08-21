@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>19BIT0346 Question 1</title>
+    </head>
+    <body>
+        <h1>19BIT0346 Aashish Bansal Question 1</h1>
+        <script>
+            var minimum_charge=2.00;
+            var charge_per_hr=0.5;
+            var maximum_charge=10.00;
+            var amount=0.0;
+            var hours = prompt("Waring!Car cannot be parked for more than 16 Hours.\nEnter the number of hours:", "Hours");
+            document.write("Number of Hours Entered: "+hours+"\n");
+            if(hours>=24.0){
+                alert("No car can be parked for longer than 24 hours.\nPlease 'OK' to enter again.");
+                hours = prompt("Enter the number of hours:", "Hours");
+            }
+            else if(hours>=16.0){
+                amount = 10.0;
+                document.write("<br>");
+                document.write("Total Amount: "+amount);
+            }
+            else{
+                if(hours<=3.0){
+                    amount = minimum_charge + (hours*charge_per_hr);
+                    document.write("<br>");
+                    document.write("Total Amount: "+amount);
+                }
+                else if(hours>3.0 && hours<16.0){
+                    cal_hours = hours - 3.0;
+                    amount = minimum_charge + (cal_hours*charge_per_hr);
+                    document.write("<br>");
+                    document.write("Total Amount: "+amount);
+                }
+            }
+        </script>
+    </body>
+</html>
