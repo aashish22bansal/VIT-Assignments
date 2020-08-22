@@ -1,0 +1,112 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title>19BIT0346 Question 3</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript">
+            function validate()
+            {
+                name(document.getElementById("name").value);
+                reg(document.getElementById("regno").value);
+                mail(document.getElementById("email").value);
+                num(document.getElementById("phoneno").value);
+            }
+            function name(name)
+            {
+                nam=name.length;
+                flag=1;
+                for(i=0;i<nam;i++)
+                {
+                    n=name.charAt(i);
+                    if(!((n>='A' && n<='Z') || (n>='a' && n<='z') || n==' '))
+                        flag=0;
+                }
+                if(flag==0)
+                    alert("Name should contain alphabets");
+            }
+            function reg(regno)
+            {
+                flag=1;
+                for(i=0;i<regno.length;i++)
+                {
+                    n=regno.charAt(i);
+                    if(!((n>='A' && n<='Z') || (n>='a' &&  n<='z') || (n>='0' && n<='9')))
+                        flag=0;
+                }
+                if(flag==0)
+                    alert("Register number should be in alphabets and number");
+            }
+            function mail(email)
+            {
+                atp=email.indexOf("@");
+                dotp=email.lastIndexOf(".");
+                if (atp<1 || dotp<atp+2 || dotp+2>=email.length)
+                    alert("Enter a valid E-mail ID");
+            }
+            function num(phoneno)
+            {
+                if(phno.length<10)
+                    alert("Enter a valid phoneno");
+            }
+            function disable()
+            {
+                if(document.getElementById("check").checked)
+                {
+                    document.getElementById("permadd").value=document.getElementById("tempadd").value;
+                    document.getElementById("permadd").disabled=true;
+                }
+                else
+                {
+                    document.getElementById("permadd").disabled=false;
+                    document.getElementById("permadd").value="";
+                }
+            }
+        </script>
+        <style>
+            .border{
+                border-style: solid;
+                width:45%;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Aashish Bansal 19BIT0346 Question 3</h1>
+        <center>
+            <form class="border">
+                <table>
+                    <tr>
+                        <td>Student Name:</td><td><input name="name" type="text" maxlength="30"></td>
+                    </tr>
+                    <tr>
+                        <td>Register Number:</td><td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Date of Birth:</td><td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Program:</td><td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>E-Mail ID:</td><td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Temporary Address:</td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Permanent Address:</td>
+                        <td><input type="text"></td>
+                        <td><input type="checkbox" onclick="disable();">Same as temporary address</td>
+                    </tr>
+                    <tr>
+                        <td>Phone Nummber:</td>
+                        <td><input type="text" maxlength="10"></td>
+                        </tr>
+                    <tr>
+                        <td colspan="2"><input type="submit" onclick="validate();"></td>
+                    </tr>
+                </table>
+            </form>
+        </center>
+    </body>
+</html>
