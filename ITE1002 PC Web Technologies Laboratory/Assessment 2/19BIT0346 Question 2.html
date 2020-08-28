@@ -2,11 +2,134 @@
 <html>
     <head>
         <title>19BIT0346 Question 2</title>
+        <meta charset="UTF-8" /> 
+        <meta name="viewport" content= 
+            "width=device-width,  
+            initial-scale=1.0" /> 
+    
+        <title>Digital Clock</title> 
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"> </script> 
+    
+        <style> 
+            #clock { 
+                font-size: 50px; 
+                width: 270px; 
+                margin: 50px; 
+                text-align: center; 
+                border: 2px solid black; 
+                /*border-radius: 20px; */
+                align-content: right;
+            } 
+        </style> 
     </head>
     <body>
         <h1>Aashish Bansal 19BIT0346 Question 2</h1>
-        <iframe src="clock.html" width="100%" align="center" scrolling="no"></iframe><br>
-        <iframe src="image slider.html" width="49%" height="640px" align="left"></iframe>
-        <iframe src="change.html" width="49%" height="640px" align="right"></iframe>
+        <div class="row">
+            <div id="clock" style="float:right;">12:32:40</div> 
+  
+            <script> 
+                setInterval(showTime, 1000); 
+                function showTime() { 
+                    let time = new Date(); 
+                    let hour = time.getHours(); 
+                    let min = time.getMinutes(); 
+                    let sec = time.getSeconds(); 
+                    am_pm = "AM"; 
+        
+                    if (hour > 12) { 
+                        hour -= 12; 
+                        am_pm = "PM"; 
+                    } 
+                    if (hour == 0) { 
+                        hr = 12; 
+                        am_pm = "AM"; 
+                    } 
+        
+                    hour = hour < 10 ? "0" + hour : hour; 
+                    min = min < 10 ? "0" + min : min; 
+                    sec = sec < 10 ? "0" + sec : sec; 
+        
+                    let currentTime = hour + ":"  
+                        + min + ":" + sec + am_pm; 
+        
+                    document.getElementById("clock") 
+                        .innerHTML = currentTime; 
+                } 
+        
+                showTime(); 
+            </script>
+        </div>
+        <div class="row">
+            <style>
+                .column {
+                    float: left;
+                    width: 50%;
+                }
+
+                /* Clear floats after the columns */
+                .row:after {
+                    content: "";
+                    display: table;
+                    clear: both;
+                }
+            </style>
+            <div class="column">
+                <img class="mySlides" src="slider image 1.jpg" width="960px" height="620px">
+                <img class="mySlides" src="slider image 2.jpg" width="960px" height="620px">
+                <img class="mySlides" src="slider image 3.jpg" width="960px" height="620px">
+                <img class="mySlides" src="slider image 4.jpg" width="960px" height="620px">
+                <script>
+                    /*
+                    var slideIndex = 1;
+                    showDivs(slideIndex);
+
+                    function plusDivs(n) {
+                    showDivs(slideIndex += n);
+                    }
+
+                    function showDivs(n) {
+                    var i;
+                    var x = document.getElementsByClassName("mySlides");
+                    if (n > x.length) {slideIndex = 1}
+                    if (n < 1) {slideIndex = x.length} ;
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";
+                    }
+                    x[slideIndex-1].style.display = "block";
+                    }
+                    */
+
+                    var slideIndex = 0;
+                    carousel();
+
+                    function carousel() {
+                        var i;
+                        var x = document.getElementsByClassName("mySlides");
+                        for (i = 0; i < x.length; i++) {
+                            x[i].style.display = "none";
+                        }
+                        slideIndex++;
+                        if (slideIndex > x.length) {slideIndex = 1}
+                        x[slideIndex-1].style.display = "block";
+                        setTimeout(carousel, 2000); // Change image every 2 seconds
+                    }
+                </script>
+            </div>
+            <div class="column" style = "text-align:center;">
+                <p id="GFG_UP" style="font-size: 16px; font-weight: bold;"></p> 
+                
+                <button>Click here</button> 
+                
+                <p id="GFG_DOWN" style="color:green; font-size: 20px; font-weight: bold;"></p> 
+                
+                <script> 
+                    $('#GFG_UP').text("Click on button to change the background color"); 
+                    $('button').on('click', function() { 
+                        $('body').css('background', '#ccc'); 
+                        $('#GFG_DOWN').text("Background Color Changed!"); 
+                    }); 
+                </script> 
+            </div><!-- Ending of the column division -->
+        </div><!-- Ending of the row division-->
     </body>
 </html>
