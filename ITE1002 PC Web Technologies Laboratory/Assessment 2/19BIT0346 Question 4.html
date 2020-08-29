@@ -9,14 +9,21 @@
                 //document.write(x);
             }
             function phrase(x){
-                //document.getElementById('x').innerHTML = document.getElementById('x').value;
-                document.write(x);
+                var str=reverseString(x);
+                var str_length=str.length;
+                var i=0;
+                for(i=0;i<str_length;i++){
+                    document.write("<span>"+str[i]+"</span>");
+                }
+            }
+            function reverseString(x){
+                return x.split(" ").reverse().join(" ");
             }
         </script>
     </head>
     <body>
         <h1>Aashish Bansal 19BIT0346 Question 4</h1>
         <textarea cols="20" rows="5" type="text" name="phrase" id="phrase" placeholder="Enter Phase Here..."></textarea><br>
-        <button type="submit" onclick="validate();">submit</button>
+        <button type="submit" onclick="validate();">Go!</button>
     </body>
 </html>
