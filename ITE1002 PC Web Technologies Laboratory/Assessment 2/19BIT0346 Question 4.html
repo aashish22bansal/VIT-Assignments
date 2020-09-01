@@ -3,27 +3,44 @@
     <head>
         <title>19BIT0346 Question 4</title>
         <script type="text/javascript">
+            $('h1').each(function() {
+                var words = $(this).text().split(' ');
+                $(this).empty().html(function() {
+                    for (i = 0; i < words.length; i++) {
+                        if (i == 0) {
+                            $(this).append('<span>' + words[i] + '</span>');
+                        } else {
+                            $(this).append(' <span>' + words[i] + '</span>');
+                        }
+                    }
+                });
+            });
             function validate(){
-                var x = document.getElementById("phrase").value;
-                phrase(x);
-                //document.write(x);
-            }
-            function phrase(x){
-                var str=reverseString(x);
-                var str_length=str.length;
-                var i=0;
-                for(i=0;i<str_length;i++){
-                    document.write("<span>"+str[i]+"</span>");
-                }
-            }
-            function reverseString(x){
-                return x.split(" ").reverse().join(" ");
+                var x = document.getElementById('phrase').value;
+                var y = document.getElementById('');
+                for(var i=0;i<x.length;i++){
+                    document.getElementById('t1').innerHTML=document.getElementById('phrase').value.split(" ").reverse().join(" ");
+                }//<span class=""><div id=""></div></span>
+                //x.elements[i].name+":"+x.elements[i].value+"<br>"
+                
             }
         </script>
     </head>
     <body>
+        <style>
+            h1 span{
+                text-decoration: underline;
+            }
+        </style>
         <h1>Aashish Bansal 19BIT0346 Question 4</h1>
         <textarea cols="20" rows="5" type="text" name="phrase" id="phrase" placeholder="Enter Phase Here..."></textarea><br>
-        <button type="submit" onclick="validate();">Go!</button>
+        <button type="submit" onclick="validate();">Go!</button><br><br>
+    <label id="t1" style="border:1px solid black;padding: 10px;">
+        <span class="word" style="text-decoration: underline;">
+            <div id="words">
+                <h1><u>data</u></h1>
+            </div>
+        </span>
+    </label>
     </body>
 </html>

@@ -8,43 +8,123 @@
         <form>
             <table>
                 <tr>
-                    <td>Name:</td><td><input type="text" placeholder="Enter Your Name..." name="name"></input></td>
+                    <td>User:</td><td><input id="user" type="text" placeholder="Enter Your Name..." name="name"></input></td>
                 </tr>
                 <tr>
-                    <td>Select the items: <nbsp;><nbsp;><nbsp;>Quantity</td>
+                    <td>Select the items:</td><td>Quantity</td>
                 </tr>
                 <tr>
-                    <td><input type="checkbox"></td>
+                    <td><input type="checkbox" id="a_check"></td>
                     <td>Four 100watt bulbs for Rs. 20.39</td>
-                    <td><input type="number"></td>
+                    <td><input type="number" id="a"></td>
                 </tr>
                 <tr>
-                    <td><input type="checkbox"></td>
+                    <td><input type="checkbox" id="b_check"></td>
                     <td>Eight 100watt bulbs for Rs. 40.20</td>
-                    <td><input type="number"></td>
+                    <td><input type="number" id="b"></td>
                 </tr>
                 <tr>
-                    <td><input type="checkbox"></td>
+                    <td><input type="checkbox" id="c_check"></td>
                     <td>Four 100watt long life bulbs for Rs. 30.95</td>
-                    <td><input type="number"></td>
+                    <td><input type="number" id="c"></td>
                 </tr>
                 <tr>
-                    <td><input type="checkbox"></td>
+                    <td><input type="checkbox" id="d_check"></td>
                     <td>Eight 100watt long life bulbs for Rs 70.49</td>
-                    <td><input type="number"></td>
+                    <td><input type="number" id="d"></td>
                 </tr>
                 <tr>
-                    <td><input type="radio"></td>
+                    <td><input type="radio" id="visa"></td>
                     <td>VISA</td>
                 </tr>
                 <tr>
-                    <td><input type="radio"></td>
+                    <td><input type="radio" id="credit"></td>
                     <td>MASTER CARD</td>
                 </tr>
                 <tr>
-                    <td><input type="radio"></td>
+                    <td><input type="radio" id="debit"></td>
+                    <td>DISCOVER</td>
                 </tr>
             </table>
+            <button type="submit" id="submit" onclick="start();">Submit</button>
+            <button type="reset" id="reset">Reset Order</button>
         </form>
+        <script>
+            function start(){
+                var user=document.getElementById("user").value;
+                var a=document.getElementById("a").value;
+                var b=document.getElementById("b").value;
+                var c=document.getElementById("c").value;
+                var d=document.getElementById("d").value;
+                var sum = 0;
+                var total = 0;
+                sum = (a*20.39) + (b*30.95) + (c*40.2) + (d*70.49);
+                total=sum;
+                if(document.getElementById("visa")){
+                    var paymenttype = "visa";
+                }
+                else if(document.getElementById("credit")){
+                    var paymenttype = "credit";
+                }
+                else if(document.getElementById("debit")){
+                    var paymenttype = "debit";
+                }
+            }
+        </script>
+        <table style="border: 1px solid black;">
+            <thead>
+                <td>Item</td>
+                <td>Qty</td>
+                <td>Price</td>
+                <td>Total</td>
+            </thead>
+            <tr>
+                <td>Four 100 watt bulbs for Rs. 20.39</td>
+                <td><script>document.getElementById("a").value;</script></td>
+                <td>
+                    <script>
+                        var price = document.getElementById("a").value;
+                        document.write(price);
+                    </script>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Eight 100 watt bulbs for Rs. 40.20</td>
+                <td><script>document.getElementById("b").value;</script></td>
+                <td>
+					<script>
+                        var price = document.getElementById("b").value;
+                        document.write(price);
+                    </script>
+				</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Four 100 watt long life bulbs for Rs. 30.59</td>
+                <td><script>document.getElementById("c").value;</script></td>
+                <td>
+					<script>
+                        var price = document.getElementById("c").value;
+                        document.write(price);
+                    </script>
+				</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Four 100 watt long life bulbs for Rs. 70.49</td>
+                <td><script>document.getElementById("d").value;</script></td>
+                <td>
+					<script>
+                        var price = document.getElementById("d").value;
+                        document.write(price);
+                    </script>
+				</td>
+                <td></td>
+            </tr>
+        </table>
+        <script>
+            document.write("Total bill including 13.5% tax:"+ (0.135 * total) +" payment mode:" + paymenttype);
+        </script>
     </body>
 </html>
