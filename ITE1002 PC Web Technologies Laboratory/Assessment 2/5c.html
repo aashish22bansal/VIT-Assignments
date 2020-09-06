@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body style="background-color:burlywood">
+    <div id="book_tickets" name="book_tickets">
+        <center>
+            <form>
+                <table>
+                    <tr>
+                        <td>From:</td>
+                        <td><input name="from" id="from" type="text" maxlength="30"></td>
+                    </tr>
+                    <tr>
+                        <td>To:</td>
+                        <td><input id="to" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Train Name:</td>
+                        <td>
+                            <label for="train_names"></label>
+                            <select id="train_names" name="train_names">
+                                        <option value="Shatabdi_Express">Shatabdi Express</option>
+                                        <option value="Havada_Express">Havada Express</option>
+                                        <option value="Rajdhani_Express">Rajdhani Express</option>
+                                    </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Coach Number:</td>
+                        <td>
+                            <select name="coach_number" id="coach_number">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                    </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Date:</td>
+                        <td><input id="date" type="date"></td>
+                    </tr>
+                    <tr>
+                        <td>Timing:</td>
+                        <td><input id="time" type="time"></td>
+                    </tr>
+                    <tr>
+                        <td>Passenger Gender:</td>
+                        <td>
+                            <select name="gender" id="gender">
+                                        <option value="M">M</option>
+                                        <option value="F">F</option>
+                                        <option value="T">T</option>
+                                    </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="1"><input class="btn" type="submit" onclick="validate();"></td>
+                        <td colspan="1"><input type="reset" onclick="validate();"></td>
+                    </tr>
+                </table>
+                <div class="table-div">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th> From </th>
+                                <th> To </th>
+                                <th> Train Number </th>
+                                <th> Coach Number</th>
+                                <th> Date </th>
+                                <th> Time </th>
+                                <th> Gender </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <script>
+                                var sno = 0;
+                                $(document).ready(function() {
+                                    $("button").click(function() {
+                                        $("button.btn").click(function() {
+                                            var from = $('[name="from"]');
+                                            var to = $('[name="to"]').val();
+                                            var train_names = $('[name="train_names"]').val();
+                                            var coach_number = $('[name="coach_number"]').val();
+                                            var date = $("#date").val();
+                                            var time = $("#time").val();
+                                            var gender = $('[name="gender"]').val();
+                                            var new_row = "<tr><td>" + from + "</td><td>" + to + "</td><td>" + train_names + "</td><td>" + coach_number + "</td><td>" + date + "</td><td>" + time + "</td><td>" + gender + "</td></tr > ";
+                                            $("table tbody").show(new_row);
+                                            return true;
+                                        });
+                                    });
+                                });
+                            </script>
+                        </tbody>
+                    </table>
+                </div>
+            </form>
+        </center>
+    </div>
+</body>
+
+</html>
+
+</html>

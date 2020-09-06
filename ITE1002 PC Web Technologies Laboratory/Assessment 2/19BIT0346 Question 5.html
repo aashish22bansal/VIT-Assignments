@@ -1,209 +1,135 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Aashish Bansal 19BIT0346 Question 5</title>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <style>
-            .column {
-                float: left;
-                width: 50%;
-            }
 
-            /* Clear floats after the columns */
-            .row:after {
-                content: "";
-                display: table;
-                clear: both;
-            }
-            img {
-                position: fixed;
-                align-items: left;
-                top: 10px;
-                left: 700px;
-            }
+<head>
+    <meta charset="UTF-8">
+    <title>Aashish Bansal 19BIT0346 Question 5</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        .column {
+            float: left;
+            width: 50%;
+        }
+        /* Clear floats after the columns */
+        
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        img {
+            position: fixed;
+            align-items: left;
+            top: 10px;
+            left: 700px;
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        #frame2 {
+            margin-left: 40px;
+            float: right;
+            vertical-align: top;
+        }
+        
+        #frames {
+            margin: 10px;
+        }
+        
+        #links {
+            float: left;
+            border: 2px solid black;
+            height: 400px;
+            width: 600px;
+        }
+        
+        li {
+            margin: 30px;
+        }
+        /* Dropdown Button */
+        
+        .dropbtn {
+            background-color: #3498DB;
+            color: white;
+            padding: 6px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        /* Dropdown button on hover & focus */
+        
+        .dropbtn:hover,
+        .dropbtn:focus {
+            background-color: #2980B9;
+        }
+        /* The container <div> - needed to position the dropdown content */
+        
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        /* Dropdown Content (Hidden by Default) */
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        /* Links inside the dropdown */
+        
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        /* Change color of dropdown links on hover */
+        
+        .dropdown-content a:hover {
+            background-color: #ddd
+        }
+        /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+        
+        .show {
+            display: block;
+        }
+    </style>
+    <script>
+        /* When the user clicks on the button,
+                                                                                                toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
 
-            h1 {
-                text-align: center;
-            }
-
-            #frame2 {
-                margin-left: 40px;
-                float: right;
-                vertical-align: top;
-            }
-
-            #frames {
-                margin: 10px;
-            }
-
-            #links {
-                float: left;
-                border: 2px solid black;
-                height: 400px;
-                width: 600px;
-            }
-
-            li {
-                margin: 30px;
-            }
-
-            /* Dropdown Button */
-            .dropbtn {
-                background-color: #3498DB;
-                color: white;
-                padding: 6px;
-                font-size: 16px;
-                border: none;
-                cursor: pointer;
-            }
-
-            /* Dropdown button on hover & focus */
-            .dropbtn:hover, .dropbtn:focus {
-                background-color: #2980B9;
-            }
-
-            /* The container <div> - needed to position the dropdown content */
-            .dropdown {
-                position: relative;
-                display: inline-block;
-            }
-
-            /* Dropdown Content (Hidden by Default) */
-            .dropdown-content {
-                display: none;
-                position: absolute;
-                background-color: #f1f1f1;
-                min-width: 160px;
-                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-                z-index: 1;
-            }
-
-            /* Links inside the dropdown */
-            .dropdown-content a {
-                color: black;
-                padding: 12px 16px;
-                text-decoration: none;
-                display: block;
-            }
-
-            /* Change color of dropdown links on hover */
-            .dropdown-content a:hover {background-color: #ddd}
-
-            /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-            .show {display:block;}
-        </style>
-        <script>
-            /* When the user clicks on the button,
-            toggle between hiding and showing the dropdown content */
-            function myFunction() 
-            {
-                document.getElementById("myDropdown").classList.toggle("show");
-            }
-
-            // Close the dropdown menu if the user clicks outside of it
-            window.onclick = function(event) 
-            {
-                if (!event.target.matches('.dropbtn')) 
-                {
-                    var dropdowns = document.getElementsByClassName("dropdown-content");
-                    var i;
-                    for (i = 0; i < dropdowns.length; i++) 
-                    {
-                        var openDropdown = dropdowns[i];
-                        if (openDropdown.classList.contains('show')) 
-                        {
-                            openDropdown.classList.remove('show');
-                        }
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
                     }
                 }
             }
-        </script>
-    </head>
+        }
+    </script>
+</head>
 
-    <body>
-        <div class="row">
-            <div class="column" style="float:left;glyph-orientation-horizontal:left;">
-                <img src="IRCTC.png" height="50" width="100">
-            </div>
-            <div class="column">
-                <h1>Online Railway Reservation System</h1>
-            </div>
-        </div>
-        <div class="row" id="frames">
-            <div class="column" id="links">
-                <ul>
-                    <li><a href="#book_tickets" target="#book_tickets">BOOK TICKETS</a></li>
-                    <li><a href="#PNR_status" target="#PNR_status" >Check PNR status</a></li>
-                    <li><a href="#cancel_tickets" target="#cancel_tickets">CANCEL TICKETS</a></li>
-                </ul>
-            </div>
-            <div class="column">
-                <!iframe width="100%" id="frame2" height="400px">
-                    <div id="book_tickets" name="book_tickets">
-                        <center>
-                            <form>
-                                <table>
-                                    <tr>
-                                        <td>From:</td>
-                                        <td><input name="from" id="from" type="text" maxlength="30"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>To:</td>
-                                        <td><input id="to" type="text"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Train Name:</td>
-                                        <td>
-                                            <label for="train_names"></label>
-                                            <select id="train_names" name="train_names">
-                                                <option value="Shatabdi_Express">Shatabdi Express</option>
-                                                <option value="Havada_Express">Havada Express</option>
-                                                <option value="Rajdhani_Express">Rajdhani Express</option>
-                                            </select>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Coach Number:</td>
-                                        <td>
-                                            <select name="coach_number" id="coach_number">
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                              </select>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Date:</td>
-                                        <td><input id="date" type="date"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Timing:</td>
-                                        <td><input id="time" type="time"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Passenger Gender:</td>
-                                        <td>
-                                            <select name="gender" id="gender">
-                                                <option value="M">M</option>
-                                                <option value="F">F</option>
-                                                <option value="T">T</option>
-                                            </select>    
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="1"><input type="submit" onclick="validate();"></td>
-                                        <td colspan="1"><input type="reset" onclick="validate();"></td>
-                                    </tr>
-                                </table>
-                            </form>
-                        </center>
-                    </div>
-                    <div id="PRN_status" name="PRN_status"></div>
-                    <div id="cancel_tickets" name="cancel_tickets"></div>
-                <!/iframe>
-            </div>
-        </div>
-    </body>
+<body>
+    <h1>Aashish Bansal 19BIT0346 Question 5</h1>
+    <frameset>
+        <iframe name="ORSS" src="5a.html" width="100%" noresize scrolling="no"></iframe><br>
+        <iframe name="list" src="5b.html" width="50%" height="370" noresize scrolling="no"></iframe>
+        <iframe name="form" src="5c.html" width="49%" height="370" noresize scrolling="no "></iframe>
+    </frameset>
+</body>
+
 </html>
