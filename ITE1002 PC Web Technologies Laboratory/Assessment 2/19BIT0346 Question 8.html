@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $("#add").click(function () {
+                    var newNote = $("#note").val();
+                        $("ul").append("<li>" + newNote + "</li>");
+                        $("#note").val("");
+                    });
+                    $("#remove").click(function () {
+                        var delNote = $("#note");
+                        var list = $("li");
+                        for (var i = 0; i < list.length; i++) {
+                            if (list[i].textContent === delNote.val()) list[i].remove();
+                        }
+                        $("#note").val("");
+                    });
+            });
+            $("li:nth-of-type(2)").css("background-color", "blue");
+        </script>
+        <style>
+            body {
+                text-align: center;
+            }
+            li:nth-child(2n) {
+                background-color: yellow;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Aashish Bansal 19BIT0346 Question 8</h1>
+        <h1>My Super Nifty Todo List</h1>
+        <input type="text" id="note" />
+        <button id="add">Add</button>
+        <button id="remove">Remove</button>
+        <ul></ul>
+    </body>
+</html>

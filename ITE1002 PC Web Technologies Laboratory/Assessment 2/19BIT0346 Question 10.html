@@ -1,130 +1,138 @@
-<!DOCTYPE html>
 <html>
     <head>
-        <title>19BIT0346 Question 10</title>
-    </head>
-    <body>
-        <h1>Aashish Bansal 19BIT0346 Question 10</h1>
-        <form>
-            <table>
-                <tr>
-                    <td>User:</td><td><input id="user" type="text" placeholder="Enter Your Name..." name="name"></input></td>
-                </tr>
-                <tr>
-                    <td>Select the items:</td><td>Quantity</td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" id="a_check"></td>
-                    <td>Four 100watt bulbs for Rs. 20.39</td>
-                    <td><input type="number" id="a"></td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" id="b_check"></td>
-                    <td>Eight 100watt bulbs for Rs. 40.20</td>
-                    <td><input type="number" id="b"></td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" id="c_check"></td>
-                    <td>Four 100watt long life bulbs for Rs. 30.95</td>
-                    <td><input type="number" id="c"></td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" id="d_check"></td>
-                    <td>Eight 100watt long life bulbs for Rs 70.49</td>
-                    <td><input type="number" id="d"></td>
-                </tr>
-                <tr>
-                    <td><input type="radio" id="visa"></td>
-                    <td>VISA</td>
-                </tr>
-                <tr>
-                    <td><input type="radio" id="credit"></td>
-                    <td>MASTER CARD</td>
-                </tr>
-                <tr>
-                    <td><input type="radio" id="debit"></td>
-                    <td>DISCOVER</td>
-                </tr>
-            </table>
-            <button type="submit" id="submit" onclick="start();">Submit</button>
-            <button type="reset" id="reset">Reset Order</button>
-        </form>
-        <script>
-            function start(){
-                var user=document.getElementById("user").value;
-                var a=document.getElementById("a").value;
-                var b=document.getElementById("b").value;
-                var c=document.getElementById("c").value;
-                var d=document.getElementById("d").value;
-                var sum = 0;
-                var total = 0;
-                sum = (a*20.39) + (b*30.95) + (c*40.2) + (d*70.49);
-                total=sum;
-                if(document.getElementById("visa")){
-                    var paymenttype = "visa";
+        <title>Order Form</title>
+        <script type="text/javascript">
+            function loadjson() {
+                var json = '{"h1": "Select the items : Quantity"}';
+                var obj = JSON.parse(json);
+                document.getElementById("heading").innerHTML = obj.h1;
+                document.getElementById("heading").innerText = obj.h1;
+            }
+            var pay;
+            function info() {
+                    if (document.getElementById("r1").checked) {
+                    pay = document.getElementById("r1");
+                } else if (document.getElementById("r2").checked) {
+                    pay = document.getElementById("r2");
+                } else if (document.getElementById("r3").checked) {
+                    pay = document.getElementById("r3");
                 }
-                else if(document.getElementById("credit")){
-                    var paymenttype = "credit";
-                }
-                else if(document.getElementById("debit")){
-                    var paymenttype = "debit";
-                }
+                document.getElementById("result").innerHTML =
+                "User name:" +
+                document.getElementById("name").value +
+                "<br/>" +
+                "<h2>You have ordered following items</h2></br>" +
+                "<table border=2px><tr>" +
+                "<td><b>Item</b></td>" +
+                "<td><b>Qty</b></td>" +
+                "<td><b>Price</b></td>" +
+                "<td><b>Total</b></td>" +
+                "</tr>" +
+                "<tr>" +
+                "<td>Four 100 watt bulbs for Rs. 20.39</td>" +
+                "<td>" +
+                document.getElementById("q1").value +
+                "</td>" +
+                "<td>20.39</td>" +
+                "<td>" +
+                document.getElementById("q1").value * 20.39 +
+                "</td>" +
+                "</tr>" +
+                "<tr>" +
+                "<td>Eight 100watt bulbs for Rs 40.20</td>" +
+                "<td>" +
+                document.getElementById("q2").value +
+                "</td>" +
+                "<td>40.20</td>" +
+                "<td>" +
+                document.getElementById("q2").value * 40.2 +
+                "</td>" +
+                "</tr>" +
+                "<tr>" +
+                "<td>Four 100watt long life bulbs for Rs. 30.95</td>" +
+                "<td>" +
+                document.getElementById("q3").value +
+                "</td>" +
+                "<td>30.95</td>" +
+                "<td>" +
+                document.getElementById("q3").value * 30.95 +
+                "</td>" +
+                "</tr>" +
+                "<tr>" +
+                "<td>Eight 100watt long life bulbs for Rs 70.49</td>" +
+                "<td>" +
+                document.getElementById("q4").value +
+                "</td>" +
+                "<td>70.49</td>" +
+                "<td>" +
+                document.getElementById("q4").value * 70.49 +
+                "</td>" +
+                "</tr>" +
+                //0.135*(getElementById("q1").innerHTML*20.39+getElementById("q2").innerHTML*40.20+getElementById("q3").innerHTML*30.95+getElementById("q4").innerHTML*70.49)
+                "</table><br>" +
+                "Total bill including 13.5% tax :<b>" +
+                1.135 *
+                    (document.getElementById("q1").value * 20.39 +
+                    document.getElementById("q2").value * 40.2 +
+                    document.getElementById("q3").value * 30.95 +
+                    document.getElementById("q4").value * 70.49) +
+                "</b> payment mode: " +
+                pay.value;
             }
         </script>
-        <table style="border: 1px solid black;">
-            <thead>
-                <td>Item</td>
-                <td>Qty</td>
-                <td>Price</td>
-                <td>Total</td>
-            </thead>
-            <tr>
-                <td>Four 100 watt bulbs for Rs. 20.39</td>
-                <td><script>document.getElementById("a").value;</script></td>
+    </head>
+    <body onload="loadjson();">
+        <h1>Aashish Bansal 19BIT0346 Question 10</h1>
+        <form>
+            User: <input type="text" name="mname" size="30" id="name" /> <br />
+            <b><h2><label id="heading"></label></h2></b>
+            <table>
+                <tr>
                 <td>
-                    <script>
-                        var price = document.getElementById("a").value;
-                        document.write(price);
-                    </script>
+                    <input type="checkbox" name="option1" checked="checked" />
+                    <label id="chk1">Four 100 watt bulbs for Rs. 20.39 </label>
                 </td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Eight 100 watt bulbs for Rs. 40.20</td>
-                <td><script>document.getElementById("b").value;</script></td>
                 <td>
-					<script>
-                        var price = document.getElementById("b").value;
-                        document.write(price);
-                    </script>
-				</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Four 100 watt long life bulbs for Rs. 30.59</td>
-                <td><script>document.getElementById("c").value;</script></td>
+                    <input type="text" id="q1" name="VAL1" size="2" />
+                </td>
+                </tr>
+                <tr>
                 <td>
-					<script>
-                        var price = document.getElementById("c").value;
-                        document.write(price);
-                    </script>
-				</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Four 100 watt long life bulbs for Rs. 70.49</td>
-                <td><script>document.getElementById("d").value;</script></td>
+                    <input type="checkbox" name="option2" />
+                    <label id="chk2">Eight 100watt bulbs for Rs 40.20 </label>
+                </td>
                 <td>
-					<script>
-                        var price = document.getElementById("d").value;
-                        document.write(price);
-                    </script>
-				</td>
-                <td></td>
-            </tr>
-        </table>
-        <script>
-            document.write("Total bill including 13.5% tax:"+ (0.135 * total) +" payment mode:" + paymenttype);
-        </script>
+                    <input type="text" id="q2" name="VAL2" size="2" />
+                </td>
+                </tr>
+                <tr>
+                <td>
+                    <input type="checkbox" name="option3" />
+                    <label id="chk3">Four 100watt long life bulbs for Rs. 30.95 </label>
+                </td>
+                <td>
+                    <input type="text" id="q3" name="VAL3" size="2" />
+                </td>
+                </tr>
+                <tr>
+                <td>
+                    <input type="checkbox" name="option4" />
+                    <label id="chk4">Eight 100watt long life bulbs for Rs 70.49 </label><br />
+                </td>
+                <td>
+                    <input type="text" id="q4" name="VAL4" size="2" />
+                </td>
+                </tr>
+            </table>
+            <input type="radio" id="r1" name="paymode" value="visa" checked="checked"/>
+            VISA <br />
+            <input type="radio" id="r3" name="paymode" value="mcard" /> MASTER CARD
+            <br />
+            <input type="radio" id="r2" name="paymode" value="discover" /> DISCOVER
+            <br />
+            <input type="button" id="bt" value="submit" onclick="info()" />
+            <input type="reset" value="Reset Order" />
+            <p id="result"></p>
+        </form>
     </body>
 </html>
