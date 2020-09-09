@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>question 5 book</title>
+        <style type="text/css">#con{color: #FF5656 ;}</style>
+        <script type="text/javascript">
+        function ticket(){var con = document.querySelector("#con");// console.log(con.textContent);41
+var form = document.querySelector("#form");// console.log(form.to.value);// console.log(form.from.value);// console.log(form.train_name.value);// console.log(form.coach.value);// console.log(form.date.value);// console.log(form.time.value);// console.log(form.gender.value);
+if(form.train_name.value=="chennai express" ||form.train_name.value=="delhi express"){confirm.value = "CONGRATULATIONS";con.textContent = "YOUR TICKET IS CONFIRM";}else{confirm.value= "SORRY";con.textContent = "SORRY SELECT ANOTHERTRAIN";}}
+</script>
+</head>
+<body bgcolor="#2591AB">
+<center>
+    <h3>BOOK YOUR TICKET HERE</h3>
+    </center><br><br>
+    <div id="from_box">
+        <form id="form">
+            <div>To:<input type="text" name="to" value="chennai"></div>
+            <div>From:<input type="text" name="from" value="delhi"></div>
+            Name of the train :<select name="train_name">
+                <option value="chennai express">chennaiexpress</option>
+                <option value="delhi express">delhiexpress</option>
+                <option value="agra express">agra express</option>
+                <option value="banaras express">banarasexpress</option>
+                </select><br>Coach :<select name="coach">
+                    </select>
+    <option value="A1">A1</option>
+    <option value="A2">A2</option>
+    </select><br>Date:<input type="date" name="date">Time:<input type="time" name="time">
+    Gender:<select name="gender"><option value="Male">Male</option><option value="Female">Female</option></select><br><br><center><input onclick="ticket()" type="button"name="submit" value="submit"></center></form><center><p id="con">RESERVATION STATUS PENDING</p></center></div>
+</body></html>
