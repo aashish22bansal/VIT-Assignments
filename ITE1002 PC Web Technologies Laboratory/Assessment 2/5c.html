@@ -3,6 +3,7 @@
 
 <head>
     <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body style="background-color:burlywood">
@@ -23,21 +24,21 @@
                         <td>
                             <label for="train_names"></label>
                             <select id="train_names" name="train_names">
-                                        <option value="Shatabdi_Express">Shatabdi Express</option>
-                                        <option value="Havada_Express">Havada Express</option>
-                                        <option value="Rajdhani_Express">Rajdhani Express</option>
-                                    </select>
+                                <option value="Shatabdi_Express">Shatabdi Express</option>
+                                <option value="Havada_Express">Havada Express</option>
+                                <option value="Rajdhani_Express">Rajdhani Express</option>
+                            </select>
                         </td>
                     </tr>
                     <tr>
                         <td>Coach Number:</td>
                         <td>
                             <select name="coach_number" id="coach_number">
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                    </select>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
                         </td>
                     </tr>
                     <tr>
@@ -52,14 +53,14 @@
                         <td>Passenger Gender:</td>
                         <td>
                             <select name="gender" id="gender">
-                                        <option value="M">M</option>
-                                        <option value="F">F</option>
-                                        <option value="T">T</option>
-                                    </select>
+                                <option value="M">M</option>
+                                <option value="F">F</option>
+                                <option value="T">T</option>
+                            </select>
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="1"><input class="btn" type="submit" onclick="validate();"></td>
+                        <td colspan="1"><input class="btn" type="submit" id="submit" onclick="validate();"></td>
                         <td colspan="1"><input type="reset" onclick="validate();"></td>
                     </tr>
                 </table>
@@ -77,24 +78,98 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <!--tr>
+                                <td>
+                                    <script>
+                                        //document.getElementById('from').innerHTML=document.getElementById('phrase').value.trim().split(" ").reverse().join(" ");
+                                        $(document).ready(function(){
+                                            $("button").click(function(){
+                                                $("#from").text(document.getElementById('from').innerHTML);
+                                            });
+                                        });
+                                    </script>
+                                </td>
+                                <td>
+                                    <script>
+                                        //document.getElementById('from').innerHTML=document.getElementById('phrase').value.trim().split(" ").reverse().join(" ");
+                                        $(document).ready(function(){
+                                            $("button").click(function(){
+                                                $("#to").text(document.getElementById('to').innerHTML);
+                                            });
+                                        });
+                                    </script>
+                                </td>
+                                <td>
+                                    <script>
+                                        //document.getElementById('from').innerHTML=document.getElementById('phrase').value.trim().split(" ").reverse().join(" ");
+                                        $(document).ready(function(){
+                                            $("button").click(function(){
+                                                $("#train_names").text(document.getElementById('train_names').innerHTML);
+                                            });
+                                        });
+                                    </script>
+                                </td>
+                                <td>
+                                    <script>
+                                        //document.getElementById('from').innerHTML=document.getElementById('phrase').value.trim().split(" ").reverse().join(" ");
+                                        $(document).ready(function(){
+                                            $("button").click(function(){
+                                                $("#from").text(document.getElementById('from').innerHTML.value);
+                                            });
+                                        });
+                                    </script>
+                                </td>
+                                <td>
+                                    <script>
+                                        //document.getElementById('from').innerHTML=document.getElementById('phrase').value.trim().split(" ").reverse().join(" ");
+                                        $(document).ready(function(){
+                                            $("button").click(function(){
+                                                $("#from").text(document.getElementById('from').innerHTML.value);
+                                            });
+                                        });
+                                    </script>
+                                </td>
+                                <td>
+                                    <script>
+                                        //document.getElementById('from').innerHTML=document.getElementById('phrase').value.trim().split(" ").reverse().join(" ");
+                                        $(document).ready(function(){
+                                            $("button").click(function(){
+                                                $("#from").text(document.getElementById('from').innerHTML.value);
+                                            });
+                                        });
+                                    </script>
+                                </td>
+                            </tr-->
                             <script>
-                                var sno = 0;
                                 $(document).ready(function() {
                                     $("button").click(function() {
                                         $("button.btn").click(function() {
-                                            var from = $('[name="from"]');
-                                            var to = $('[name="to"]').val();
-                                            var train_names = $('[name="train_names"]').val();
-                                            var coach_number = $('[name="coach_number"]').val();
-                                            var date = $("#date").val();
-                                            var time = $("#time").val();
-                                            var gender = $('[name="gender"]').val();
-                                            var new_row = "<tr><td>" + from + "</td><td>" + to + "</td><td>" + train_names + "</td><td>" + coach_number + "</td><td>" + date + "</td><td>" + time + "</td><td>" + gender + "</td></tr > ";
-                                            $("table tbody").show(new_row);
-                                            return true;
+                                            /*
+                                            var from = document.getElementById('from').innerHTML;
+                                            document.write(document.getElementById('from').value);
+                                            var to = document.getElementById('to').value;
+                                            var train_names = document.getElementById('train_names').value;
+                                            var coach_number = document.getElementById('coach_number').value;
+                                            var date = document.getElementById('date').value;
+                                            var time = document.getElementById('time').value;
+                                            var gender = document.getElementById('gender').value;
+                                            document.write(from);
+                                            */
+                                            //document.getElementById('t1').innerHTML=document.getElementById('phrase').value.trim().split(" ").reverse().join(" ");
+                                            var from = $('[name="from"]').value;
+                                            var to = $('[name="to"]').value;
+                                            var train_names = $('[name="train_names"]').value;
+                                            var coach_number = $('[name="coach_number"]').value;
+                                            var date = $("#date").value;
+                                            var time = $("#time").value;
+                                            var gender = $('[name="gender"]').value;
+                                            var new_row = "<tr><td>" + $("#from").text() + "</td><td>" + to + "</td><td>" + train_names + "</td><td>" + coach_number + "</td><td>" + date + "</td><td>" + time + "</td><td>" + gender + "</td></tr > ";
+                                            //$("table tbody").show(new_row);
+                                            return false;
                                         });
                                     });
                                 });
+                                document.write(new_row);
                             </script>
                         </tbody>
                     </table>
