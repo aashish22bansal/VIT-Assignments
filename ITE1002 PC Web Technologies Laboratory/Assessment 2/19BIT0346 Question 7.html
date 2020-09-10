@@ -1,34 +1,47 @@
-<!DOCTYPE html>
 <html>
-
 <head>
-    <title>19BIT0346 Question 7</title>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-</head>
-
-<body>
-    <h1>Aashish Bansal 19BIT0346 Question 7</h1>
-    <label>Divisible By: </label>
-    <input type="number" name="Divisible" id="Divisible">
-    <button type="submit" name="Delete" id="Delete" value="Delete" style="background-color:gray;">Delete</button>
-    <br><br>
-    <button id="11" name="11">11</button>
-    <button id="22" name="22">22</button>
-    <button id="34" name="34">34</button>
-    <button id="42" name="42">42</button>
-    <button id="50" name="50">50</button>
-    <button id="63" name="63">63</button>
-    <button id="71" name="71">71</button>
-    <button id="85" name="85">85</button>
-    <button id="94" name="94">94</button>
-    <button id="103" name="103">103</button>
-</body>
+<title>19BIT0284</title>
+<script src="jquery-3.5.1.min.js"></script>
 <script>
-    var num=document.getElementById('Divisible').innerHTML;
-    for(var i=9;i<10;i++){
-        var btn_val = document.getElementById();
-        if()
-    }
+$("document").ready(function(){
+"#del").click(function(){
+var but_id=[
+"#but1","#but2",
+"#but3","#but4",
+"#but5","#but6",
+"#but7","#but8",
+"#but9","#but10"
+];
+for(var i = 0; i < but_id.length; i++){
+if($(but_id[i]).text() % $("#in").val() == 0){
+$(but_id[i]).remove();
+}
+}
+});
+});
 </script>
-
+</head>
+<body>
+<form>
+<table>
+<tr>
+<td>Divisible by:</td>
+<td><input type="text" id="in"></td>
+<td><button type="button"
+id="del">Delete</button></td>
+</tr>
+</table>
+Click a button:
+<button type="button" id="but1">11</button>
+<button type="button" id="but2">22</button>
+<button type="button" id="but3">34</button>
+<button type="button" id="but4">42</button>
+<button type="button" id="but5">50</button>
+<button type="button" id="but6">63</button>
+<button type="button" id="but7">71</button>
+<button type="button" id="but8">85</button>
+<button type="button" id="but9">94</button>
+<button type="button" id="but10">103</button>
+</form>
+</body>
 </html>

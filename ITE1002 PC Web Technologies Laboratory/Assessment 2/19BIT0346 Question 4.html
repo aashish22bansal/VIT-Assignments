@@ -1,77 +1,65 @@
-<!DOCTYPE html>
 <html>
-    <head>
-        <title>19BIT0346 Question 4</title>
-        <meta charset="utf-8">
-        <script type="text/javascript">
-            string_to_array = function (str) {
-                return str.trim().split(" ");
-            };
-            //console.log(string_to_array("Robin Singh"));
-            $('h1').each(function() {
-                var words = $(this).text().split(' ');
-                $(this).empty().html(function() {
-                    for (i = 0; i < words.length; i++) {
-                        if (i == 0) {
-                            $(this).append('<span>' + words[i] + '</span>');
-                        } else {
-                            $(this).append(' <span>' + words[i] + '</span>');
-                        }
-                    }
-                });
-            });
-            function validate(){
-                var x = document.getElementById('phrase').value;
-                var y = document.getElementById('');
-                for(var i=0;i<x.length;i++){
-                    document.getElementById('t1').innerHTML=document.getElementById('phrase').value.trim().split(" ").reverse().join(" ");
-                }//<span class=""><div id=""></div></span>
-                //x.elements[i].name+":"+x.elements[i].value+"<br>"
-            }
-        </script>
-    </head>
-    <body>
-        <h1>Aashish Bansal 19BIT0346 Question 4</h1>
-        <textarea cols="20" rows="5" type="text" name="phrase" id="phrase" placeholder="Enter Phase Here..."></textarea><br>
-        <button type="submit" onclick="validate();">Go!</button><br><br>
-        <label id="t1" style="border:1px dashed black; padding:10px;">
-            <span class="word" style="text-decoration: underline;">
-                <div id="words">
-                    <h1 style="text-decoration: underline;"><u>data</u></h1>
-                </div>
-            </span>
-        </label>
-    </body>
+<head>
+<style>
+body span{
+margin:30px 10px 30px 10px;
+border:2px dashed black;
+height:40px; width:60px;
+color:black; font-size:18px;
+background-color:dodgerblue;
+text-decoration:underline;
+padding:5px 20px 5px 20px;
+}
+</style>
+<script>
+function apply()
+{
+document.clear();
+var phr=document.getElementById("phr").value;
+if(phr==null){alert("Please Enter the phrase...");}
+var ftr=document.getElementById("ftr").value;
+var arr=phr.split(" ");
+var temp; var f=0;
+if(ftr!=null || ftr!=" ")
+{
+var k=0;
+for(var j=arr.length-1;j>=0;j--)
+{
+if(!arr[j].includes(ftr))
+{
+var p=document.getElementById("ptag");
+p.innerHTML+=" "+"<span>"+arr[j]+"</span>"+" ";
+f+=1;
+}
+}
+fil.innerHTML=(arr.length-f)+" word(s) filtered out....";
+}
+else
+{
+var p=document.getElementById("ptag");
+for(var i=arr.length-1;i>=0;i--)
+{
+p.innerHTML+=" "+"<span>"+arr[i]+"</span>"+" "; }
+}
+}
+</script>
+</head>
+<body>
+<h1>Aashish Bansal 19BIT0346 Question 4</h1>
+<h2>Sentence Reverser!</h2>
+<table cellspacing="20">
+<tr> <td>
+Phrase :</td> <td><input id="phr" type="text" pattern="/w+/i"required>
+</td></tr>
+<tr> <td>
+Filter :</td> <td><input id="ftr" type="text">
+</td> </tr>
+<tr> <td>
+<button id="go" onclick="apply();">Go!</button>
+</td> </tr>
+</table>
+<br>
+<div id="ptag"></div><br> <br>
+<div id="fil"></div>
+</body>
 </html>
-<!--
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>JS Array</title>
-        <script
-            src="https://code.jquery.com/jquery-3.4.1.min.js"
-            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-            crossorigin="anonymous"
-        ></script>
-        <script type="text/javascript">
-            function disp(){
-                var sample = document.getElementById("sample").value; var words = sample.split(" ");
-                for (var i = words.length - 1; i >= 0; i--) {
-                    if(i%2!=0){
-                        if(i%2!=0){
-                            document.getElementById("writeStuff").innerHTML = document.write("<p><u> " + words[i] + "</u></p>");
-                        }
-                        document.getElementById("writeStuff").innerHTML = document.write("<p> " + words[i] + "</p>");
-                    }
-                }
-            }
-        </script>
-    </head>
-    <body>
-        <label>Enter Phrase <input type="text" name="text" id="sample" /></label><br/><br/>
-        <label>Filter <input type="text" name="filter" id="filter" /></label><br/><br/>
-        <button onclick="disp()">Click</button>
-        <div id="writeStuff"></div>
-    </body>
-</html>
--->

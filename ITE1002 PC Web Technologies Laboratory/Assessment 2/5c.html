@@ -64,116 +64,125 @@
                         <td colspan="1"><input type="reset" onclick="validate();"></td>
                     </tr>
                 </table>
-                <div class="table-div">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th> From </th>
-                                <th> To </th>
-                                <th> Train Number </th>
-                                <th> Coach Number</th>
-                                <th> Date </th>
-                                <th> Time </th>
-                                <th> Gender </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!--tr>
-                                <td>
-                                    <script>
-                                        //document.getElementById('from').innerHTML=document.getElementById('phrase').value.trim().split(" ").reverse().join(" ");
-                                        $(document).ready(function(){
-                                            $("button").click(function(){
-                                                $("#from").text(document.getElementById('from').innerHTML);
+                <p id="result">
+                    <div class="table-div">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th> From </th>
+                                    <th> To </th>
+                                    <th> Train Number </th>
+                                    <th> Coach Number</th>
+                                    <th> Date </th>
+                                    <th> Time </th>
+                                    <th> Gender </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!--tr>
+                                    <td>
+                                        <script>
+                                            //document.getElementById('from').innerHTML=document.getElementById('phrase').value.trim().split(" ").reverse().join(" ");
+                                            $(document).ready(function(){
+                                                $("button").click(function(){
+                                                    $("#from").text(document.getElementById('from').innerHTML);
+                                                });
                                             });
-                                        });
-                                    </script>
-                                </td>
-                                <td>
-                                    <script>
-                                        //document.getElementById('from').innerHTML=document.getElementById('phrase').value.trim().split(" ").reverse().join(" ");
-                                        $(document).ready(function(){
-                                            $("button").click(function(){
-                                                $("#to").text(document.getElementById('to').innerHTML);
+                                        </script>
+                                    </td>
+                                    <td>
+                                        <script>
+                                            //document.getElementById('from').innerHTML=document.getElementById('phrase').value.trim().split(" ").reverse().join(" ");
+                                            $(document).ready(function(){
+                                                $("button").click(function(){
+                                                    $("#to").text(document.getElementById('to').innerHTML);
+                                                });
                                             });
-                                        });
-                                    </script>
-                                </td>
-                                <td>
-                                    <script>
-                                        //document.getElementById('from').innerHTML=document.getElementById('phrase').value.trim().split(" ").reverse().join(" ");
-                                        $(document).ready(function(){
-                                            $("button").click(function(){
-                                                $("#train_names").text(document.getElementById('train_names').innerHTML);
+                                        </script>
+                                    </td>
+                                    <td>
+                                        <script>
+                                            //document.getElementById('from').innerHTML=document.getElementById('phrase').value.trim().split(" ").reverse().join(" ");
+                                            $(document).ready(function(){
+                                                $("button").click(function(){
+                                                    $("#train_names").text(document.getElementById('train_names').innerHTML);
+                                                });
                                             });
-                                        });
-                                    </script>
-                                </td>
-                                <td>
-                                    <script>
-                                        //document.getElementById('from').innerHTML=document.getElementById('phrase').value.trim().split(" ").reverse().join(" ");
-                                        $(document).ready(function(){
-                                            $("button").click(function(){
-                                                $("#from").text(document.getElementById('from').innerHTML.value);
+                                        </script>
+                                    </td>
+                                    <td>
+                                        <script>
+                                            //document.getElementById('from').innerHTML=document.getElementById('phrase').value.trim().split(" ").reverse().join(" ");
+                                            $(document).ready(function(){
+                                                $("button").click(function(){
+                                                    $("#from").text(document.getElementById('from').innerHTML.value);
+                                                });
                                             });
-                                        });
-                                    </script>
-                                </td>
-                                <td>
-                                    <script>
-                                        //document.getElementById('from').innerHTML=document.getElementById('phrase').value.trim().split(" ").reverse().join(" ");
-                                        $(document).ready(function(){
-                                            $("button").click(function(){
-                                                $("#from").text(document.getElementById('from').innerHTML.value);
+                                        </script>
+                                    </td>
+                                    <td>
+                                        <script>
+                                            //document.getElementById('from').innerHTML=document.getElementById('phrase').value.trim().split(" ").reverse().join(" ");
+                                            $(document).ready(function(){
+                                                $("button").click(function(){
+                                                    $("#from").text(document.getElementById('from').innerHTML.value);
+                                                });
                                             });
-                                        });
-                                    </script>
-                                </td>
-                                <td>
-                                    <script>
-                                        //document.getElementById('from').innerHTML=document.getElementById('phrase').value.trim().split(" ").reverse().join(" ");
-                                        $(document).ready(function(){
-                                            $("button").click(function(){
-                                                $("#from").text(document.getElementById('from').innerHTML.value);
+                                        </script>
+                                    </td>
+                                    <td>
+                                        <script>
+                                            //document.getElementById('from').innerHTML=document.getElementById('phrase').value.trim().split(" ").reverse().join(" ");
+                                            $(document).ready(function(){
+                                                $("button").click(function(){
+                                                    $("#from").text(document.getElementById('from').innerHTML.value);
+                                                });
                                             });
-                                        });
-                                    </script>
-                                </td>
-                            </tr-->
-                            <script>
-                                $(document).ready(function() {
-                                    $("button").click(function() {
-                                        $("button.btn").click(function() {
-                                            /*
-                                            var from = document.getElementById('from').innerHTML;
-                                            document.write(document.getElementById('from').value);
-                                            var to = document.getElementById('to').value;
-                                            var train_names = document.getElementById('train_names').value;
-                                            var coach_number = document.getElementById('coach_number').value;
-                                            var date = document.getElementById('date').value;
-                                            var time = document.getElementById('time').value;
-                                            var gender = document.getElementById('gender').value;
-                                            document.write(from);
-                                            */
-                                            //document.getElementById('t1').innerHTML=document.getElementById('phrase').value.trim().split(" ").reverse().join(" ");
-                                            var from = $('[name="from"]').value;
-                                            var to = $('[name="to"]').value;
-                                            var train_names = $('[name="train_names"]').value;
-                                            var coach_number = $('[name="coach_number"]').value;
-                                            var date = $("#date").value;
-                                            var time = $("#time").value;
-                                            var gender = $('[name="gender"]').value;
-                                            var new_row = "<tr><td>" + $("#from").text() + "</td><td>" + to + "</td><td>" + train_names + "</td><td>" + coach_number + "</td><td>" + date + "</td><td>" + time + "</td><td>" + gender + "</td></tr > ";
-                                            //$("table tbody").show(new_row);
-                                            return false;
+                                        </script>
+                                    </td>
+                                </tr-->
+                                <!--script>
+                                    $(document).ready(function() {
+                                        $("button").click(function() {
+                                            $("button.btn").click(function() {
+                                                /*
+                                                var from = document.getElementById('from').innerHTML;
+                                                document.write(document.getElementById('from').value);
+                                                var to = document.getElementById('to').value;
+                                                var train_names = document.getElementById('train_names').value;
+                                                var coach_number = document.getElementById('coach_number').value;
+                                                var date = document.getElementById('date').value;
+                                                var time = document.getElementById('time').value;
+                                                var gender = document.getElementById('gender').value;
+                                                document.write(from);
+                                                */
+                                                //document.getElementById('t1').innerHTML=document.getElementById('phrase').value.trim().split(" ").reverse().join(" ");
+                                                var from = $('[name="from"]').value;
+                                                var to = $('[name="to"]').value;
+                                                var train_names = $('[name="train_names"]').value;
+                                                var coach_number = $('[name="coach_number"]').value;
+                                                var date = $("#date").value;
+                                                var time = $("#time").value;
+                                                var gender = $('[name="gender"]').value;
+                                                var new_row = "<tr><td>" + $("#from").text() + "</td><td>" + to + "</td><td>" + train_names + "</td><td>" + coach_number + "</td><td>" + date + "</td><td>" + time + "</td><td>" + gender + "</td></tr > ";
+                                                //$("table tbody").show(new_row);
+                                                return false;
+                                            });
                                         });
                                     });
-                                });
-                                document.write(new_row);
-                            </script>
-                        </tbody>
-                    </table>
-                </div>
+                                    document.write(new_row);
+                                </script-->
+                                <script>
+                                    var a;
+                                    document.getElementById("result").innerHTML = "From: " + document.getElementById("from").value + "<br/>" +
+                                    "<h2>Booked Ticket</h2><br/>" + 
+                                    "";
+
+                                </script>
+                            </tbody>
+                        </table>
+                    </div>
+                </p>
             </form>
         </center>
     </div>

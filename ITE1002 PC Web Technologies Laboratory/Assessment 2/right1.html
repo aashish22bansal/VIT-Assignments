@@ -1,0 +1,55 @@
+<html>
+<head>
+<style> body{
+background-image:url("img.jpg"); background-size:cover;
+font-size:1.4rem;
+}
+#drop{
+margin-left:1rem; height:2rem;
+font-size:1rem; text-align:center;
+}
+.m{ display:none;
+}
+#d{
+margin-left:0.7rem;
+}
+#H{
+margin-left:35%; font-weight: 800;
+}
+</style>
+</head>
+<body>
+<p id="H">Booking Form</p>
+<form> From&nbsp;
+<input type='textbox' placeholder='Departure'> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To&nbsp;
+<input type='textbox' placeholder='Destination'><br><br>
+Train&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<select id='drop'>
+<option value="shatabdi">Shatabdi</option>
+<option value="rajdhani">Rajdhani</option>
+<option value="chennaiexpress">Chennai Express</option>
+<option value="kashmirexpress">Kashmir Express</option>
+</select>
+<br><br>
+Coach Number&nbsp;&nbsp;&nbsp;
+<select id='d' size='5'>
+<option value="h1">H1</option>
+<option value="h2">H2</option>
+<option value="n1">N1</option>
+<option value="n2">N2</option>
+<option value="s1">S1</option>
+</select>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Enter Date of travel&nbsp;&nbsp;
+<input type="date"><br><br> Gender&nbsp;&nbsp;&nbsp;
+<select>
+<option value="m">Male - 49 </option>
+<option value="f">Female - 35 </option>
+</select>
+<br><br>
+&nbsp;&nbsp;<button onclick="document.write('Tickets Confirmed!')">Submit</button>
+&nbsp;&nbsp;
+<button type="reset">Reset</button>
+</form>
+</body>
+</html>

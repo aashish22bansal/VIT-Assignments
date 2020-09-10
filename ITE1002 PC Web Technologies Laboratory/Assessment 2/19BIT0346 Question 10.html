@@ -3,14 +3,14 @@
         <title>Order Form</title>
         <script type="text/javascript">
             function loadjson() {
-                var json = '{"h1": "Select the items : Quantity"}';
+                
                 var obj = JSON.parse(json);
                 document.getElementById("heading").innerHTML = obj.h1;
                 document.getElementById("heading").innerText = obj.h1;
             }
             var pay;
             function info() {
-                    if (document.getElementById("r1").checked) {
+                if (document.getElementById("r1").checked) {
                     pay = document.getElementById("r1");
                 } else if (document.getElementById("r2").checked) {
                     pay = document.getElementById("r2");
