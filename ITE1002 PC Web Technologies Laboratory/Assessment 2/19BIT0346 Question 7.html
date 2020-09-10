@@ -1,47 +1,49 @@
 <html>
+
 <head>
-<title>19BIT0284</title>
-<script src="jquery-3.5.1.min.js"></script>
-<script>
-$("document").ready(function(){
-"#del").click(function(){
-var but_id=[
-"#but1","#but2",
-"#but3","#but4",
-"#but5","#but6",
-"#but7","#but8",
-"#but9","#but10"
-];
-for(var i = 0; i < but_id.length; i++){
-if($(but_id[i]).text() % $("#in").val() == 0){
-$(but_id[i]).remove();
-}
-}
-});
-});
-</script>
+    <title>19BIT0284</title>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script>
+        $("document").ready(function() {
+            ("#del").click(function() {
+                var but_id = [
+                    "#but1", "#but2",
+                    "#but3", "#but4",
+                    "#but5", "#but6",
+                    "#but7", "#but8",
+                    "#but9", "#but10"
+                ];
+                for (var i = 0; i < but_id.length; i++) {
+                    if ($(but_id[i]).text() % $("#in").val() == 0) {
+                        $(but_id[i]).remove();
+                    }
+                }
+            });
+        });
+    </script>
 </head>
+
 <body>
-<form>
-<table>
-<tr>
-<td>Divisible by:</td>
-<td><input type="text" id="in"></td>
-<td><button type="button"
-id="del">Delete</button></td>
-</tr>
-</table>
-Click a button:
-<button type="button" id="but1">11</button>
-<button type="button" id="but2">22</button>
-<button type="button" id="but3">34</button>
-<button type="button" id="but4">42</button>
-<button type="button" id="but5">50</button>
-<button type="button" id="but6">63</button>
-<button type="button" id="but7">71</button>
-<button type="button" id="but8">85</button>
-<button type="button" id="but9">94</button>
-<button type="button" id="but10">103</button>
-</form>
+    <form>
+        <table>
+            <tr>
+                <td>Divisible by:</td>
+                <td><input type="text" id="in" /></td>
+                <td><button type="button" id="del">Delete</button></td>
+            </tr>
+        </table>
+        Click a button:
+        <button type="button" id="but1">11</button>
+        <button type="button" id="but2">22</button>
+        <button type="button" id="but3">34</button>
+        <button type="button" id="but4">42</button>
+        <button type="button" id="but5">50</button>
+        <button type="button" id="but6">63</button>
+        <button type="button" id="but7">71</button>
+        <button type="button" id="but8">85</button>
+        <button type="button" id="but9">94</button>
+        <button type="button" id="but10">103</button>
+    </form>
 </body>
+
 </html>

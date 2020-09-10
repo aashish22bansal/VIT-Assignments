@@ -1,65 +1,73 @@
 <html>
+
 <head>
-<style>
-body span{
-margin:30px 10px 30px 10px;
-border:2px dashed black;
-height:40px; width:60px;
-color:black; font-size:18px;
-background-color:dodgerblue;
-text-decoration:underline;
-padding:5px 20px 5px 20px;
-}
-</style>
-<script>
-function apply()
-{
-document.clear();
-var phr=document.getElementById("phr").value;
-if(phr==null){alert("Please Enter the phrase...");}
-var ftr=document.getElementById("ftr").value;
-var arr=phr.split(" ");
-var temp; var f=0;
-if(ftr!=null || ftr!=" ")
-{
-var k=0;
-for(var j=arr.length-1;j>=0;j--)
-{
-if(!arr[j].includes(ftr))
-{
-var p=document.getElementById("ptag");
-p.innerHTML+=" "+"<span>"+arr[j]+"</span>"+" ";
-f+=1;
-}
-}
-fil.innerHTML=(arr.length-f)+" word(s) filtered out....";
-}
-else
-{
-var p=document.getElementById("ptag");
-for(var i=arr.length-1;i>=0;i--)
-{
-p.innerHTML+=" "+"<span>"+arr[i]+"</span>"+" "; }
-}
-}
-</script>
+    <style>
+        body span {
+            margin: 30px 10px 30px 10px;
+            border: 2px dashed black;
+            height: 40px;
+            width: 60px;
+            color: black;
+            font-size: 18px;
+            background-color: dodgerblue;
+            text-decoration: underline;
+            padding: 5px 20px 5px 20px;
+        }
+    </style>
+    <script>
+        function apply() {
+            document.clear();
+            var phr = document.getElementById("phr").value;
+            if (phr == null) {
+                alert("Please Enter the phrase...");
+            }
+            var ftr = document.getElementById("ftr").value;
+            var arr = phr.split(" ");
+            var temp;
+            var f = 0;
+            if (ftr != null || ftr != " ") {
+                var k = 0;
+                for (var j = arr.length - 1; j >= 0; j--) {
+                    if (!arr[j].includes(ftr)) {
+                        var p = document.getElementById("ptag");
+                        p.innerHTML += " " + "<span>" + arr[j] + "</span>" + " ";
+                        f += 1;
+                    }
+                }
+                fil.innerHTML = arr.length - f + " word(s) filtered out....";
+            } else {
+                var p = document.getElementById("ptag");
+                for (var i = arr.length - 1; i >= 0; i--) {
+                    p.innerHTML += " " + "<span>" + arr[i] + "</span>" + " ";
+                }
+            }
+        }
+    </script>
 </head>
+
 <body>
-<h1>Aashish Bansal 19BIT0346 Question 4</h1>
-<h2>Sentence Reverser!</h2>
-<table cellspacing="20">
-<tr> <td>
-Phrase :</td> <td><input id="phr" type="text" pattern="/w+/i"required>
-</td></tr>
-<tr> <td>
-Filter :</td> <td><input id="ftr" type="text">
-</td> </tr>
-<tr> <td>
-<button id="go" onclick="apply();">Go!</button>
-</td> </tr>
-</table>
-<br>
-<div id="ptag"></div><br> <br>
-<div id="fil"></div>
+    <h1>Aashish Bansal 19BIT0346 Question 4</h1>
+    <h2>Sentence Reverser!</h2>
+    <table cellspacing="20">
+        <tr>
+            <td>Phrase :</td>
+            <td><input id="phr" type="text" pattern="/w+/i" required /></td>
+        </tr>
+        <tr>
+            <td>Filter :</td>
+            <td><input id="ftr" type="text" /></td>
+        </tr>
+        <tr>
+            <td>
+                <button id="go" onclick="apply();">Go!</button>
+            </td>
+        </tr>
+    </table>
+    <br />
+    <div id="ptag"></div>
+    <br />
+    <br />
+    <div id="fil"></div>
 </body>
+
 </html>
