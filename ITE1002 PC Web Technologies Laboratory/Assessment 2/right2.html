@@ -1,69 +1,78 @@
-<!Doctype HTML>
+<!DOCTYPE html>
 <html>
-<head>
-<script>
-function validate(){ var ticket=[];
-var a={from:'Delhi',to:'Mumbai',train:'shatabdi',cno:'h1',date:'04-10-2019'};
-var b={from:'Delhi',to:'Mumbai',train:'rajdhani',cno:'h1',date:'09-12-2019'}; var
-c={from:document.getElementById('from').value,to:document.getElementById('to').value,tr
-ain:document.getElementById('drop').value,cno:document.getElementById
-('d').value,date:document.getElementById('date').value};
-if(a==c){
-document.write("Ticket is Available! ");
-}
-else{
-document.write("Ticket is Not Available!");
-}
-}
-</script>
-<style> body{
-background-image:url("img.jpg"); background-size:cover;
-font-size:1.4rem;
-}
-#drop{
-margin-left:1rem; height:2rem;
-font-size:1rem; text-align:center;
-}
-#d{
-margin-left:0.7rem;
-}
-#H{
-margin-left:35%; font-weight: 800;
-}
-</style>
-</head>
-<body>
-<p id="H">Availabilty Form</p>
-<form> From&nbsp;
-<input id='from' type='textbox' placeholder='Departure'>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To&nbsp;
-<input id='to' type='textbox' placeholder='Destination'><br><br>
-Train&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<select id='drop'>
-<option name='train' value="shatabdi">Shatabdi</option>
-<option name='train' value="rajdhani">Rajdhani</option>
-<option name='train' value="chennaiexpress">Chennai Express</option>
-<option name='train' value="kashmirexpress">Kashmir Express</option>
-</select>
-<br><br>
-Coach Number&nbsp;&nbsp;&nbsp;
-<select id='d' size='5'>
-<option name='cno' value="h1">H1</option>
-<option name='cno' value="h2">H2</option>
-<option name='cno' value="n1">N1</option>
-<option name='cno' value="n2">N2</option>
-<option name='cno' value="s1">S1</option>
-</select>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Enter Date of travel&nbsp;&nbsp;
-<input id='date' type="date"><br><br> Gender&nbsp;&nbsp;&nbsp;
-<select id='gender'>
-<option value="m">Male - 49 </option>
-<option value="f">Female - 35 </option>
-</select>
-<br><br>
-&nbsp;&nbsp;<button onclick='validate()'>Submit</button> &nbsp;&nbsp;
-<button type="reset">Reset</button>
-</form>
-</body>
+    <head>
+        <script>
+            function validate(){ var ticket=[];
+                var a={from:'Delhi',to:'Mumbai',train:'shatabdi',cno:'h1',date:'04-10-2019'};
+                var b={from:'Delhi',to:'Mumbai',train:'rajdhani',cno:'h1',date:'09-12-2019'}; 
+                var c={from:document.getElementById('from').value,to:document.getElementById('to').value,train:document.getElementById('drop').value,cno:document.getElementById
+                ('d').value,date:document.getElementById('date').value};
+                if(a==c){
+                    document.write("Ticket is Available! ");
+                }
+                else{
+                    document.write("Ticket is Not Available!");
+                }
+            }
+        </script>
+        <style>
+            body {
+                background-image: url("img.jpg");
+                background-size: cover;
+                font-size: 1.4rem;
+            }
+            #drop {
+                margin-left: 1rem;
+                height: 2rem;
+                font-size: 1rem;
+                text-align: center;
+            }
+            #d {
+                margin-left: 0.7rem;
+            }
+            #H {
+                margin-left: 35%;
+                font-weight: 800;
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+            <p id="H">Availabilty Form</p><br>
+            <form>
+                From&nbsp;
+                <input id="from" type="textbox" placeholder="Departure" />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                To&nbsp;
+                <input id="to" type="textbox" placeholder="Destination" /><br /><br />
+                Train&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <select id="drop">
+                    <option name="train" value="shatabdi">Shatabdi</option>
+                    <option name="train" value="rajdhani">Rajdhani</option>
+                    <option name="train" value="chennaiexpress">Chennai Express</option>
+                    <option name="train" value="kashmirexpress">Kashmir Express</option>
+                </select>
+                <br /><br />
+                Coach Number&nbsp;&nbsp;&nbsp;
+                <select id="d" size="5">
+                    <option name="cno" value="h1">H1</option>
+                    <option name="cno" value="h2">H2</option>
+                    <option name="cno" value="n1">N1</option>
+                    <option name="cno" value="n2">N2</option>
+                    <option name="cno" value="s1">S1</option>
+                </select>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Enter Date of travel&nbsp;&nbsp;
+                <input id="date" type="date" /><br /><br />
+                Gender&nbsp;&nbsp;&nbsp;
+                <select id="gender">
+                    <option value="m">Male - 49</option>
+                    <option value="f">Female - 35</option>
+                </select>
+                <br /><br />
+                &nbsp;&nbsp;<button onclick="validate()">Submit</button> &nbsp;&nbsp;
+                <button type="reset">Reset</button>
+            </form>
+        </center>
+    </body>
 </html>

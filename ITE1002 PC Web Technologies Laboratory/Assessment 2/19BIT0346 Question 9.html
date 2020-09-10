@@ -1,202 +1,223 @@
+<!DOCTYPE html>
 <html>
 
 <head>
+    <title>19BIT0346 Question 9</title>
     <style>
-        #d1 {
-            background-color: midnightblue;
-            color: white;
-            font-size: 22px;
-            height: 90px;
-            width: 700px;
-            position: absolute;
-            left: 350px;
+        #d1{
+            background-color:midnightblue;
+            color:white; 
+            font-size:22px;
+            height:90px; 
+            width:700px;
+            position:absolute;
+            left:350px;
         }
-        
-        #d1 img {
-            width: 60px;
-            height: 50px;
-            position: absolute;
-            top: 20px;
-            left: 95px;
+        #d1 img{
+            width:60px; 
+            height:50px;
+            position:absolute;
+            top:20px;
+            left:95px;
         }
-        
-        table {
-            width: 700px;
-            height: 510px;
-            background-color: lightsteelblue;
-            position: absolute;
-            top: 98px;
-            left: 350px;
-            padding-left: 30px;
-            padding-top: 20px;
-            padding-bottom: 10px;
+        table{
+            width:700px; 
+            height:510px;
+            background-color:lightsteelblue;
+            position:absolute;
+            top:98px;
+            left:350px;
+            padding-left:30px; 
+            padding-top:20px;
+            padding-bottom:10px;
         }
-        
-        #d3 {
-            background-color: midnightblue;
-            height: 40px;
-            width: 700px;
-            position: absolute;
-            left: 350px;
-            bottom: -6px;
-            padding-top: 20px;
+        #d3{
+            background-color:midnightblue;
+            height:40px; 
+            width:700px;
+            position:absolute;
+            left:350px; 
+            bottom:-6px;
+            padding-top:20px;
         }
     </style>
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js" "></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js""></script>
     <script>
-    $(document).ready(function(){
-        $("#form ").validate({
-            rules:{
-                fname:{
-                    required:true
-                },
-                lname:{
-                    required:true
-                },
-                city:{
-                    required:true
-                },
-                state:{
-                    required:true
-                },
-                mad:{
-                    required:true,
+        $(document).ready(function(){
+            $("#form").validate({
+                rules:{
+                    fname:{
+                        required:true
+                    },
+                    lname:{
+                        required:true
+                    },
+                    city:{
+                        required:true
+                    },
+                    state:{
+                        required:true
+                    },
                     mad:{
-                        depends:function(mad){
-                            var letters=/^([0-9A-Za-z/.\_-])+\@(([0-9A-Za-z])+.\/)+([AZa-z0-9]{2,4})+)$/;
-                            return $("#mad ").val().test(letters);
+                        required:true,
+                        mad:{
+                            depends:function(mad){
+                                var letters=/^([0-9A-Za-z/.\_-])+\@(([0-9A-Za-z])+.\/)+([AZa-z0-9]{2,4})+)$/;
+                                return $("#mad").val().test(letters);
+                            }
                         }
+                    },
+                    zip:{
+                        required:true,
+                        zip:true,
+                        max:5,min:5
+                    },
+                    con:{
+                        required:true
+                    },
+                    pass:{
+                        required:true
+                    },
+                    meal:{
+                        required:true
                     }
-                },
-                zip:{
-                    required:true,
-                    zip:true,
-                    max:5,min:5
-                },
-                con:{
-                    required:true
-                },
-                pass:{
-                    required:true
-                },
-                meal:{
-                    required:true
                 }
-            }
+            });
         });
-    });
-    messages:{
-        zip:{
-            required:"Please Enter the valid E-mail Id... ";
-            min:"zip code must be of 5 digits ";
-            max:"zip code must be of 5 digits ";
-        };
-        mad:{
-            required:"Please Enter the E-mail Id... ";
-            mad:"Please Enter the valid E-mail Id... ";
+        messages:{
+            zip:{
+                required:"Please Enter the valid E-mail Id...";
+                min:"zip code must be of 5 digits";
+                max:"zip code must be of 5 digits"
+            };
+            mad:{
+                required:"Please Enter the E-mail Id...";
+                mad:"Please Enter the valid E-mail Id..."
+            }
         }
-    }
-    [
-        {
-            "id ":"city ",
-            "value ":"Delhi ",
-            "label ":"Delhi "
-        },
-        {
-            "id ":"city ",
-            "value ":"delhi ",
-            "label ":"delhi "
-        },
-        {
-            "id ":"city ",
-            "value ":"Delhi ",
-            "label ":"Delhi "
-        }
-    ]
+        [
+            {
+                "id":"city",
+                "value":"Delhi",
+                "label":"Delhi"
+            },
+            {
+                "id":"city",
+                "value":"delhi",
+                "label":"delhi"
+            },
+            {
+                "id":"city",
+                "value":"Delhi",
+                "label":"Delhi"
+            }
+        ]
     </script>
 </head>
 <body>
-    <form align="center " id="form " action=" " method="post ">
-    <div id="d1 ">
-        <img
-        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIEAAACBCAMAAADQfiliAAAAzFBMVE X///9GXo3zTVbh4eHg4unzQ034l5xEXIzn5+fFxcW6ur1bb5Xk5OT19fX4SVH8/PyoVXDaUGI9V4k2UoaZ pLzu8PRjdp395eb2eoDzR1H+9PS3v89YbZestcnDytdpe6EnSID2hotPZZKIlrPO097i29zaRFDJPk3KOUhx
-        W4SSWHnSwMazdIg5X4/7RUzrvsD3bnJXXInGT2Hoa3HgPUrZur3RY22eVHPNU1/ajZqEj6akqrbUz891gp/ZrbDXoqazVG3ReIDQbXXKLj9ftEcIAAAGoElEQVR4nO2c/XuaOhTHRekNWpAZ0LteeekFFNet3drVrlW 7ruv//z/dIEJejSg07If7ffbseZalyYdwODlJTtrpnCJLD6Zu/DzxIk3TIm8Sxu400K2T2jpW9jiZxpMIQAdCADS
-        ACNDfAKJ/g2gST5Ox/a7d69PY01Bf255ZoVLoaF481d8LYuyHIOtdLkQBQn/cfPdWEF4e7B1TXIZBs1ah+x 6EFbvPBaHn683173pO1ccnBsLx3GYYxq52Qv85g+bWNwjbP3L4aUHo1/sw7OS8Tv9bhvOkBsPYBXUBs mE4/VUEpxggL2SSwUn9W+7J/bM+EzjuCd5BDx26FTQNVHRJ2ZsDdFUnPPrDTDzaAgCIfd/1KpgFgGh+C taMCUMvOQ5gyjwuiALTMIxeTA+McAR8wzBNIwmZR4DTYwBc7lkDs4dkms+HXgRcGb1tVT1iqkK3cv8
-        296TgOW+2ZwbCiZmoGSVmXtWI2ZpOXNEz2DE3AmC6a7bX8w4QTIqK5pRrBlZD4EcA/SgmCA8QhCV BwJtttVHgRwARBM0QoFE4DOCKrL0xAs05aI5TAuBa+3T1IdfngmD25YNcX2YFweddydUn1BJGOPBRJg T39dWoO8x187Uk+HYzlOnmW0nwtajZHV0RCFDqmnTC0m/vht1CZ5jg+0VXpovvmOCsLB3e3eL35Ekc tEX4sdsRBujeL0uCBylAt/tQEizvcelwhBFguH+aIq3wkQDoLgiCuRRgThAsiPLhqIo1Bhjg+gcJMCcJFmynlBYkAQk7/IFtwdkTL4xJI6CelCaQDcJ8L0F3TpqCMGqifOHVkG73Z0nwmEoJ0seCwHihCYbEByH2jQkZVPyiLH6+eC1mpmWa3nf36z5d/NxVNZjRuviFmwdA8ElaVPRxxzzZYrlt1zR+L1IJQLebLh5n5m4ImNG6I9qHH
-        v89+JQPHXHtLlHcYcxe2WZZIdiHJQpmZi9pyrCOyA6gz5kh7cRHXLvp68vPp8cF2yw/CKjqw+trVpNhpQg 0yBqjKyVACOni7e3tMECGkC6QOACWgHEKuqZJCZAxppnkr6CkzSi4qiOmD9o5s3MyR5C1PJd9BaTu5yJ ShoD2jDobe4kI6oohoGconw1LFBBoDvE5WFz4qYIARNgn8PGUCgIU+5UEYUsEYemNLtn/U0OgXRZeye eDWjUEhWu2BQG4GgIQ2kJ/qI6g8ItTwRpFEUG+eBAsVBHBWfMSEORL2bFoNfz0V/N64rvJA8ZE8Hq05
-        raEsUT2piV7zEAZwdYQRGagjGC7mp+IluOqCMAEzYuR6PUoswM0P+qg1TEAumBmVjoGaIYWfgrqCND HwG9eqh0DV/wxlgS2RSgvIkvs6pX2EcQd8d5YQWD0sMy8O6Kkl/dnkUV5fyZRYsgIQCh2B6cTmMcSTD qeqFwdgeZ12B1w1WMQdYRgCsdA+58AEbRvB+1/C+37g/Z9onxeMEysvCWbLNoRkJXsPT+3f15of25sPz5oP0ZqP04ci8iUxsrtrxf+gDWTfN1oE9pXIij6529CEoLtulG6djY432aT7m6vV/54dlHo7F8JwXbtPBYZQl2
-        v/BGf0VxICPL9A+EeSt2ZqSLBLh1AZAiKCHaH0KL3o4hg149oP1ENQbGfKNpTVUNQHncJ9pXVEJT7yoK9 dSUEeG9dMEOrIcDnC/wZiwqPRJ6x8OdMmKAM90qvjFUSEGXVCchzJv6srdzBqDINiWYmUmICJhuEPW 9UMDszmRjsCKmID5g+mKD9/Qm4TD3q7D2LH9+BgIqJubN32jWLUiRqK6EAuPwDOgcDDJq/AGAPCAJ RDgadh7I2+Ao1Zaxx+8I8FCoXB6x6TV8JsXorTLAnT5E4cALn/YYRrF7/HDcvzkeicrLgelMsxJsQWvJv1tjO9uVkkZ4RDcIGrfwtuwlZhmluiCGQZEkSuXlw1e+jCcdoQmgK6/dXuGlJbh45Q8HVoL+Z9ZrQbNMfYABpfiK
-        VownDQb+P/tRW1gwRhclzNKnFA9Ce14MmtH4m0qwP5alS8zRyUZF3XldeRCbyH87VZVbz2Y2xmqLSz KvkK4vXkQ2pctr4eyFUBBBnrjehyrn7HdH9hSYAqt9f6PB3OOrryDsc/D2Wujr6Hgt/l6eeTrjLg6apuJH7VJ mAE58WbbR9p6uT3WurdbEvV517bX/A3b6MwXVq3W903PqxXtt3PDO1fc91y+BHR9/1jRq865up7fvO W7V853urtu+95xDt3v0vlf/+g3D7+w+imr//4D+U3t9rUanAdQAAAABJRU5ErkJggg==" 
-        >
-        <h2> Event Registration Form</h2>
-        <br>
-    </div>
-    <table align=" center " cellpadding="8 ">
-        <tr>
-            <td>First Name</td> 
-            <td><input name="fname " type="text " size="35 "></td>
-        </tr>
-        <tr>
-            <td>Last Name</td> 
-            <td><input name="lname " type="text " size="35 "></td>
-        </tr>
-        <tr>
-            <td>Mailing Address</td> 
-            <td><input name="mad " id="mad " type="text " size="35 "></td>
-        </tr>
-        <tr>
-            <td>City</td> 
-            <td><input name="city " type="text " size="35 "></td>
-        </tr>
-        <tr>
-            <td>State</td> 
-            <td>
-                <select name="state ">
+    <form align="center" id="form" action="" method="post">
+        <div id="d1">
+            <img
+            src="data:image/png;base64,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" >
+            <h2> Event Registration Form</h2>
+            <br>
+        </div>
+        <table align="center" cellpadding="8">
+            <tr>
+                <td>First Name</td>
+                <td><input name="fname" type="text" size="35"></td>
+            </tr>
+            <tr>
+                <td>Last Name</td> 
+                <td><input name="lname" type="text" size="35"></td>
+            </tr>
+            <tr>
+                <td>Mailing Address</td> 
+                <td><input name="mad" id="mad" type="text" size="35"></td>
+            </tr>
+            <tr>
+                <td>City</td> 
+                <td> <input name="city" type="text" size="35"></td>
+            </tr>
+            <tr>
+                <td>State</td> <td>
+                <select name="state">
                     <option default>----select state----</option>
                     <option >Delhi</option> <option>Kerala</option>
                     <option>Gujarat</option> <option>U.P.</option>
                     <option>Andhra Pradesh</option><option>Odissa</option>
                 </select>
-            </td>
-        </tr>
-        <tr>
-            <td>Zip Code</td> 
-            <td><input name="zip " type="number " size="35 "></td>
-        </tr>
-        <tr>
-            <td>-----------------------------------------</td>
-            <td>-----------------------------------------------------</td>
-        </tr>
-        <tr>
-            <td>Are you speaking at the<br> conference</td>
-            <td> <input type="checkbox " name="con ">Yes
-            <input type="checkbox " name="con ">No </td>
-        </tr>
-        <tr>
-            <td>Conference Pass</td>
-            <td> <input type="radio " name="pass "> 1-day Pass <br>
-            <input type="radio " name="pass "> 2-day Pass <br>
-            <input type="radio " name="pass "> 3-day Pass <br>
-            <input type="radio " name="pass "> 4-day Pass <br> </td>
-        </tr>
-        <tr>
-            <td>Meal Preference</td> 
-            <td>
-                <select name="meal ">
-                    <option default>----select meal type----</option>
-                    <option>South-Indian veg</option>
-                    <option>South-Indian Non-veg</option>
-                    <option>North-Indian veg</option>
-                    <option>North-Indian Non-veg</option>
-                    <option>Western Type</option>
-                </select> 
-            </td>
-        </tr>
-    </table> 
-    <br> <br>
-    <div id="d3 ">
-        <button>Submit</button>
-    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Zip Code</td> 
+                <td><input name="zip" type="number" size="35"></td>
+            </tr>
+            <tr>
+                <td>-----------------------------------------</td>
+                <td>-----------------------------------------------------</td>
+            </tr>
+            <tr>
+                <td>Are you speaking at the<br> conference</td>
+                <td> 
+                    <input type="checkbox" name="con">Yes
+                    <input type="checkbox" name="con">No 
+                </td>
+            </tr>
+            <tr>
+                <td>Conference Pass</td>
+                <td> 
+                    <input type="radio" name="pass"> 1-day Pass <br>
+                    <input type="radio" name="pass"> 2-day Pass <br>
+                    <input type="radio" name="pass"> 3-day Pass <br>
+                    <input type="radio" name="pass"> 4-day Pass <br> 
+                </td>
+            </tr>
+            <tr>
+                <td>Meal Preference</td> 
+                <td>
+                    <select name="meal">
+                        <option default>----select meal type----</option>
+                        <option>South-Indian veg</option>
+                        <option>South-Indian Non-veg</option>
+                        <option>North-Indian veg</option>
+                        <option>North-Indian Non-veg</option>
+                        <option>Western Type</option>
+                    </select> 
+                </td>
+            </tr>
+        </table> 
+        <br> <br>
+        <div id="d3">
+            <button>Submit</button>
+        </div>
     </form>
 </body>
 </html>
