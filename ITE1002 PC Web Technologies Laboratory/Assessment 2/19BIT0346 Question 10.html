@@ -1,23 +1,25 @@
 <html>
-    <head>
-        <title>Order Form</title>
-        <script type="text/javascript">
-            function loadjson() {
-                
-                var obj = JSON.parse(json);
-                document.getElementById("heading").innerHTML = obj.h1;
-                document.getElementById("heading").innerText = obj.h1;
+
+<head>
+    <title>19BIT0346 Question 10</title>
+    <script type="text/javascript">
+        function loadjson() {
+
+            var obj = JSON.parse(json);
+            document.getElementById("heading").innerHTML = obj.h1;
+            document.getElementById("heading").innerText = obj.h1;
+        }
+        var pay;
+
+        function info() {
+            if (document.getElementById("r1").checked) {
+                pay = document.getElementById("r1");
+            } else if (document.getElementById("r2").checked) {
+                pay = document.getElementById("r2");
+            } else if (document.getElementById("r3").checked) {
+                pay = document.getElementById("r3");
             }
-            var pay;
-            function info() {
-                if (document.getElementById("r1").checked) {
-                    pay = document.getElementById("r1");
-                } else if (document.getElementById("r2").checked) {
-                    pay = document.getElementById("r2");
-                } else if (document.getElementById("r3").checked) {
-                    pay = document.getElementById("r3");
-                }
-                document.getElementById("result").innerHTML =
+            document.getElementById("result").innerHTML =
                 "User name:" +
                 document.getElementById("name").value +
                 "<br/>" +
@@ -72,22 +74,23 @@
                 "</table><br>" +
                 "Total bill including 13.5% tax :<b>" +
                 1.135 *
-                    (document.getElementById("q1").value * 20.39 +
+                (document.getElementById("q1").value * 20.39 +
                     document.getElementById("q2").value * 40.2 +
                     document.getElementById("q3").value * 30.95 +
                     document.getElementById("q4").value * 70.49) +
                 "</b> payment mode: " +
                 pay.value;
-            }
-        </script>
-    </head>
-    <body onload="loadjson();">
-        <h1>Aashish Bansal 19BIT0346 Question 10</h1>
-        <form>
-            User: <input type="text" name="mname" size="30" id="name" /> <br />
-            <b><h2><label id="heading"></label></h2></b>
-            <table>
-                <tr>
+        }
+    </script>
+</head>
+
+<body onload="loadjson();">
+    <h1>Aashish Bansal 19BIT0346 Question 10</h1>
+    <form>
+        User: <input type="text" name="mname" size="30" id="name" /> <br />
+        <b><h2><label id="heading"></label></h2></b>
+        <table>
+            <tr>
                 <td>
                     <input type="checkbox" name="option1" checked="checked" />
                     <label id="chk1">Four 100 watt bulbs for Rs. 20.39 </label>
@@ -95,8 +98,8 @@
                 <td>
                     <input type="text" id="q1" name="VAL1" size="2" />
                 </td>
-                </tr>
-                <tr>
+            </tr>
+            <tr>
                 <td>
                     <input type="checkbox" name="option2" />
                     <label id="chk2">Eight 100watt bulbs for Rs 40.20 </label>
@@ -104,8 +107,8 @@
                 <td>
                     <input type="text" id="q2" name="VAL2" size="2" />
                 </td>
-                </tr>
-                <tr>
+            </tr>
+            <tr>
                 <td>
                     <input type="checkbox" name="option3" />
                     <label id="chk3">Four 100watt long life bulbs for Rs. 30.95 </label>
@@ -113,8 +116,8 @@
                 <td>
                     <input type="text" id="q3" name="VAL3" size="2" />
                 </td>
-                </tr>
-                <tr>
+            </tr>
+            <tr>
                 <td>
                     <input type="checkbox" name="option4" />
                     <label id="chk4">Eight 100watt long life bulbs for Rs 70.49 </label><br />
@@ -122,17 +125,17 @@
                 <td>
                     <input type="text" id="q4" name="VAL4" size="2" />
                 </td>
-                </tr>
-            </table>
-            <input type="radio" id="r1" name="paymode" value="visa" checked="checked"/>
-            VISA <br />
-            <input type="radio" id="r3" name="paymode" value="mcard" /> MASTER CARD
-            <br />
-            <input type="radio" id="r2" name="paymode" value="discover" /> DISCOVER
-            <br />
-            <input type="button" id="bt" value="submit" onclick="info()" />
-            <input type="reset" value="Reset Order" />
-            <p id="result"></p>
-        </form>
-    </body>
+            </tr>
+        </table>
+        <input type="radio" id="r1" name="paymode" value="visa" checked="checked" /> VISA <br />
+        <input type="radio" id="r3" name="paymode" value="mcard" /> MASTER CARD
+        <br />
+        <input type="radio" id="r2" name="paymode" value="discover" /> DISCOVER
+        <br />
+        <input type="button" id="bt" value="submit" onclick="info()" />
+        <input type="reset" value="Reset Order" />
+        <p id="result"></p>
+    </form>
+</body>
+
 </html>
