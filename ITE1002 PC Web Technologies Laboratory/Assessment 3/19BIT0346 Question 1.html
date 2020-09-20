@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>19BIT0346 Question 1</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+			<!--function json_data(){
+				"$schema": "http://json-schema.org/draft-04/schema#",
+				"title": "Students_information",
+				"description": "Contains data of 20 students",
+				"type": "object",
+				"properties": {
+					"student1": {
+						"$schema": "http://json-schema.org/draft-04/schema#",
+						"title": "Student1",
+						"description": "Contains data of 1 student",
+						"type": "object",
+						"properties": {
+							"name":{
+								"type": "string",
+								"description": "name of the student..."
+							}
+						}
+					}
+				}
+			}-->
+		<script type="text/javascript">
+			function output_table(){
+				document.getElementById("display").innerHTML = "<table>"+
+					"<th>"+
+					"<td>Student Name</td>"+
+					"<td>Date of Birth</td>"+
+					"<td>Father Name</td>"+
+					"<td>Mother Name</td>"+
+					"<td>Blood Group</td>"+
+					"<td>Email</td>"+
+					"<td>Landline</td>"+
+					"<td>Mobile</td>"+
+					"<td>Address</td>"+
+					"<td>Degree</td>"+
+					"</th>+
+					"</table>";
+			}
+			
+			function display(){
+				var x = document.getElementById("form1");
+				document.getElementById("display").innerHTML = document.getElementById('student_name').value;
+				var z = output_table();
+				document.getElementById("display").innerHTML = z;
+			}
+			
+		</script>
+	</head>
+	<body>
+		<h1>Aashish Bansal 19BIT0346 Question 1</h1>
+		<form id="form1" action="">
+			<label for="student_name">Enter Name: </label><input type="text" name="student_name" id="student_name" placeholder="Enter your name..." required><br>
+			<!--label for="dob">Enter Date of Birth: </label><input type="date" name="dob" id="dob" required><br>
+			<label for="father_name">Enter Father's Name: </label><input type="text" name="father_name" id="father_name" placeholder="Enter Father name..." required><br>
+			<label for="mother_name">Enter Mother's Name: </label><input type="text" name="mother_name" id="mother_name" placeholder="Enter Mother name..." required><br>
+			<label for="blood_group">Enter Blood Group: </label>
+			<select name="blood_group_type">
+				<option value="Choose_Blood_Group">--choose--</option>
+				<option value="A -ve">A -ve</option>
+				<option value="A +ve">A +ve</option>
+				<option value="B -ve">B -ve</option>
+				<option value="B +ve">B +ve</option>
+				<option value="o -ve">O -ve</option>
+				<option value="O +ve">O +ve</option>
+				<option value="AB -ve">AB -ve</option>
+				<option value="AB +ve">AB +ve</option>
+			</select><br>
+			<label for="email">Enter your Email: </label><input type="text" name="email" id="email" placeholder="Enter your email..." required><br>
+			<label for="landline">Enter your Landline Number: </label><input type="number" name="landline" id="landline" placeholder="Enter your landline..." required><br>
+			<label for="mobile">Enter your Mobile Number: </label><input type="number" name="mobile" id="mobile" placeholder="Enter your mobile..." required><br-->
+			
+			<input type="button" value="Submit" onclick="display()" name="submitbutton">
+		</form>
+		<p id="display">
+			<label id='t1'>Student Name</label>
+		</p>
+	</body>
+</html>

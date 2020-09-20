@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<title>Question 1</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script type="text/javascript">
+			function operate(){
+				var x = document.getElementById(" form1");
+				document.getElementById("t1").innerHTML += document.getElementById("name").value;
+				var name = document.getElementById("name").value;
+				name = name.toLowerCase().split("");
+				document.getElementById("t1").innerHTML += name;
+				var alphanum_array = array{"a":"1","b":"2","c":"3","d":"4","e":"5","f":"6","g":"7","h":"8","i":"9","j":"10","k":"11","l":"12","m":"13","n":"14","o":"15","p":"16","q":"17","r":"18","s":"19","t":"20","u":"21","v":"22","w":"23","x":"24","y":"25","z":"26"};
+				var num = "";
+				for(var i=0;i<name.length;i++){
+					for(var j=0;j<26;j++){
+						if(name[i]==alphanum_array[j]){
+							num = num.concat(name[i]);
+						}
+					}
+				}
+				var magic_number = num.split("");
+				var characteristics = array(1:array("Brave Heart","Dreamer",));
+			}
+		</script>
+	</head>
+	<body>
+		<form id="form1">
+			Enter: <input type="text" name="name" id="name" placeholder="Enter name...">
+			<input type="button" name="submit" id="submit" value="Submit" onclick="operate()"/>
+		</form>
+		<p id="t1"></p>
+	</body>
+</html>
