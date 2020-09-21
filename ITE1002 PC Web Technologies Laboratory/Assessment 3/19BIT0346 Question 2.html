@@ -4,8 +4,35 @@
         <title>19BIT0346 Question 2</title>
         <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     </head>
-    <body>
-        <script>
+    <!---->
+    <body ng-app="myapp">
+        <script type="text/javascript">
+            var app = angular.module('myapp',[]);
+            function start(){
+                var user_input = document.getElementById("input").value;
+                if(user_input.value == 1){
+                    app.controller()
+                }
+                else if(user_input == 2){}
+                else if(user_input == 3){}
+                else{
+                    document.getElementById("home").innerHTML += "Not a valid input! Please refresh to Enter again...";
+                }
+                document.getElementById("home").innerHTML = ""
+            }
         </script>
+        <h1>Welcome to the World of Books</h1>
+        <p>
+            <label>The menu of options:</label>
+            <ol>
+                <li ng-controller="order">Order a book</li>
+                <li ng-controller="add">Add a Book</li>
+                <li ng-controller="remove">Remove a Book</li>
+            </ol>
+            <form id="user_input">
+                Enter your choice: <input type="number" name="input" id="input" onclick="start()" required/>
+            </form>
+        </p>
+        <p id="home"></p>
     </body>
 </html>
