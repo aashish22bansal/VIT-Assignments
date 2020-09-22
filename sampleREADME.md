@@ -29,24 +29,6 @@
 - [GitHub](#github)
 - [Connect](#Connect)
 
-
----
-
-## Example (Optional)
-
-```javascript
-// code away!
-
-let generateProject = project => {
-  let code = [];
-  for (let js = 0; js < project.length; js++) {
-    code.push(js);
-  }
-};
-```
-
----
-
 ## Home
 
 - This is the `Home Page` for the Website
@@ -66,23 +48,8 @@ let generateProject = project => {
   - Pre-University
   - Undergraduation
 
-> update and install this package first
+## GitHub
+- Connects to my GitHub Account.
 
-```shell
-$ brew update
-$ brew install fvcproductions
-```
-
-> now install npm and bower packages
-
-```shell
-$ npm install
-$ bower install
-```
-
-- For all the possible languages that support syntax highlithing on GitHub (which is basically all of them), refer <a href="https://github.com/github/linguist/blob/master/lib/linguist/languages.yml" target="_blank">here</a>.
-
----
-
-## Features
-## Usage (Optional)
+## Connect
+- Basic form made using PHP using which the user can contact me.
