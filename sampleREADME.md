@@ -2,7 +2,6 @@
 
 <!-- [![Aashish Bansal](https://aashish22bansal.github.io)](http://aashish22bansal.github.io) -->
 
-***INSERT GRAPHIC HERE (include hyperlink in image)***
 
 # aashish22bansal.github.io
 
