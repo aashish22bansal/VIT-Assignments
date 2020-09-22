@@ -1,18 +1,22 @@
-<a href="http://fvcproductions.com"><img src="https://avatars1.githubusercontent.com/u/4284691?v=3&s=200" title="FVCproductions" alt="FVCproductions"></a>
+<a href="http://aashish22bansal.github.io"><img src="Aashish Bansal Original.jpg" title="Aashish Bansal" alt="Aashish Bansal Original.jpg"></a>
 
-<!-- [![FVCproductions](https://avatars1.githubusercontent.com/u/4284691?v=3&s=200)](http://fvcproductions.com) -->
+<!-- [![Aashish Bansal](https://aashish22bansal.github.io)](http://aashish22bansal.github.io) -->
 
 ***INSERT GRAPHIC HERE (include hyperlink in image)***
 
-# Repository Title Goes Here
+# aashish22bansal.github.io
 
-> Subtitle or Short Description Goes Here
+> Portfolio Website
 
-> ideally one sentence
+> "Who doesn't want to make his life successful. I wanna make my life meaningful because One day a movie will flash in front of my eyes and I wanna make it worth watching."
 
 > include terms/tags that can be searched
 
-**Badges will go here**
+**Badges**
+- HackerRank Silver Level (3 Star)
+- HackerRank Silver Leve (4 Star)
+- Python Silve Leve (3 Star)
+- Java Bronze Level (1 Star)
 
 - build status
 - issues (waffle.io maybe)
@@ -59,15 +63,13 @@
 
 ## Table of Contents (Optional)
 
-> If your `README` has a lot of info, section headers might be nice.
+> My `Portfolio Website` consists of the following tabs:
 
-- [Installation](#installation)
-- [Features](#features)
-- [Contributing](#contributing)
-- [Team](#team)
-- [FAQ](#faq)
-- [Support](#support)
-- [License](#license)
+- [Home](#home)
+- [About](#about)
+- [Education](#education)
+- [GitHub](#github)
+- [Connect](#Connect)
 
 
 ---
@@ -87,18 +89,24 @@ let generateProject = project => {
 
 ---
 
-## Installation
+## Home
 
-- All the `code` required to get started
-- Images of what it should look like
+- This is the `Home Page` for the Website
+- Consists of all the basic details about me
 
-### Clone
+### About
 
-- Clone this repo to your local machine using `https://github.com/fvcproductions/SOMEREPO`
+- This consists of details about me on:
+  - Languages
+  - Programming Skills
+  - Projects
 
-### Setup
+### Education
 
-- If you want more syntax highlighting, format your code like this:
+- This consists of details about my Education:
+  - Matriculation
+  - Pre-University
+  - Undergraduation
 
 > update and install this package first
 
