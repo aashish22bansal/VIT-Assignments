@@ -1,0 +1,8 @@
+[
+	{"Product_ID":"1","Product_Name":"A","Product_Price":"100","Product_Stock":"1","Product_Type":"Z"}
+	{"Product_ID":"2","Product_Name":"B","Product_Price":"200","Product_Stock":"2","Product_Type":"Y"}
+	{"Product_ID":"3","Product_Name":"C","Product_Price":"300","Product_Stock":"3","Product_Type":"X"}
+	{"Product_ID":"4","Product_Name":"D","Product_Price":"400","Product_Stock":"4","Product_Type":"W"}
+	{"Product_ID":"5","Product_Name":"E","Product_Price":"500","Product_Stock":"5","Product_Type":"V"}
+	{"Product_ID":"6","Product_Name":"F","Product_Price":"600","Product_Stock":"6","Product_Type":"U"}
+]

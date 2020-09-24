@@ -6,7 +6,6 @@
         <title>GFG User Details</title>
         <!-- INCLUDING JQUERY-->
         <script src="https://code.jquery.com/jquery-3.5.1.js"></script> 
-        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
         <!-- CSS FOR STYLING THE PAGE -->
         <style> 
             table { 
@@ -18,9 +17,7 @@
                 text-align: center; 
                 color: #006600; 
                 font-size: xx-large; 
-                font-family: 'Gill Sans',  
-                    'Gill Sans MT', ' Calibri',  
-                    'Trebuchet MS', 'sans-serif'; 
+                font-family: 'Gill Sans', 'Gill Sans MT', ' Calibri', 'Trebuchet MS', 'sans-serif';
             }
             td { 
                 background-color: #E4F5D4; 
@@ -39,36 +36,59 @@
     </head>
     <body>
         <h1>19BIT0346 Aashish Bansal Question 3</h1>
-        <section> 
-            <h1>GeeksForGeeks</h1> 
+        <section>
+            <form>
+                <fieldset>
+                    <legend>Product Name:</legend>
+                    <p>
+                        <label>Select list</label>
+                        <select id = "myList">
+                            <option value = "select">--Select--</option>
+                            <option value = "A">A</option>
+                            <option value = "B">B</option>
+                            <option value = "C">C</option>
+                            <option value = "D">D</option>
+                            <option value = "E">E</option>
+                            <option value = "F">F</option>
+                        </select>
+                    </p>
+                </fieldset>
+                <input type="button" id="submit" value="Submit">
+            </form>
             <!-- TABLE CONSTRUCTION-->
             <table id='table'> 
                 <!-- HEADING FORMATION -->
                 <tr> 
-                    <th>GFG UserHandle</th> 
-                    <th>Practice Problems</th> 
-                    <th>Coding Score</th> 
-                    <th>GFG Articles</th> 
+                    <th>Product ID</th> 
+                    <th>Product Name</th> 
+                    <th>Product Price</th> 
+                    <th>Product Stock</th> 
+                    <th>Product Type</th>
                 </tr>
                 <script> 
-                    $(document).ready(function () { 
-                        // FETCHING DATA FROM JSON FILE 
-                        $.getJSON("gfgdetails.json", function (data) { 
-                            var student = '';
-                            // ITERATING THROUGH OBJECTS 
-                            $.each(data, function (key, value) { 
-                                //CONSTRUCTION OF ROWS HAVING
-                                // DATA FROM JSON OBJECT
-                                student += '<tr>';
-                                student += '<td>' + value.GFGUserName + '</td>';
-                                student += '<td>' + value.NoOfProblems + '</td>';
-                                student += '<td>' + value.TotalScore + '</td>';
-                                student += '<td>' + value.Articles + '</td>';
-                                student += '</tr>';
-                            });
-                            //INSERTING ROWS INTO TABLE  
-                            $('#table').append(student); 
-                        }); 
+                    $(document).ready(function () {
+                        $("#submit").click(function(){
+                            // FETCHING DATA FROM JSON FILE
+                            $.getJSON("productdetails.json", function (data) { 
+                                var student = '';
+                                // ITERATING THROUGH OBJECTS 
+                                $.each(data, function (key, value) { 
+                                    if(key == 'Product_Name' && value==$("#myList").val())
+                                    //CONSTRUCTION OF ROWS HAVING
+                                    // DATA FROM JSON OBJECT
+                                    student += '<tr>';
+                                    student += '<td>' + value.Product_ID + '</td>';
+                                    student += '<td>' + value.Product_Name + '</td>';
+                                    student += '<td>' + value.Product_Price + '</td>';
+                                    student += '<td>' + value.Product_Stock + '</td>';
+                                    student += '<td>' + value.Product_Type + '</td>';
+                                    student += '</tr>';
+                                });
+                                //INSERTING ROWS INTO TABLE  
+                                $('#table').append(student); 
+                            }); 
+                        });
+                        
                     }); 
                 </script> 
         </section>
