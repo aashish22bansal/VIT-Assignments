@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>19BIT0346 Question 1</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<style>
+			table, td{
+				border: 1px solid black;
+				margin: 5%;
+				font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+			}
+			tr:hover {
+				background-color: #ddd;
+			}
+			td {
+				padding: 12px;
+				/*padding-bottom: 12px;*/
+				text-align: left;
+				color: black;
+			}
+			th {
+				padding-top: 12px;
+				padding-bottom: 12px;
+				text-align: left;
+				background-color: #4CAF50;
+				color: white;
+			}
+		</style>
+		
+		<script>
+			$(document).ready(function(){
+				$("#submit").click(function(){
+					details=[
+							{ "student_name":$("#student_name").val(),
+							  "dob": 
+							  {
+								"date":$("#date").val(),
+								"month":$("#month").val(),
+								"year":$("#year").val()
+								}},						 
+							{ "student_name":"marees",
+							  "dob": 
+							  {
+								"date":1,
+								"month":12,
+								"year":1234
+							}},
+							{ "student_name":"mareeswari",
+							"dob": 
+							  {
+								"date":2,
+								"month":23,
+								"year":4321
+							}}
+						];
+						
+						var tbl = $("<table/>").attr("id","mytable");
+						$("#div1").append(tbl);
+						for(var i=0; i<details.length;i++){
+							var tr="<tr>";
+								var td1 = "<td>"+details[i]["student_name"]+"</td>";
+								var td2 = "<td>"+details[i]["dob"]["date"]+"-"+details[i]["dob"]["month"]+"-"+details[i]["dob"]["year"]+"</td>";
+								$("#mytable").append(tr+td1+td2);
+						}
+						});
+						});	</script>
+	</head>
+	<body>
+		<h1>Aashish Bansal 19BIT0346 Question 1</h1>
+		<table style="border: 1px solid black;" id="detail_table">
+			<form id="form1" class="form1class" action="">
+				<tr>
+					<td rowspan="8" style="background-color: #4CAF50;">Personal Details</td>
+					<td><label for="student_name">Enter Name: </label></td>
+					<td><input type="text" id="student_name" placeholder="Enter your name..." required></td>
+				</tr>
+				<tr>
+					<td><label for="dob">Enter Date of Birth: </label></td>
+					<td><input type="number" id="date" required></td>
+					<td><input type="number" id="month" required></td>
+					<td><input type="number" id="year" required></td>
+				</tr>
+			
+				<tr style="align-items: center;">
+					<td colspan="3"><input type="button" value="Submit" id="submit" name="submitbutton"></td>
+				</tr>
+			</form>
+		</table>
+		<p id="display"></p>
+		<div id="div1"></div>
+	</body>
+</html>

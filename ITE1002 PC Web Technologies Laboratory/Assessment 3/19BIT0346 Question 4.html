@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <title>19BIT0346 Question 3</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+
+    <h1>19BIT0346 Aashish Bansal Question 4</h1>
+    <h2>AngularJS Form</h2>
+
+    <form  ng-app="myApp"  ng-controller="validateCtrl" name="myForm" novalidate>
+
+        <p>Username:<br>
+            <input type="text" name="user" ng-model="user" required>
+            <span style="color:red" ng-show="myForm.user.$dirty && myForm.user.$invalid">
+                <span ng-show="myForm.user.$error.required">Username is required.</span>
+            </span>
+        </p>
+
+        <p>Email:<br>
+            <input type="email" name="email" ng-model="email" required>
+            <span style="color:red" ng-show="myForm.email.$dirty && myForm.email.$invalid">
+                <span ng-show="myForm.email.$error.required">Email is required.</span>
+                <span ng-show="myForm.email.$error.email">Invalid email address.</span>
+            </span>
+        </p>
+
+        <p>Phone Number:<br>
+            <input type="number" ng-model="mobile_number" name="mobile_number" ng-pattern="/^[7-9][0-9]{9}$/" required>
+            <span ng-show="myForm.mobile_number.$error.pattern">Please enter valid number.</span>
+        </p>
+
+        <p>Website:<br>
+            <input type="text" ng-model="website" name="website" ng-pattern="(https?:\/\/)?(www\.)[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,4}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)|(https?:\/\/)?(www\.)?(?!ww)[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,4}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)" required>
+            <span ng-show="myForm.website.$error.pattern">Please enter valid website.</span>
+        </p>
+
+        <p>Credit Card:<br>
+            <input type="text" ng-model="blah" payments-validate="VALIDATION_TYPE" />
+        </p>
+
+        <p>
+            <input type='date' id="trandate" class="form-control" ng-model="trandate" required ng-class="{ 'has-error' : userForm.trandate.$error }" />
+            <p ng-show="userForm.trandate.$error" class="help-block">Transaction can't be in future</p>
+        </p>
+
+        <p>
+            <input type="submit" ng-disabled="myForm.user.$dirty && myForm.user.$invalid || myForm.email.$dirty && myForm.email.$invalid">
+        </p>
+
+    </form>
+
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('validateCtrl', function($scope) {
+            $scope.user = 'John Doe';
+            $scope.email = 'john.doe@gmail.com';
+            $scope.mobile_number = "1234567899";
+            $scope.website = "https://www.abc.com";
+            
+            var today = new Date();
+            var dd = today.getDate();
+            var mm = today.getMonth() + 1;
+            var yyyy = today.getFullYear();
+            if (dd < 10) {
+                dd = '0' + dd;
+            }
+            if (mm < 10) {
+                mm = '0' + mm;
+            }
+            today = yyyy + '-' + mm + '-' + dd;
+            document.getElementById("trandate").setAttribute("max", today);
+            $scope.submitForm = function() {
+                if ($scope.userForm.$valid) {
+                    alert('our form is amazing');
+                } else {
+                    console.log("Error");
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>

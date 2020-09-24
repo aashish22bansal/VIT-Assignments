@@ -1,97 +1,363 @@
-<html lang="en"> 
-  
-<head> 
-    <meta charset="UTF-8"> 
-    <title>GFG User Details</title> 
-  
-    <!-- INCLUDING JQUERY-->
-    <script src= "https://code.jquery.com/jquery-3.5.1.js"></script> 
-  
-    <!-- CSS FOR STYLING THE PAGE -->
-    <style> 
-        table { 
-            margin: 0 auto; 
-            font-size: large; 
-            border: 1px solid black; 
-        } 
-  
-        h1 { 
-            text-align: center; 
-            color: #006600; 
-            font-size: xx-large; 
-            font-family: 'Gill Sans',  
-                'Gill Sans MT', ' Calibri',  
-                'Trebuchet MS', 'sans-serif'; 
-        } 
-  
-        td { 
-            background-color: #E4F5D4; 
-            border: 1px solid black; 
-        } 
-  
-        th, 
-        td { 
-            font-weight: bold; 
-            border: 1px solid black; 
-            padding: 10px; 
-            text-align: center; 
-        } 
-  
-        td { 
-            font-weight: lighter; 
-        } 
-    </style> 
-</head> 
-  
-<body> 
-    <section> 
-        <h1>GeeksForGeeks</h1> 
-  
-        <!-- TABLE CONSTRUCTION-->
-        <table id='table'> 
-            <!-- HEADING FORMATION -->
-            <tr> 
-                <th>GFG UserHandle</th> 
-                <th>Practice Problems</th> 
-                <th>Coding Score</th> 
-                <th>GFG Articles</th> 
-            </tr> 
-  
-            <script> 
-                $(document).ready(function () { 
-  
-                    // FETCHING DATA FROM JSON FILE 
-                    $.getJSON("gfgdetails.json",  
-                            function (data) { 
-                        var student = ''; 
-  
-                        // ITERATING THROUGH OBJECTS 
-                        $.each(data, function (key, value) { 
-  
-                            //CONSTRUCTION OF ROWS HAVING 
-                            // DATA FROM JSON OBJECT 
-                            student += '<tr>'; 
-                            student += '<td>' +  
-                                value.GFGUserName + '</td>'; 
-  
-                            student += '<td>' +  
-                                value.NoOfProblems + '</td>'; 
-  
-                            student += '<td>' +  
-                                value.TotalScore + '</td>'; 
-  
-                            student += '<td>' +  
-                                value.Articles + '</td>'; 
-  
-                            student += '</tr>'; 
-                        }); 
-                          
-                        //INSERTING ROWS INTO TABLE  
-                        $('#table').append(student); 
-                    }); 
-                }); 
-            </script> 
-    </section> 
-</body> 
-  
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>19BIT0346 Question 1</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+			<!--function json_data(){
+				"$schema": "http://json-schema.org/draft-04/schema#",
+				"title": "Students_information",
+				"description": "Contains data of 20 students",
+				"type": "object",
+				"properties": {
+					"student1": {
+						"$schema": "http://json-schema.org/draft-04/schema#",
+						"title": "Student1",
+						"description": "Contains data of 1 student",
+						"type": "object",
+						"properties": {
+							"name":{
+								"type": "string",
+								"description": "name of the student..."
+							}
+						}
+					}
+				}
+			}-->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#submit").click(function(){
+					function display(){
+						
+						/*
+						const details = getFormDataAsJSON()
+						/*document.getElementById("display").innerHTML = details + "<br>";*/
+						/*
+						const formToJSON = elements => [].reduce.call(elements, (data, element) => {
+							data[element.name] = element.value;
+							return data;
+						}, {});
+
+						const handleFormSubmit = event => {
+							// Stop the form from submitting since we’re handling that with AJAX.
+							event.preventDefault();
+
+							// TODO: Call our function to get the form data.
+							const data = {};
+
+							// Demo only: print the form data onscreen as a formatted JSON object.
+							const dataContainer = document.getElementsByClassName('form1class')[0];
+
+							// Use `JSON.stringify()` to make the output valid, human-readable JSON.
+							dataContainer.textContent = JSON.stringify(data, null, "  ");
+
+							// ...this is where we’d actually do something with the form data...
+						}
+
+						const form = document.getElementsByClassName('form1class')[0];
+						form.addEventListener('submit', handleFormSubmit);
+
+						const formToJSON_deconstructed = elements => {
+							// This is the function that is called on each element of the array.
+							const reducerFunction = (data, element) => {
+								// Add the current field to the object.
+								data[element.name] = element.value;
+								// For the demo only: show each step in the reducer’s progress.
+								console.log(JSON.stringify(data));
+								return data;
+							};
+							// This is used as the initial value of `data` in `reducerFunction()`.
+							const reducerInitialValue = {};
+							// To help visualize what happens, log the inital value.
+							console.log('Initial `data` value:', JSON.stringify(reducerInitialValue));
+							// Now we reduce by `call`-ing `Array.prototype.reduce()` on `elements`.
+							const formData = [].reduce.call(elements, reducerFunction, reducerInitialValue);
+							// The result is then returned for use elsewhere.
+							return formData;
+						};
+
+						const isValidElement = element => {
+							return element.name && element.value;
+						};
+
+						const formToJSON = elements => [].reduce.call(elements, (data, element) => {
+							// Make sure the element has the required properties and should be added.
+							if (isValidElement(element) && isValidValue(element)) {
+								data[element.name] = element.value;
+							}
+							return data;
+						}, {});
+						*/
+
+						/*
+						var details = $("form: form1").serializeObject();
+						console.log(details);
+						document.getElementById("display").innerHTML += details;
+						*/
+
+						//console.log($('form').serialize());
+						var details = new FormData(document.querySelector('form'));
+						function data(details){
+							$("#allowed").shoe();
+							$.each(detail.location,function(index,element){
+								$('#places').append("<p id='location_" + index + "'> '" + JSON.stringify(element) + "</p>");
+							});
+							console.log(details);
+						}
+						/*
+						var details = [
+							{ student_name      :$(document).getElementById("student_name").value},
+							{ dob               :$(document).getElementById("dob").value},
+							{ father_name       :$(document).getElementById("father_name").value},
+							{ mother_name       :$(document).getElementById("mother_name").value},
+							{ blood_group       :$(document).getElementById("blood_group").value},
+							{ blood_group_type  :$(document).getElementById("blood_group_type").value},
+							{ email			    :$(document).getElementById("email").value},
+							{ landline		    :$(document).getElementById("landline").value},
+							{ mobile			:$(document).getElementById("mobile").value},
+							{ address_door_no   :$(document).getElementById("address_door_no").value},
+							{ address_street_no :$(document).getElementById("address_street_no").value},
+							{ address_place_name:$(document).getElementById("address_place_name").value},
+							{ address_pincode   :$(document).getElementById("address_pincode").value},
+							{ address_country   :$(document).getElementById("address_country").value},
+							{ degree_ug		    :$(document).getElementById("degree_ug").value},
+							{ degree_pg		    :$(document).getElementById("degree_pg").value},
+							{ degree_other      :$(document).getElementById("degree_other").value}
+						];
+						var tbl = $("<table/>").attr("id","mytable");
+						$("#div1").append(tbl);
+						for(var i=0; i<details.length;i++){
+							var tr="<tr>";
+								var td1 = "<td>"+details[i][student_name]+"</td>";
+								var td2 = "<td>"+details[i][dob]+"</td>";
+								var td3 = "<td>"+details[i][father_name]+"</td>";
+								var td4 = "<td>"+details[i][mother_name]+"</td>";
+								var td5 = "<td>"+details[i][blood_group]+"</td>";
+								var td6 = "<td>"+details[i][blood_group_type]+"</td>";
+								var td7 = "<td>"+details[i][email]+"</td>";
+								var td8 = "<td>"+details[i][landline]+"</td>";
+								var td9 = "<td>"+details[i][mobile]+"</td>";
+								var td10 = "<td>"+details[i][address_door_no]+"</td>";
+								var td11 = "<td>"+details[i][address_street_no]+"</td>";
+								var td12 = "<td>"+details[i][address_place_name]+"</td>";
+								var td13 = "<td>"+details[i][address_pincode]+"</td>";
+								var td14 = "<td>"+details[i][address_country]+"</td>";
+								var td15 = "<td>"+details[i][degree_ug]+"</td>";
+								var td16 = "<td>"+details[i][degree_other]+"</td>";
+							var td17 = "<td>"+details[i][degree_other]+"</td></tr>";
+							$("#mytable").append(tr+td1+td2+td3+td4+td5+td6+td7+td8+td9+td10+td11+td12+td13+td14+td15+td16+td17);
+						}
+						/*
+						var dataAsJsonString = JSON.stringify(details);
+						$('#json_data').val(dataAsJsonString);
+						var getDataBackOut = $.parseJSON($('#json_data').val());
+						*/
+						
+						document.getElementById("display").innerHTML = "<table>"+
+								"<th>"+
+									"<tr>"+
+										"<td colspan='8'>Personal Details</td>"+
+										"<td colspan='5'>Address Details</td>"+
+										"<td colspan='3'>Educational Degree</td>"+
+									"</tr>"+
+									"<tr>"+
+										"<td>Student Name</td>"+
+										"<td>Date of Birth</td>"+
+										"<td>Father Name</td>"+
+										"<td>Mother Name</td>"+
+										"<td>Blood Group</td>"+
+										"<td>Email</td>"+
+										"<td>Landline</td>"+
+										"<td>Mobile</td>"+
+										"<td>Door No.</td>"+
+										"<td>Street No.</td>"+
+										"<td>Area</td>"+
+										"<td>PIN Code</td>"+
+										"<td>Country</td>"+
+										"<td>UG Qualification</td>"+
+										"<td>PG Qualification</td>"+
+										"<td>Other Qualification</td>"+
+									"</tr>"+
+								"</th>"+
+								"<tr>"+
+									"<td>"+
+										document.getElementById('student_name').value
+									"</td>"+
+									"<td>"+
+										document.getElementById('dob').value
+									"</td>"+
+									"<td>"+
+										document.getElementById('father_name').value
+									"</td>"+
+									"<td>"+
+										details.mother_name
+									"</td>"+
+									"<td>"+
+										details.blood_group
+									"</td>"+
+									"<td>"+
+										details.blood_group_type
+									"</td>"+
+									"<td>"+
+										details.email
+									"</td>"+
+									"<td>"+
+										details.landline
+									"</td>"+
+									"<td>"+
+										details.mobile
+									"</td>"+
+									"<td>"+
+										details.address_door_no
+									"</td>"+
+									"<td>"+
+										details.address_street_no
+									"</td>"+
+									"<td>"+
+										details.address_place_name
+									"</td>"+
+									"<td>"+
+										details.address_pincode
+									"</td>"+
+									"<td>"+
+										details.address_country
+									"</td>"+
+									"<td>"+
+										details.degree_ug
+									"</td>"+
+									"<td>"+
+										details.degree_pg
+									"</td>"+
+									"<td>"+
+										details.degree_other
+									"</td>"+
+								"</tr>"+
+							"</table>";
+							
+						/*
+						document.getElementById("display").innerHTML = document.getElementById('student_name').value;
+						var z = output_table();
+						document.getElementById("display").innerHTML = z;*/
+					}
+				});
+			});
+			
+			
+		</script>
+	</head>
+	<body>
+		<h1>Aashish Bansal 19BIT0346 Question 1</h1>
+		<style>
+			table, td{
+				border: 1px solid black;
+				margin: 5%;
+				font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+			}
+			tr:hover {
+				background-color: #ddd;
+			}
+			td {
+				padding: 12px;
+				/*padding-bottom: 12px;*/
+				text-align: left;
+				color: black;
+			}
+			th {
+				padding-top: 12px;
+				padding-bottom: 12px;
+				text-align: left;
+				background-color: #4CAF50;
+				color: white;
+			}
+		</style>
+		<table style="border: 1px solid black;" id="detail_table">
+			<form id="form1" class="form1class" action="">
+				<tr>
+					<td rowspan="8" style="background-color: #4CAF50;">Personal Details</td>
+					<td><label for="student_name">Enter Name: </label></td>
+					<td><input type="text" name="student_name" id="student_name" placeholder="Enter your name..." required></td>
+				</tr>
+				<tr>
+					<td><label for="dob">Enter Date of Birth: </label></td>
+					<td><input type="date" name="dob" id="dob" required></td>
+				</tr>
+				<tr>
+					<td><label for="father_name">Enter Father's Name: </label></td>
+					<td><input type="text" name="father_name" id="father_name" placeholder="Enter Father name..." required></td>
+				</tr>
+				<tr>
+					<td><label for="mother_name">Enter Mother's Name: </label></td>
+					<td><input type="text" name="mother_name" id="mother_name" placeholder="Enter Mother name..." required></td>
+				</tr>
+				<tr>
+					<td><label for="blood_group">Enter Blood Group: </label></td>
+					<td>
+						<select name="blood_group_type">
+							<option value="Choose_Blood_Group">--choose--</option>
+							<option value="A -ve">A -ve</option>
+							<option value="A +ve">A +ve</option>
+							<option value="B -ve">B -ve</option>
+							<option value="B +ve">B +ve</option>
+							<option value="o -ve">O -ve</option>
+							<option value="O +ve">O +ve</option>
+							<option value="AB -ve">AB -ve</option>
+							<option value="AB +ve">AB +ve</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td><label for="email">Enter your Email: </label></td>
+					<td><input type="text" name="email" id="email" placeholder="Enter your email..." required></td>
+				</tr>
+				<tr>
+					<td><label for="landline">Enter your Landline Number: </label></td>
+					<td><input type="number" name="landline" id="landline" placeholder="Enter your landline..." required></td>
+				</tr>
+				<tr>
+					<td><label for="mobile">Enter your Mobile Number: </label></td>
+					<td><input type="number" name="mobile" id="mobile" placeholder="Enter your mobile..." required></td>
+				</tr>
+				<tr>
+					<td rowspan="5" style="background-color: #4CAF50;"><label for="address">Address Details</label></td>
+					<td><label for="address_door_no">Enter Door No.: </label></td>
+					<td><input type="text" name="address_door_no" id="address_door_no" placeholder="Enter your Door No..." required/></td>
+				</tr>
+				<tr>
+					<td><label for="address_street_no">Enter Street No.: </label></td>
+					<td><input type="text" name="address_street_no" id="address_street_no" placeholder="Enter your Street..." required/></td>
+				</tr>
+				<tr>
+					<td><label for="address_place_name">Enter the Area: </label></td>
+					<td><input type="text" name="address_place_name" id="address_place_name" placeholder="Enter the Area" required/></td>
+				</tr>
+				<tr>
+					<td><label for="address_pincode">Enter the Pin Code: </label></td>
+					<td><input type="number" name="address_pincode" id="address_pincode" placeholder="Enter the PIN Code..." required/></td>
+				</tr>
+				<tr>
+					<td><label for="address_country">Enter the Country: </label></td>
+					<td><input type="text" name="address_country" id="address_country" placeholder="Enter the Country..." required/></td>
+				</tr>
+				<tr>
+					<td rowspan="3" style="background-color: #4CAF50;">Educational Details</td>
+					<td><label for="degree_ug">Enter Undergraduate Qualification: </label></td>
+					<td><input type="text" name="degree_ug" id="degree_ug" placeholder="Enter UG Qualification..." required/></td>
+				</tr>
+				<tr>
+					<td><label for="degree_pg">Enter Postgraduation Qualification: </label></td>
+					<td><input type="text" name="degree_pg" id="degree_pg" placeholder="Enter PG Qualification..." required/></td>
+				</tr>
+				<tr>
+					<td><label for="degree_other">Enter Other Qualifications: </label></td>
+					<td><input type="text" name="degree_other" id="degree_other" placeholder="Enter other Qualifications...[Enter NA if None]" required/></td>
+				</tr>
+				<tr style="align-items: center;">
+					<td colspan="3"><input type="button" value="Submit" id="submit" onclick="display()" name="submitbutton"></td>
+				</tr>
+			</form>
+		</table>
+		<p id="display"></p>
+		<div id="div1"></div>
+	</body>
 </html>
