@@ -44,12 +44,12 @@
                         <label>Select list</label>
                         <select id = "myList">
                             <option value = "select">--Select--</option>
-                            <option value = "A">A</option>
-                            <option value = "B">B</option>
-                            <option value = "C">C</option>
-                            <option value = "D">D</option>
-                            <option value = "E">E</option>
-                            <option value = "F">F</option>
+                            <option id = "A" value = "A">A</option>
+                            <option id = "B" value = "B">B</option>
+                            <option id = "C" value = "C">C</option>
+                            <option id = "D" value = "D">D</option>
+                            <option id = "E" value = "E">E</option>
+                            <option id = "F" value = "F">F</option>
                         </select>
                     </p>
                 </fieldset>
@@ -70,25 +70,25 @@
                         $("#submit").click(function(){
                             // FETCHING DATA FROM JSON FILE
                             $.getJSON("productdetails.json", function (data) { 
-                                var student = '';
-                                // ITERATING THROUGH OBJECTS 
-                                $.each(data, function (key, value) { 
-                                    if(key == 'Product_Name' && value==$("#myList").val())
-                                    //CONSTRUCTION OF ROWS HAVING
-                                    // DATA FROM JSON OBJECT
-                                    student += '<tr>';
-                                    student += '<td>' + value.Product_ID + '</td>';
-                                    student += '<td>' + value.Product_Name + '</td>';
-                                    student += '<td>' + value.Product_Price + '</td>';
-                                    student += '<td>' + value.Product_Stock + '</td>';
-                                    student += '<td>' + value.Product_Type + '</td>';
-                                    student += '</tr>';
+                                var product = '';
+                                // ITERATING THROUGH OBJECTS
+                                $.each(data, function (key, value) {
+                                    if(key == 'Product_Name', value==$("#").val()){
+                                        //CONSTRUCTION OF ROWS HAVING
+                                        // DATA FROM JSON OBJECT
+                                        product += '<tr>';
+                                        product += '<td>' + value.Product_ID + '</td>';
+                                        product += '<td>' + value.Product_Name + '</td>';
+                                        product += '<td>' + value.Product_Price + '</td>';
+                                        product += '<td>' + value.Product_Stock + '</td>';
+                                        product += '<td>' + value.Product_Type + '</td>';
+                                        product += '</tr>';
+                                    }
                                 });
                                 //INSERTING ROWS INTO TABLE  
-                                $('#table').append(student); 
+                                $('#table').append(product); 
                             }); 
                         });
-                        
                     }); 
                 </script> 
         </section>
