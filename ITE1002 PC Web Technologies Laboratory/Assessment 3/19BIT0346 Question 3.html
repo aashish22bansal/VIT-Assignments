@@ -1,109 +1,40 @@
-<!DOCTYPE html>
 <html>
-    <head>
-        <title>19BIT0346 Question 3</title>
-        <meta charset="UTF-8"> 
-        <title>GFG User Details</title>
-        <!-- INCLUDING JQUERY-->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
-        <!-- CSS FOR STYLING THE PAGE -->
-        <style> 
-            table { 
-                margin: 0 auto; 
-                font-size: large; 
-                border: 1px solid black; 
-            }
-            h1 { 
-                text-align: center; 
-                color: #006600; 
-                font-size: xx-large; 
-                font-family: 'Gill Sans', 'Gill Sans MT', ' Calibri', 'Trebuchet MS', 'sans-serif';
-            }
-            td { 
-                background-color: #E4F5D4; 
-                border: 1px solid black; 
-            } 
-            th, td { 
-                font-weight: bold; 
-                border: 1px solid black; 
-                padding: 10px; 
-                text-align: center; 
-            }
-            td { 
-                font-weight: lighter; 
-            } 
-        </style>
-    </head>
-    <body>
-        <h1>19BIT0346 Aashish Bansal Question 3</h1>
-        <section>
-            <form>
-                <fieldset>
-                    <legend>Product Name:</legend>
-                    <p>
-                        <label>Select list</label>
-                        <select id = "myList">
-                            <option value = "select">--Select--</option>
-                            <option id = "A" value = "A">A</option>
-                            <option id = "B" value = "B">B</option>
-                            <option id = "C" value = "C">C</option>
-                            <option id = "D" value = "D">D</option>
-                            <option id = "E" value = "E">E</option>
-                            <option id = "F" value = "F">F</option>
-                        </select>
-                    </p>
-                </fieldset>
-                <input type="button" id="submit" value="Submit" onclick="gfg_Run()">
-            </form>
-            <p id="display"></p>
-            <!--script>
-                $(document).ready(function () {
-                    $("#submit").click(function(){
-                        var key_ = document.getElementById("display");
-                        key_.innerHTML = "Display<br>";
-                        function gfg_Run(){
-                            key_.innerHTML = $("#display option:nth-child(1)").val();
-                        }
-                        var value_ = document.getElementById("myList option:nth-child(1)").val();
-                    });
-                });
-            </script-->
-            <!-- TABLE CONSTRUCTION -->
-            <table id='table'> 
-                <!-- HEADING FORMATION -->
-                <tr> 
-                    <th>Product ID</th> 
-                    <th>Product Name</th> 
-                    <th>Product Price</th> 
-                    <th>Product Stock</th> 
-                    <th>Product Type</th>
-                </tr>
-                <script> 
-                    $(document).ready(function () {
-                        $("#submit").click(function(){
-                            // FETCHING DATA FROM JSON FILE
-                            $.getJSON("productdetails.json", function (data) { 
-                                var product = '';
-                                // ITERATING THROUGH OBJECTS
-                                $.each(data, function (key, value) {
-                                    if(key == 'Product_Name', value==$("#").val()){
-                                        //CONSTRUCTION OF ROWS HAVING
-                                        // DATA FROM JSON OBJECT
-                                        product += '<tr>';
-                                        product += '<td>' + value.Product_ID + '</td>';
-                                        product += '<td>' + value.Product_Name + '</td>';
-                                        product += '<td>' + value.Product_Price + '</td>';
-                                        product += '<td>' + value.Product_Stock + '</td>';
-                                        product += '<td>' + value.Product_Type + '</td>';
-                                        product += '</tr>';
-                                    }
-                                });
-                                //INSERTING ROWS INTO TABLE  
-                                $('#table').append(product); 
-                            }); 
-                        });
-                    }); 
-                </script> 
-        </section>
-    </body>
+<head>
+<script type="text/javascript">
+function loadJSON(){
+var data_file="productdetails.json";
+var http_request=new XMLHttpRequest();
+http_request.onreadystatechange=function(){
+if(http_request.readyState==4){
+var jsonObj=JSON.parse(http_request.responseText);
+document.getElementById("pid").innerHTML=jsonObj[document.getElementById("choose").value].id;
+document.getElementById("name").innerHTML=jsonObj[document.getElementById("choose").value].name;
+document.getElementById("price").innerHTML=jsonObj[document.getElementById("choose").value].price;
+document.getElementById("stock").innerHTML=jsonObj[document.getElementById("choose").value].stock;
+document.getElementById("type").innerHTML=jsonObj[document.getElementById("choose").value].type;
+}
+}
+http_request.open("GET", data_file, true);
+http_request.send(); 
+}
+</script>
+</head>
+<body>
+
+<select id="choose">
+<option value="A">A</option>
+<option value="B">B</option>
+<option value="C">C</option>
+<option value="D">D</option>
+<option value="E">E</option>
+<option value="F">F</option>
+</select>
+<button onclick="loadJSON()">Availability</button>
+<br>
+Product ID:<span id="pid" value="1"></span><br>
+Name:<span id="name" value="0"></span><br>
+Price:<span id="price" value="2"></span><br>
+Stock:<span id="stock" value="3"></span><br>
+Type:<span id="type" value="4"></span><br>
+</body>
 </html>
