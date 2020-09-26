@@ -1,40 +1,39 @@
 <html>
-<head>
-<script type="text/javascript">
-function loadJSON(){
-var data_file="productdetails.json";
-var http_request=new XMLHttpRequest();
-http_request.onreadystatechange=function(){
-if(http_request.readyState==4){
-var jsonObj=JSON.parse(http_request.responseText);
-document.getElementById("pid").innerHTML=jsonObj[document.getElementById("choose").value].id;
-document.getElementById("name").innerHTML=jsonObj[document.getElementById("choose").value].name;
-document.getElementById("price").innerHTML=jsonObj[document.getElementById("choose").value].price;
-document.getElementById("stock").innerHTML=jsonObj[document.getElementById("choose").value].stock;
-document.getElementById("type").innerHTML=jsonObj[document.getElementById("choose").value].type;
-}
-}
-http_request.open("GET", data_file, true);
-http_request.send(); 
-}
-</script>
-</head>
-<body>
-
-<select id="choose">
-<option value="A">A</option>
-<option value="B">B</option>
-<option value="C">C</option>
-<option value="D">D</option>
-<option value="E">E</option>
-<option value="F">F</option>
-</select>
-<button onclick="loadJSON()">Availability</button>
-<br>
-Product ID:<span id="pid" value="1"></span><br>
-Name:<span id="name" value="0"></span><br>
-Price:<span id="price" value="2"></span><br>
-Stock:<span id="stock" value="3"></span><br>
-Type:<span id="type" value="4"></span><br>
-</body>
+    <head>
+        <script type="text/javascript">
+            function loadJSON(){
+                var data_file="productdetails.json";
+                var http_request=new XMLHttpRequest();
+                http_request.onreadystatechange=function(){
+                    if(http_request.readyState==4){
+                    var jsonObj=JSON.parse(http_request.responseText);
+                        document.getElementById("pid").innerHTML=jsonObj[document.getElementById("choose").value].id;
+                        document.getElementById("name").innerHTML=jsonObj[document.getElementById("choose").value].name;
+                        document.getElementById("price").innerHTML=jsonObj[document.getElementById("choose").value].price;
+                        document.getElementById("stock").innerHTML=jsonObj[document.getElementById("choose").value].stock;
+                        document.getElementById("type").innerHTML=jsonObj[document.getElementById("choose").value].type;
+                    }
+                }
+                http_request.open("GET", data_file, true);
+                http_request.send(); 
+            }
+        </script>
+    </head>
+    <body>
+        <select id="choose">
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
+            <option value="E">E</option>
+            <option value="F">F</option>
+        </select>
+        <button onclick="loadJSON()">Availability</button>
+        <br>
+        Product ID:<span id="pid" value="1"></span><br>
+        Name:<span id="name" value="0"></span><br>
+        Price:<span id="price" value="2"></span><br>
+        Stock:<span id="stock" value="3"></span><br>
+        Type:<span id="type" value="4"></span><br>
+    </body>
 </html>
