@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<script src="productdetails.json"></script>
+		<script type=text/javascript>
+			function getD(){
+				var e = document.getElementById("p");
+				var text = e.options[e.selectedIndex].text;
+				var h = document.getElementById("here");
+				if(text=="--select product--")
+				{
+					h.innerHTML="NO PRODUCT SELECTED <BR> please select a product";
+				}
+				else
+				{
+					for( var i=0;i<4;i++)
+					{
+						if( text == p_details[i]["ProductName"])
+						{
+							h.innerHTML="<b>Product Id: </b>"+p_details[i]["Product_ID"]+"<br>"
+							h.innerHTML+="<b>Product Name: </b>"+p_details[i]["Product_Name"]+"<br>"
+							h.innerHTML+="<b>Price: </b>"+p_details[i]["Product_Price"]+"<br>"
+							h.innerHTML+="<b>Stock: </b>"+p_details[i]["Product_Stock"]+"<br>"
+							h.innerHTML+="<b>Type: </b>"+p_details[i]["Product_Type"]+"<br>"
+						}
+						else
+						{
+							continue;
+						}
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Product Details</h1>
+		<br><br>
+		<select id="p" size=1>
+			<option>--select product--</option>
+			<option value="A">A</option>
+			<option value="B">B</option>
+			<option value="C">C</option>
+			<option value="D">D</option>
+			<option value="E">E</option>
+			<option value="F">F</option>
+		</select>
+		<button onClick="getD()">Availability</button><br><br>
+		<p id="here"></p>
+	</body>
+</html>

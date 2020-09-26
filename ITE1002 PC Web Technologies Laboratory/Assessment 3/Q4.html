@@ -8,49 +8,41 @@
         <p>Your name(required)<br>
             <input type="text" size="50" name="user" ng-model="user" required>
             <span style="color:red" ng-show="myForm.user.$dirty && myForm.user.$invalid">
-<span ng-show="myForm.user.$error.required"> Name is required.</span>
+                <span ng-show="myForm.user.$error.required"> Name is required.</span>
             </span>
         </p>
         <p>Your Email (required)<br>
             <input type="email" size="50" name="email" ng-model="email" required>
             <span style="color:red" ng-show="myForm.email.$dirty && myForm.email.$invalid">
-<span ng-show="myForm.email.$error.required">Email is required.</span>
+                <span ng-show="myForm.email.$error.required">Email is required.</span>
             <span ng-show="myForm.email.$error.email">Invalid email address.</span>
             </span>
         </p>
         <p>Your Phone<br>
             <input type="tel" size="50" ng-model="mobile_number" name="mobile_number" ng-pattern="/^[7-9][0-9]{9}$/" required>
             <span ng-show="myForm.mobile_number.$error.pattern">Please enter valid number!</span>
-            <span style="color:red" ng-show="myForm.email.$dirty && myForm.Phone.$invalid">           
-            </span>
+            <span style="color:red" ng-show="myForm.email.$dirty && myForm.Phone.$invalid"></span>
         </p>
         <p>Website<br>
-
             <input type="url" size="50" name="Website" ng-model="Website" ng-pattern="/^(http[s]?:\/\/){0,1}(www\.){0,1}[a-zA-Z0-9\.\-]+\.[a-zA-Z]{2,5}[\.]{0,1}/" required>
             <span ng-show="myForm.Website.$error.pattern">Invalid url</span>
-            <span style="color:red" ng-show="myForm.Website.$dirty && myForm.Website.$invalid">
-  
-            </span>
+            <span style="color:red" ng-show="myForm.Website.$dirty && myForm.Website.$invalid"></span>
         </p>
 
         <p>Credit Card<br>
             <input type="tel" size="50" name="CC" ng-model="CC" ng-pattern="/^[0-9]{18}$/" required>
-
             <span style="color:red" ng-show="myForm.CC.$dirty && myForm.CC.$invalid">
                 <span ng-show="myForm.CC.$error.pattern">Invalid Credit card</span>
-
             </span>
         </p>
         <p>Date Of Birth<br>
             <input type="date" name="DOB" size="50" ng-model="DOB" placeholder="dd/mmm/yyyy" required>
-
             <span style="color:red" ng-show="myForm.DOB.$dirty && myForm.DOB.$invalid">
-            <span ng-show="myForm.DOB.$error.date">Invalid Date Of Birth</span>
+                <span ng-show="myForm.DOB.$error.date">Invalid Date Of Birth</span>
             </span>
         </p>
         <p>
-            <input type="submit" ng-disabled="myForm.user.$dirty && myForm.user.$invalid || myForm.email.$dirty &&
-myForm.email.$invalid">
+            <input type="submit" ng-disabled="myForm.user.$dirty && myForm.user.$invalid || myForm.email.$dirty && myForm.email.$invalid">
         </p>
     </form>
     <script>
