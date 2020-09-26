@@ -5,7 +5,7 @@
         <meta charset="UTF-8"> 
         <title>GFG User Details</title>
         <!-- INCLUDING JQUERY-->
-        <script src="https://code.jquery.com/jquery-3.5.1.js"></script> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
         <!-- CSS FOR STYLING THE PAGE -->
         <style> 
             table { 
@@ -53,9 +53,22 @@
                         </select>
                     </p>
                 </fieldset>
-                <input type="button" id="submit" value="Submit">
+                <input type="button" id="submit" value="Submit" onclick="gfg_Run()">
             </form>
-            <!-- TABLE CONSTRUCTION-->
+            <p id="display"></p>
+            <!--script>
+                $(document).ready(function () {
+                    $("#submit").click(function(){
+                        var key_ = document.getElementById("display");
+                        key_.innerHTML = "Display<br>";
+                        function gfg_Run(){
+                            key_.innerHTML = $("#display option:nth-child(1)").val();
+                        }
+                        var value_ = document.getElementById("myList option:nth-child(1)").val();
+                    });
+                });
+            </script-->
+            <!-- TABLE CONSTRUCTION -->
             <table id='table'> 
                 <!-- HEADING FORMATION -->
                 <tr> 

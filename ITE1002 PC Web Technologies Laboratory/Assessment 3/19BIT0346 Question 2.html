@@ -1,38 +1,52 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-    <head>
-        <title>19BIT0346 Question 2</title>
-        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-    </head>
-    <!---->
-    <body ng-app="myapp">
-        <script type="text/javascript">
-            var app = angular.module('myapp',[]);
-            function start(){
-                var user_input = document.getElementById("input").value;
-                if(user_input.value == 1){
-                    app.controller()
-                }
-                else if(user_input == 2){}
-                else if(user_input == 3){}
-                else{
-                    document.getElementById("home").innerHTML += "Not a valid input! Please refresh to Enter again...";
-                }
-                document.getElementById("home").innerHTML = ""
-            }
-        </script>
-        <h1>Welcome to the World of Books</h1>
-        <p>
-            <label>The menu of options:</label>
-            <ol>
-                <li ng-controller="order">Order a book</li>
-                <li ng-controller="add">Add a Book</li>
-                <li ng-controller="remove">Remove a Book</li>
-            </ol>
-            <form id="user_input">
-                Enter your choice: <input type="number" name="input" id="input" onclick="start()" required/>
-            </form>
-        </p>
-        <p id="home"></p>
-    </body>
+	<head>
+		<meta charset="utf-8">
+		<title>19BIT0346 Question 2</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	</head>
+	<body ng-app="ShoppingList" ng-controller="myCtrl">
+		<script>
+			var app = angular.module("ShoppingList", []);
+			app.controller("myCtrl", function($scope) {
+				$scope.products = ["Web Technologies","Operating Systems","Database Systems","Computer Architecture"];
+					$scope.addItem = function(){
+						$scope.errortext = "";
+						if(!$scope.addMe){
+							return;
+						}
+						if($scope.products.indexOf($scope.addMe) == -1){
+							$scope.products.push($scope.addMe);
+						}
+						else {
+							$scope.error = "The item is already in your shopping list.";
+						}
+					}
+					$scope.removeItem = function(x){
+					$scope.error ="";
+					$scope.products.splice(x, 1);
+				}
+			});
+		</script>
+		<div ng-app="ShoppingList" ng-cloak ngcontroller="myCtrl" style="max-width:400px;">
+			<header>
+				<h3>Books</h3>
+			</header>
+			<ul class="w3-ul">
+				<li ng-repeat="x in products" class="w3-padding16">{{x}}
+				<span ng-click="removeItem($index)" style="cursor:pointer;" class="w3-right w3-marginright">×</span>
+				</li>
+			</ul>
+			<div class="w3-row w3-margin-top">
+				<div class="w3-col s10">
+					<input placeholder="Add shopping items here" ng-model="addMe" class="w3-input w3-border w3-padding">
+				</div>
+				<div class="w3-col s2">
+					<button ng-click="addItem()">ADD BOOK</button>
+				</div>
+			<p>{{error}}</p>
+			</div>
+		</div>
+	</body>
 </html>

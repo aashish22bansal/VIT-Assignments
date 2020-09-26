@@ -37,10 +37,11 @@
         <p>Credit Card:<br>
             <input type="text" ng-model="blah" payments-validate="VALIDATION_TYPE" />
         </p>
+		
 
-        <p>
-            <input type='date' id="trandate" class="form-control" ng-model="trandate" required ng-class="{ 'has-error' : userForm.trandate.$error }" />
-            <p ng-show="userForm.trandate.$error" class="help-block">Transaction can't be in future</p>
+        <p>Date of Birth:<br>
+            <input type='text' id="date" class="form-control" ng-model="dob" required ng-pattern="^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/([12][0-9]{3})$" />
+            <p ng-show="userForm.trandate.$error" class="help-block">Invalid Date Of Birth</p>
         </p>
 
         <p>
