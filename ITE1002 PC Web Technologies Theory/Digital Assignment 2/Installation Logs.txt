@@ -1,8 +1,8 @@
 Your environment has been set up for using Node.js 12.18.4 (x64) and npm.
 
-C:\Users\aashi>cd C:\xampp\htdocs\VIT-Assignments\ITE1002 PC Web Technologies Theory\Digital Assignment 2
+C:\Users\aashi>cd C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Theory\Digital Assignment 2
 
-C:\xampp\htdocs\VIT-Assignments\ITE1002 PC Web Technologies Theory\Digital Assignment 2>npm init
+C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Theory\Digital Assignment 2>npm init
 This utility will walk you through creating a package.json file.
 It only covers the most common items, and tries to guess sensible defaults.
 
@@ -13,24 +13,22 @@ Use `npm install <pkg>` afterwards to install a package and
 save it as a dependency in the package.json file.
 
 Press ^C at any time to quit.
-package name: (digital-assignment 2) Digital_Assignment_2
-Sorry, name can no longer contain capital letters.
 package name: (digital-assignment 2) digital_assignment_2
 version: (1.0.0)
-description: this is for the digital assignment
-entry point: (Creating_a_Server_Using_node.js) app.js
+description:
+entry point: (Creating_a_Server_Using_node.js)
 test command:
 git repository:
 keywords:
 author:
 license: (ISC)
-About to write to C:\xampp\htdocs\VIT-Assignments\ITE1002 PC Web Technologies Theory\Digital Assignment 2\package.json:
+About to write to C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Theory\Digital Assignment 2\package.json:
 
 {
   "name": "digital_assignment_2",
   "version": "1.0.0",
-  "description": "this is for the digital assignment",
-  "main": "app.js",
+  "description": "",
+  "main": "Creating_a_Server_Using_node.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -41,33 +39,36 @@ About to write to C:\xampp\htdocs\VIT-Assignments\ITE1002 PC Web Technologies Th
 
 Is this OK? (yes) yes
 
-C:\xampp\htdocs\VIT-Assignments\ITE1002 PC Web Technologies Theory\Digital Assignment 2>npm install express --save
+C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Theory\Digital Assignment 2>npm install express --save
 npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN digital_assignment_2@1.0.0 No description
 npm WARN digital_assignment_2@1.0.0 No repository field.
 
 + express@4.17.1
-added 50 packages from 37 contributors and audited 50 packages in 13.798s
+added 50 packages from 37 contributors and audited 50 packages in 9.112s
 found 0 vulnerabilities
 
 
-C:\xampp\htdocs\VIT-Assignments\ITE1002 PC Web Technologies Theory\Digital Assignment 2>npm install jade --save
+C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Theory\Digital Assignment 2>npm install jade --save
 npm WARN deprecated jade@1.11.0: Jade has been renamed to pug, please install the latest version of pug instead of jade
-npm WARN deprecated transformers@2.1.0: Deprecated, use jstransformer
 npm WARN deprecated constantinople@3.0.2: Please update to at least constantinople 3.1.1
+npm WARN deprecated transformers@2.1.0: Deprecated, use jstransformer
+npm WARN digital_assignment_2@1.0.0 No description
 npm WARN digital_assignment_2@1.0.0 No repository field.
 
 + jade@1.11.0
-added 47 packages from 105 contributors and audited 97 packages in 12.969s
+added 47 packages from 105 contributors and audited 97 packages in 11.805s
 found 4 vulnerabilities (3 low, 1 critical)
   run `npm audit fix` to fix them, or `npm audit` for details
 
-C:\xampp\htdocs\VIT-Assignments\ITE1002 PC Web Technologies Theory\Digital Assignment 2>npm install nano --save
+C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Theory\Digital Assignment 2>npm install nano --save
 npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
 npm WARN deprecated har-validator@5.1.5: this library is no longer supported
+npm WARN digital_assignment_2@1.0.0 No description
 npm WARN digital_assignment_2@1.0.0 No repository field.
 
 + nano@8.2.2
-added 56 packages from 123 contributors and audited 153 packages in 16.578s
+added 56 packages from 123 contributors and audited 153 packages in 13.874s
 
 1 package is looking for funding
   run `npm fund` for details
@@ -75,11 +76,12 @@ added 56 packages from 123 contributors and audited 153 packages in 16.578s
 found 4 vulnerabilities (3 low, 1 critical)
   run `npm audit fix` to fix them, or `npm audit` for details
 
-C:\xampp\htdocs\VIT-Assignments\ITE1002 PC Web Technologies Theory\Digital Assignment 2>npm install body-parser --save
+C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Theory\Digital Assignment 2>npm install body-parser --save
+npm WARN digital_assignment_2@1.0.0 No description
 npm WARN digital_assignment_2@1.0.0 No repository field.
 
 + body-parser@1.19.0
-updated 1 package and audited 154 packages in 4.168s
+updated 1 package and audited 154 packages in 4.552s
 
 1 package is looking for funding
   run `npm fund` for details
@@ -87,11 +89,12 @@ updated 1 package and audited 154 packages in 4.168s
 found 4 vulnerabilities (3 low, 1 critical)
   run `npm audit fix` to fix them, or `npm audit` for details
 
-C:\xampp\htdocs\VIT-Assignments\ITE1002 PC Web Technologies Theory\Digital Assignment 2>npm install errorhandler --save
+C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Theory\Digital Assignment 2>npm install errorhandler --save
+npm WARN digital_assignment_2@1.0.0 No description
 npm WARN digital_assignment_2@1.0.0 No repository field.
 
 + errorhandler@1.5.1
-added 1 package from 2 contributors and audited 154 packages in 4.172s
+added 1 package from 2 contributors and audited 154 packages in 4.329s
 
 1 package is looking for funding
   run `npm fund` for details
@@ -99,11 +102,12 @@ added 1 package from 2 contributors and audited 154 packages in 4.172s
 found 4 vulnerabilities (3 low, 1 critical)
   run `npm audit fix` to fix them, or `npm audit` for details
 
-C:\xampp\htdocs\VIT-Assignments\ITE1002 PC Web Technologies Theory\Digital Assignment 2>npm install url --save
+C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Theory\Digital Assignment 2>npm install url --save
+npm WARN digital_assignment_2@1.0.0 No description
 npm WARN digital_assignment_2@1.0.0 No repository field.
 
 + url@0.11.0
-added 3 packages from 3 contributors and audited 157 packages in 4.281s
+added 3 packages from 3 contributors and audited 157 packages in 4.863s
 
 1 package is looking for funding
   run `npm fund` for details
@@ -111,11 +115,12 @@ added 3 packages from 3 contributors and audited 157 packages in 4.281s
 found 4 vulnerabilities (3 low, 1 critical)
   run `npm audit fix` to fix them, or `npm audit` for details
 
-C:\xampp\htdocs\VIT-Assignments\ITE1002 PC Web Technologies Theory\Digital Assignment 2>npm install serve-favicon --save
+C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Theory\Digital Assignment 2>npm install serve-favicon --save
+npm WARN digital_assignment_2@1.0.0 No description
 npm WARN digital_assignment_2@1.0.0 No repository field.
 
 + serve-favicon@2.5.0
-added 3 packages from 2 contributors and audited 160 packages in 4.061s
+added 3 packages from 2 contributors and audited 160 packages in 5.529s
 
 1 package is looking for funding
   run `npm fund` for details
@@ -123,11 +128,12 @@ added 3 packages from 2 contributors and audited 160 packages in 4.061s
 found 4 vulnerabilities (3 low, 1 critical)
   run `npm audit fix` to fix them, or `npm audit` for details
 
-C:\xampp\htdocs\VIT-Assignments\ITE1002 PC Web Technologies Theory\Digital Assignment 2>npm install logger --save
+C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Theory\Digital Assignment 2>npm install logger --save
+npm WARN digital_assignment_2@1.0.0 No description
 npm WARN digital_assignment_2@1.0.0 No repository field.
 
 + logger@0.0.1
-added 1 package from 1 contributor and audited 161 packages in 4.375s
+added 1 package from 1 contributor and audited 161 packages in 5.367s
 
 1 package is looking for funding
   run `npm fund` for details
@@ -135,11 +141,12 @@ added 1 package from 1 contributor and audited 161 packages in 4.375s
 found 4 vulnerabilities (3 low, 1 critical)
   run `npm audit fix` to fix them, or `npm audit` for details
 
-C:\xampp\htdocs\VIT-Assignments\ITE1002 PC Web Technologies Theory\Digital Assignment 2>npm install json --save
+C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Theory\Digital Assignment 2>npm install json --save
+npm WARN digital_assignment_2@1.0.0 No description
 npm WARN digital_assignment_2@1.0.0 No repository field.
 
 + json@10.0.0
-added 1 package from 1 contributor and audited 162 packages in 3.859s
+added 1 package from 1 contributor and audited 162 packages in 5.666s
 
 1 package is looking for funding
   run `npm fund` for details
@@ -147,11 +154,12 @@ added 1 package from 1 contributor and audited 162 packages in 3.859s
 found 4 vulnerabilities (3 low, 1 critical)
   run `npm audit fix` to fix them, or `npm audit` for details
 
-C:\xampp\htdocs\VIT-Assignments\ITE1002 PC Web Technologies Theory\Digital Assignment 2>npm install express-session --save
+C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Theory\Digital Assignment 2>npm install express-session --save
+npm WARN digital_assignment_2@1.0.0 No description
 npm WARN digital_assignment_2@1.0.0 No repository field.
 
 + express-session@1.17.1
-added 6 packages from 5 contributors and audited 168 packages in 5.1s
+added 6 packages from 5 contributors and audited 168 packages in 7.023s
 
 1 package is looking for funding
   run `npm fund` for details
@@ -159,11 +167,12 @@ added 6 packages from 5 contributors and audited 168 packages in 5.1s
 found 4 vulnerabilities (3 low, 1 critical)
   run `npm audit fix` to fix them, or `npm audit` for details
 
-C:\xampp\htdocs\VIT-Assignments\ITE1002 PC Web Technologies Theory\Digital Assignment 2>npm install method-override --save
+C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Theory\Digital Assignment 2>npm install method-override --save
+npm WARN digital_assignment_2@1.0.0 No description
 npm WARN digital_assignment_2@1.0.0 No repository field.
 
 + method-override@3.0.0
-added 2 packages from 5 contributors and audited 170 packages in 4.187s
+added 2 packages from 5 contributors and audited 170 packages in 4.812s
 
 1 package is looking for funding
   run `npm fund` for details
@@ -171,10 +180,11 @@ added 2 packages from 5 contributors and audited 170 packages in 4.187s
 found 4 vulnerabilities (3 low, 1 critical)
   run `npm audit fix` to fix them, or `npm audit` for details
 
-C:\xampp\htdocs\VIT-Assignments\ITE1002 PC Web Technologies Theory\Digital Assignment 2>npm audit fix
+C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Theory\Digital Assignment 2>npm audit fix
+npm WARN digital_assignment_2@1.0.0 No description
 npm WARN digital_assignment_2@1.0.0 No repository field.
 
-up to date in 2.686s
+up to date in 2.876s
 
 1 package is looking for funding
   run `npm fund` for details
@@ -182,4 +192,20 @@ up to date in 2.686s
 fixed 0 of 4 vulnerabilities in 170 scanned packages
   4 vulnerabilities required manual review and could not be updated
 
-C:\xampp\htdocs\VIT-Assignments\ITE1002 PC Web Technologies Theory\Digital Assignment 2>
+C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Theory\Digital Assignment 2>npm install
+npm WARN digital_assignment_2@1.0.0 No description
+npm WARN digital_assignment_2@1.0.0 No repository field.
+
+audited 170 packages in 3.544s
+
+1 package is looking for funding
+  run `npm fund` for details
+
+found 4 vulnerabilities (3 low, 1 critical)
+  run `npm audit fix` to fix them, or `npm audit` for details
+
+C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Theory\Digital Assignment 2>node app.js
+open error:  ENOENT: no such file or directory, open 'C:\xampp\htdocs\VIT-Assignments\ITE1002 PC Web Technologies Theory\Digital Assignment 2\Home_Page.html'
+^C
+C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Theory\Digital Assignment 2>node app.js
+Successfully opened C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Theory\Digital Assignment 2\Home_Page.html
