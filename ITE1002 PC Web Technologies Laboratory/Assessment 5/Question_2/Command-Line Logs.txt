@@ -1,0 +1,592 @@
+Your environment has been set up for using Node.js 12.18.4 (x64) and npm.
+
+C:\Users\aashi>cd C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Laboratory\Assessment 5\Question_2
+
+C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Laboratory\Assessment 5\Question_2>mkdir SocketExample
+
+C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Laboratory\Assessment 5\Question_2>cd SocketExample
+
+C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Laboratory\Assessment 5\Question_2\SocketExample>npm init
+This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sensible defaults.
+
+See `npm help init` for definitive documentation on these fields
+and exactly what they do.
+
+Use `npm install <pkg>` afterwards to install a package and
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+package name: (socketexample) socketexample
+version: (1.0.0)
+description:
+entry point: (index.js)
+test command:
+git repository:
+keywords:
+author:
+license: (ISC)
+About to write to C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Laboratory\Assessment 5\Question_2\SocketExample\package.json:
+
+{
+  "name": "socketexample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
+
+
+Is this OK? (yes) yes
+
+C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Laboratory\Assessment 5\Question_2\SocketExample>npm install express --save
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN socketexample@1.0.0 No description
+npm WARN socketexample@1.0.0 No repository field.
+
++ express@4.17.1
+added 50 packages from 37 contributors and audited 50 packages in 10.521s
+found 0 vulnerabilities
+
+
+C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Laboratory\Assessment 5\Question_2\SocketExample>npm install socket.io --save
+npm WARN socketexample@1.0.0 No description
+npm WARN socketexample@1.0.0 No repository field.
+
++ socket.io@2.3.0
+added 49 packages from 28 contributors and audited 99 packages in 14.224s
+found 0 vulnerabilities
+
+
+C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Laboratory\Assessment 5\Question_2\SocketExample>node index.js
+internal/modules/cjs/loader.js:968
+  throw err;
+  ^
+
+Error: Cannot find module 'C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Laboratory\Assessment 5\Question_2\SocketExample\index.js'
+[90m    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:965:15)[39m
+[90m    at Function.Module._load (internal/modules/cjs/loader.js:841:27)[39m
+[90m    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)[39m
+[90m    at internal/main/run_main_module.js:17:47[39m {
+  code: [32m'MODULE_NOT_FOUND'[39m,
+  requireStack: []
+}
+
+C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Laboratory\Assessment 5\Question_2\SocketExample>node index.js
+HTTP server started on port 3000
+Client connection received
+^C
+C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Laboratory\Assessment 5\Question_2\SocketExample>node index.js
+HTTP server started on port 3000
+Client connection received
+{ my: 'data' }
+^C
+C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Laboratory\Assessment 5\Question_2\SocketExample>npm install mysportsfeeds-node --save
+npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+npm WARN deprecated request-promise@4.2.6: request-promise has been deprecated because it extends the now deprecated request package, see https://github.com/request/request/issues/3142
+npm WARN deprecated har-validator@5.1.5: this library is no longer supported
+npm WARN socketexample@1.0.0 No description
+npm WARN socketexample@1.0.0 No repository field.
+
++ mysportsfeeds-node@2.1.2
+added 75 packages from 72 contributors and audited 174 packages in 37.589s
+
+16 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+
+C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Laboratory\Assessment 5\Question_2\SocketExample>node index.js
+Making API request to 'https://api.mysportsfeeds.com/v1.2/pull/nhl/2017-2018-regular/scoreboard.json'.
+  with headers:
+{
+  Authorization: 'Basic MTlCSVQwMzQ2OjE5QklUMDM0Ng==',
+  'User-Agent': 'MySportsFeeds-Node/2.1.2 (x64-win3210.0.18362)'
+}
+ and params:
+{ fordate: '20201016', force: true }
+Making API request to 'https://api.mysportsfeeds.com/v1.2/pull/nhl/2017-2018-regular/scoreboard.json'.
+  with headers:
+{
+  Authorization: 'Basic KioqKioqKjoqKioqKio=',
+  'User-Agent': 'MySportsFeeds-Node/2.1.2 (x64-win3210.0.18362)'
+}
+ and params:
+{ fordate: '20201016', force: true }
+Making API request to 'https://api.mysportsfeeds.com/v1.2/pull/nhl/2017-2018-regular/scoreboard.json'.
+  with headers:
+{
+  Authorization: 'Basic KioqKioqKjoqKioqKio=',
+  'User-Agent': 'MySportsFeeds-Node/2.1.2 (x64-win3210.0.18362)'
+}
+ and params:
+{ fordate: '20201016', force: true }
+HTTP server started on port 3000
+events.js:292
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (net.js:1313:16)
+    at listenInCluster (net.js:1361:12)
+    at Server.listen (net.js:1447:7)
+    at Object.<anonymous> (C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Laboratory\Assessment 5\Question_2\SocketExample\index.js:55:6)
+    at Module._compile (internal/modules/cjs/loader.js:1137:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)
+    at Module.load (internal/modules/cjs/loader.js:985:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:878:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)
+    at internal/main/run_main_module.js:17:47
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (net.js:1340:8)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21) {
+  code: 'EADDRINUSE',
+  errno: 'EADDRINUSE',
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Laboratory\Assessment 5\Question_2\SocketExample>node index.js
+Making API request to 'https://api.mysportsfeeds.com/v1.2/pull/nhl/2017-2018-regular/scoreboard.json'.
+  with headers:
+{
+  Authorization: 'Basic MTlCSVQwMzQ2OjE5QklUMDM0Ng==',
+  'User-Agent': 'MySportsFeeds-Node/2.1.2 (x64-win3210.0.18362)'
+}
+ and params:
+{ fordate: '20201016', force: true }
+Making API request to 'https://api.mysportsfeeds.com/v1.2/pull/nhl/2017-2018-regular/scoreboard.json'.
+  with headers:
+{
+  Authorization: 'Basic KioqKioqKjoqKioqKio=',
+  'User-Agent': 'MySportsFeeds-Node/2.1.2 (x64-win3210.0.18362)'
+}
+ and params:
+{ fordate: '20201016', force: true }
+Making API request to 'https://api.mysportsfeeds.com/v1.2/pull/nhl/2017-2018-regular/scoreboard.json'.
+  with headers:
+{
+  Authorization: 'Basic KioqKioqKjoqKioqKio=',
+  'User-Agent': 'MySportsFeeds-Node/2.1.2 (x64-win3210.0.18362)'
+}
+ and params:
+{ fordate: '20201016', force: true }
+HTTP server started on port 3000
+events.js:292
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (net.js:1313:16)
+    at listenInCluster (net.js:1361:12)
+    at Server.listen (net.js:1447:7)
+    at Object.<anonymous> (C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Laboratory\Assessment 5\Question_2\SocketExample\index.js:55:6)
+    at Module._compile (internal/modules/cjs/loader.js:1137:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)
+    at Module.load (internal/modules/cjs/loader.js:985:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:878:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)
+    at internal/main/run_main_module.js:17:47
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (net.js:1340:8)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21) {
+  code: 'EADDRINUSE',
+  errno: 'EADDRINUSE',
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Laboratory\Assessment 5\Question_2\SocketExample>node index.js
+Making API request to 'https://api.mysportsfeeds.com/v1.2/pull/nhl/2017-2018-regular/scoreboard.json'.
+  with headers:
+{
+  Authorization: 'Basic MTlCSVQwMzQ2OjE5QklUMDM0Ng==',
+  'User-Agent': 'MySportsFeeds-Node/2.1.2 (x64-win3210.0.18362)'
+}
+ and params:
+{ fordate: '20201016', force: true }
+Making API request to 'https://api.mysportsfeeds.com/v1.2/pull/nhl/2017-2018-regular/scoreboard.json'.
+  with headers:
+{
+  Authorization: 'Basic KioqKioqKjoqKioqKio=',
+  'User-Agent': 'MySportsFeeds-Node/2.1.2 (x64-win3210.0.18362)'
+}
+ and params:
+{ fordate: '20201016', force: true }
+Making API request to 'https://api.mysportsfeeds.com/v1.2/pull/nhl/2017-2018-regular/scoreboard.json'.
+  with headers:
+{
+  Authorization: 'Basic KioqKioqKjoqKioqKio=',
+  'User-Agent': 'MySportsFeeds-Node/2.1.2 (x64-win3210.0.18362)'
+}
+ and params:
+{ fordate: '20201016', force: true }
+HTTP server started on port 3000
+events.js:292
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (net.js:1313:16)
+    at listenInCluster (net.js:1361:12)
+    at Server.listen (net.js:1447:7)
+    at Object.<anonymous> (C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Laboratory\Assessment 5\Question_2\SocketExample\index.js:55:6)
+    at Module._compile (internal/modules/cjs/loader.js:1137:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)
+    at Module.load (internal/modules/cjs/loader.js:985:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:878:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)
+    at internal/main/run_main_module.js:17:47
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (net.js:1340:8)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21) {
+  code: 'EADDRINUSE',
+  errno: 'EADDRINUSE',
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Laboratory\Assessment 5\Question_2\SocketExample>node index.js
+Making API request to 'https://api.mysportsfeeds.com/v1.2/pull/nhl/2017-2018-regular/scoreboard.json'.
+  with headers:
+{
+  Authorization: 'Basic MTlCSVQwMzQ2OjE5QklUMDM0Ng==',
+  'User-Agent': 'MySportsFeeds-Node/2.1.2 (x64-win3210.0.18362)'
+}
+ and params:
+{ fordate: '20201016', force: true }
+Making API request to 'https://api.mysportsfeeds.com/v1.2/pull/nhl/2017-2018-regular/scoreboard.json'.
+  with headers:
+{
+  Authorization: 'Basic KioqKioqKjoqKioqKio=',
+  'User-Agent': 'MySportsFeeds-Node/2.1.2 (x64-win3210.0.18362)'
+}
+ and params:
+{ fordate: '20201016', force: true }
+Making API request to 'https://api.mysportsfeeds.com/v1.2/pull/nhl/2017-2018-regular/scoreboard.json'.
+  with headers:
+{
+  Authorization: 'Basic KioqKioqKjoqKioqKio=',
+  'User-Agent': 'MySportsFeeds-Node/2.1.2 (x64-win3210.0.18362)'
+}
+ and params:
+{ fordate: '20201016', force: true }
+C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Laboratory\Assessment 5\Question_2\SocketExample\index.js:86
+socket.on('data', function (data) {
+^
+
+ReferenceError: socket is not defined
+    at Object.<anonymous> (C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Laboratory\Assessment 5\Question_2\SocketExample\index.js:86:1)
+    at Module._compile (internal/modules/cjs/loader.js:1137:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)
+    at Module.load (internal/modules/cjs/loader.js:985:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:878:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)
+    at internal/main/run_main_module.js:17:47
+
+C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Laboratory\Assessment 5\Question_2\SocketExample>node index.js
+Making API request to 'https://api.mysportsfeeds.com/v1.2/pull/nhl/2017-2018-regular/scoreboard.json'.
+  with headers:
+{
+  Authorization: 'Basic MTlCSVQwMzQ2OjE5QklUMDM0Ng==',
+  'User-Agent': 'MySportsFeeds-Node/2.1.2 (x64-win3210.0.18362)'
+}
+ and params:
+{ fordate: '20201016', force: true }
+Making API request to 'https://api.mysportsfeeds.com/v1.2/pull/nhl/2017-2018-regular/scoreboard.json'.
+  with headers:
+{
+  Authorization: 'Basic KioqKioqKjoqKioqKio=',
+  'User-Agent': 'MySportsFeeds-Node/2.1.2 (x64-win3210.0.18362)'
+}
+ and params:
+{ fordate: '20201016', force: true }
+Making API request to 'https://api.mysportsfeeds.com/v1.2/pull/nhl/2017-2018-regular/scoreboard.json'.
+  with headers:
+{
+  Authorization: 'Basic KioqKioqKjoqKioqKio=',
+  'User-Agent': 'MySportsFeeds-Node/2.1.2 (x64-win3210.0.18362)'
+}
+ and params:
+{ fordate: '20201016', force: true }
+HTTP server started on port 3000
+events.js:292
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (net.js:1313:16)
+    at listenInCluster (net.js:1361:12)
+    at Server.listen (net.js:1447:7)
+    at Object.<anonymous> (C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Laboratory\Assessment 5\Question_2\SocketExample\index.js:55:6)
+    at Module._compile (internal/modules/cjs/loader.js:1137:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)
+    at Module.load (internal/modules/cjs/loader.js:985:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:878:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)
+    at internal/main/run_main_module.js:17:47
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (net.js:1340:8)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21) {
+  code: 'EADDRINUSE',
+  errno: 'EADDRINUSE',
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Laboratory\Assessment 5\Question_2\SocketExample>node index.js
+Making API request to 'https://api.mysportsfeeds.com/v1.2/pull/nhl/2017-2018-regular/scoreboard.json'.
+  with headers:
+{
+  Authorization: 'Basic MTlCSVQwMzQ2OjE5QklUMDM0Ng==',
+  'User-Agent': 'MySportsFeeds-Node/2.1.2 (x64-win3210.0.18362)'
+}
+ and params:
+{ fordate: '20201016', force: true }
+Making API request to 'https://api.mysportsfeeds.com/v1.2/pull/nhl/2017-2018-regular/scoreboard.json'.
+  with headers:
+{
+  Authorization: 'Basic KioqKioqKjoqKioqKio=',
+  'User-Agent': 'MySportsFeeds-Node/2.1.2 (x64-win3210.0.18362)'
+}
+ and params:
+{ fordate: '20201016', force: true }
+Making API request to 'https://api.mysportsfeeds.com/v1.2/pull/nhl/2017-2018-regular/scoreboard.json'.
+  with headers:
+{
+  Authorization: 'Basic KioqKioqKjoqKioqKio=',
+  'User-Agent': 'MySportsFeeds-Node/2.1.2 (x64-win3210.0.18362)'
+}
+ and params:
+{ fordate: '20201016', force: true }
+C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Laboratory\Assessment 5\Question_2\SocketExample\index.js:86
+socket.on('data', function (data) {
+^
+
+ReferenceError: socket is not defined
+    at Object.<anonymous> (C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Laboratory\Assessment 5\Question_2\SocketExample\index.js:86:1)
+    at Module._compile (internal/modules/cjs/loader.js:1137:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)
+    at Module.load (internal/modules/cjs/loader.js:985:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:878:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)
+    at internal/main/run_main_module.js:17:47
+
+C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Laboratory\Assessment 5\Question_2\SocketExample>node index.js
+Making API request to 'https://api.mysportsfeeds.com/v1.2/pull/nhl/2017-2018-regular/scoreboard.json'.
+  with headers:
+{
+  Authorization: 'Basic MTlCSVQwMzQ2OjE5QklUMDM0Ng==',
+  'User-Agent': 'MySportsFeeds-Node/2.1.2 (x64-win3210.0.18362)'
+}
+ and params:
+{ fordate: '20201016', force: true }
+Making API request to 'https://api.mysportsfeeds.com/v1.2/pull/nhl/2017-2018-regular/scoreboard.json'.
+  with headers:
+{
+  Authorization: 'Basic MTlCSVQwMzQ2OjE5QklUMDM0Ng==',
+  'User-Agent': 'MySportsFeeds-Node/2.1.2 (x64-win3210.0.18362)'
+}
+ and params:
+{ fordate: '20201016', force: true }
+Making API request to 'https://api.mysportsfeeds.com/v1.2/pull/nhl/2017-2018-regular/scoreboard.json'.
+  with headers:
+{
+  Authorization: 'Basic MTlCSVQwMzQ2OjE5QklUMDM0Ng==',
+  'User-Agent': 'MySportsFeeds-Node/2.1.2 (x64-win3210.0.18362)'
+}
+ and params:
+{ fordate: '20201016', force: true }
+C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Laboratory\Assessment 5\Question_2\SocketExample\index.js:86
+socket.on('data', function (data) {
+^
+
+ReferenceError: socket is not defined
+    at Object.<anonymous> (C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Laboratory\Assessment 5\Question_2\SocketExample\index.js:86:1)
+    at Module._compile (internal/modules/cjs/loader.js:1137:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)
+    at Module.load (internal/modules/cjs/loader.js:985:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:878:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)
+    at internal/main/run_main_module.js:17:47
+
+C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Laboratory\Assessment 5\Question_2\SocketExample>node index.js
+Making API request to 'https://api.mysportsfeeds.com/v1.2/pull/nhl/2017-2018-regular/scoreboard.json'.
+  with headers:
+{
+  Authorization: 'Basic MTlCSVQwMzQ2OjE5QklUMDM0Ng==',
+  'User-Agent': 'MySportsFeeds-Node/2.1.2 (x64-win3210.0.18362)'
+}
+ and params:
+{ fordate: '20201016', force: true }
+C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Laboratory\Assessment 5\Question_2\SocketExample\data.js:19
+socket.on('data', function (data) {
+^
+
+ReferenceError: socket is not defined
+    at Object.<anonymous> (C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Laboratory\Assessment 5\Question_2\SocketExample\data.js:19:1)
+    at Module._compile (internal/modules/cjs/loader.js:1137:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)
+    at Module.load (internal/modules/cjs/loader.js:985:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:878:14)
+    at Module.require (internal/modules/cjs/loader.js:1025:19)
+    at require (internal/modules/cjs/helpers.js:72:18)
+    at Object.<anonymous> (C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Laboratory\Assessment 5\Question_2\SocketExample\index.js:40:12)
+    at Module._compile (internal/modules/cjs/loader.js:1137:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)
+    at Module.load (internal/modules/cjs/loader.js:985:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:878:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)
+    at internal/main/run_main_module.js:17:47
+
+C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Laboratory\Assessment 5\Question_2\SocketExample>node index.js
+Making API request to 'https://api.mysportsfeeds.com/v1.2/pull/nhl/2017-2018-regular/scoreboard.json'.
+  with headers:
+{
+  Authorization: 'Basic MTlCSVQwMzQ2OjE5QklUMDM0Ng==',
+  'User-Agent': 'MySportsFeeds-Node/2.1.2 (x64-win3210.0.18362)'
+}
+ and params:
+{ fordate: '20201016', force: true }
+Making API request to 'https://api.mysportsfeeds.com/v1.2/pull/nhl/2017-2018-regular/scoreboard.json'.
+  with headers:
+{
+  Authorization: 'Basic MTlCSVQwMzQ2OjE5QklUMDM0Ng==',
+  'User-Agent': 'MySportsFeeds-Node/2.1.2 (x64-win3210.0.18362)'
+}
+ and params:
+{ fordate: '20201016', force: true }
+Making API request to 'https://api.mysportsfeeds.com/v1.2/pull/nhl/2017-2018-regular/scoreboard.json'.
+  with headers:
+{
+  Authorization: 'Basic MTlCSVQwMzQ2OjE5QklUMDM0Ng==',
+  'User-Agent': 'MySportsFeeds-Node/2.1.2 (x64-win3210.0.18362)'
+}
+ and params:
+{ fordate: '20201016', force: true }
+C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Laboratory\Assessment 5\Question_2\SocketExample\index.js:86
+socket.on('data', function (data) {
+^
+
+ReferenceError: socket is not defined
+    at Object.<anonymous> (C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Laboratory\Assessment 5\Question_2\SocketExample\index.js:86:1)
+    at Module._compile (internal/modules/cjs/loader.js:1137:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)
+    at Module.load (internal/modules/cjs/loader.js:985:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:878:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)
+    at internal/main/run_main_module.js:17:47
+
+C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Laboratory\Assessment 5\Question_2\SocketExample>node index.js
+Making API request to 'https://api.mysportsfeeds.com/v1.2/pull/nhl/2017-2018-regular/scoreboard.json'.
+  with headers:
+{
+  Authorization: 'Basic MTlCSVQwMzQ2OjE5QklUMDM0Ng==',
+  'User-Agent': 'MySportsFeeds-Node/2.1.2 (x64-win3210.0.18362)'
+}
+ and params:
+{ fordate: '20201016', force: true }
+Making API request to 'https://api.mysportsfeeds.com/v1.2/pull/nhl/2017-2018-regular/scoreboard.json'.
+  with headers:
+{
+  Authorization: 'Basic MTlCSVQwMzQ2OjE5QklUMDM0Ng==',
+  'User-Agent': 'MySportsFeeds-Node/2.1.2 (x64-win3210.0.18362)'
+}
+ and params:
+{ fordate: '20201016', force: true }
+Making API request to 'https://api.mysportsfeeds.com/v1.2/pull/nhl/2017-2018-regular/scoreboard.json'.
+  with headers:
+{
+  Authorization: 'Basic MTlCSVQwMzQ2OjE5QklUMDM0Ng==',
+  'User-Agent': 'MySportsFeeds-Node/2.1.2 (x64-win3210.0.18362)'
+}
+ and params:
+{ fordate: '20201016', force: true }
+HTTP server started on port 3000
+events.js:292
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (net.js:1313:16)
+    at listenInCluster (net.js:1361:12)
+    at Server.listen (net.js:1447:7)
+    at Object.<anonymous> (C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Laboratory\Assessment 5\Question_2\SocketExample\index.js:55:6)
+    at Module._compile (internal/modules/cjs/loader.js:1137:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)
+    at Module.load (internal/modules/cjs/loader.js:985:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:878:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)
+    at internal/main/run_main_module.js:17:47
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (net.js:1340:8)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21) {
+  code: 'EADDRINUSE',
+  errno: 'EADDRINUSE',
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Laboratory\Assessment 5\Question_2\SocketExample>node index.js
+Making API request to 'https://api.mysportsfeeds.com/v1.2/pull/nhl/2017-2018-regular/scoreboard.json'.
+  with headers:
+{
+  Authorization: 'Basic MTlCSVQwMzQ2OjE5QklUMDM0Ng==',
+  'User-Agent': 'MySportsFeeds-Node/2.1.2 (x64-win3210.0.18362)'
+}
+ and params:
+{ fordate: '20201016', force: true }
+Making API request to 'https://api.mysportsfeeds.com/v1.2/pull/nhl/2017-2018-regular/scoreboard.json'.
+  with headers:
+{
+  Authorization: 'Basic MTlCSVQwMzQ2OjE5QklUMDM0Ng==',
+  'User-Agent': 'MySportsFeeds-Node/2.1.2 (x64-win3210.0.18362)'
+}
+ and params:
+{ fordate: '20201016', force: true }
+Making API request to 'https://api.mysportsfeeds.com/v1.2/pull/nhl/2017-2018-regular/scoreboard.json'.
+  with headers:
+{
+  Authorization: 'Basic MTlCSVQwMzQ2OjE5QklUMDM0Ng==',
+  'User-Agent': 'MySportsFeeds-Node/2.1.2 (x64-win3210.0.18362)'
+}
+ and params:
+{ fordate: '20201016', force: true }
+C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Laboratory\Assessment 5\Question_2\SocketExample\index.js:86
+socket.on('data', function (data) {
+^
+
+ReferenceError: socket is not defined
+    at Object.<anonymous> (C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Laboratory\Assessment 5\Question_2\SocketExample\index.js:86:1)
+    at Module._compile (internal/modules/cjs/loader.js:1137:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)
+    at Module.load (internal/modules/cjs/loader.js:985:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:878:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)
+    at internal/main/run_main_module.js:17:47
+
+C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Laboratory\Assessment 5\Question_2\SocketExample>node index.js
+C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Laboratory\Assessment 5\Question_2\SocketExample\index.js:13
+jQuery(function($){
+^
+
+ReferenceError: jQuery is not defined
+    at Object.<anonymous> (C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Laboratory\Assessment 5\Question_2\SocketExample\index.js:13:1)
+    at Module._compile (internal/modules/cjs/loader.js:1137:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)
+    at Module.load (internal/modules/cjs/loader.js:985:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:878:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)
+    at internal/main/run_main_module.js:17:47
+
+C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Laboratory\Assessment 5\Question_2\SocketExample>
