@@ -589,4 +589,152 @@ ReferenceError: jQuery is not defined
     at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)
     at internal/main/run_main_module.js:17:47
 
+C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Laboratory\Assessment 5\Question_2\SocketExample>node index.js
+Making API request to 'https://api.mysportsfeeds.com/v1.2/pull/nhl/2017-2018-regular/scoreboard.json'.
+  with headers:
+{
+  Authorization: 'Basic MTlCSVQwMzQ2OjE5QklUMDM0Ng==',
+  'User-Agent': 'MySportsFeeds-Node/2.1.2 (x64-win3210.0.18362)'
+}
+ and params:
+{ fordate: '20201016', force: true }
+Making API request to 'https://api.mysportsfeeds.com/v1.2/pull/nhl/2017-2018-regular/scoreboard.json'.
+  with headers:
+{
+  Authorization: 'Basic MTlCSVQwMzQ2OjE5QklUMDM0Ng==',
+  'User-Agent': 'MySportsFeeds-Node/2.1.2 (x64-win3210.0.18362)'
+}
+ and params:
+{ fordate: '20201016', force: true }
+Making API request to 'https://api.mysportsfeeds.com/v1.2/pull/nhl/2017-2018-regular/scoreboard.json'.
+  with headers:
+{
+  Authorization: 'Basic MTlCSVQwMzQ2OjE5QklUMDM0Ng==',
+  'User-Agent': 'MySportsFeeds-Node/2.1.2 (x64-win3210.0.18362)'
+}
+ and params:
+{ fordate: '20201016', force: true }
+C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Laboratory\Assessment 5\Question_2\SocketExample\index.js:86
+socket.on('data', function (data) {
+^
+
+ReferenceError: socket is not defined
+    at Object.<anonymous> (C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Laboratory\Assessment 5\Question_2\SocketExample\index.js:86:1)
+    at Module._compile (internal/modules/cjs/loader.js:1137:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)
+    at Module.load (internal/modules/cjs/loader.js:985:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:878:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)
+    at internal/main/run_main_module.js:17:47
+
+C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Laboratory\Assessment 5\Question_2\SocketExample>
+C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Laboratory\Assessment 5\Question_2\SocketExample>node index.js
+Making API request to 'https://api.mysportsfeeds.com/v1.2/pull/nhl/2017-2018-regular/scoreboard.json'.
+  with headers:
+{
+  Authorization: 'Basic MTlCSVQwMzQ2OjE5QklUMDM0Ng==',
+  'User-Agent': 'MySportsFeeds-Node/2.1.2 (x64-win3210.0.18362)'
+}
+ and params:
+{ fordate: '20201016', force: true }
+Making API request to 'https://api.mysportsfeeds.com/v1.2/pull/nhl/2017-2018-regular/scoreboard.json'.
+  with headers:
+{
+  Authorization: 'Basic MTlCSVQwMzQ2OjE5QklUMDM0Ng==',
+  'User-Agent': 'MySportsFeeds-Node/2.1.2 (x64-win3210.0.18362)'
+}
+ and params:
+{ fordate: '20201016', force: true }
+Making API request to 'https://api.mysportsfeeds.com/v1.2/pull/nhl/2017-2018-regular/scoreboard.json'.
+  with headers:
+{
+  Authorization: 'Basic MTlCSVQwMzQ2OjE5QklUMDM0Ng==',
+  'User-Agent': 'MySportsFeeds-Node/2.1.2 (x64-win3210.0.18362)'
+}
+ and params:
+{ fordate: '20201016', force: true }
+C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Laboratory\Assessment 5\Question_2\SocketExample\index.js:86
+socket.on('data', function (data) {
+^
+
+ReferenceError: socket is not defined
+    at Object.<anonymous> (C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Laboratory\Assessment 5\Question_2\SocketExample\index.js:86:1)
+    at Module._compile (internal/modules/cjs/loader.js:1137:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)
+    at Module.load (internal/modules/cjs/loader.js:985:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:878:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)
+    at internal/main/run_main_module.js:17:47
+
+C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Laboratory\Assessment 5\Question_2\SocketExample>node index.js
+Making API request to 'https://api.mysportsfeeds.com/v1.2/pull/nhl/2017-2018-regular/scoreboard.json'.
+  with headers:
+{
+  Authorization: 'Basic MTlCSVQwMzQ2OjE5QklUMDM0Ng==',
+  'User-Agent': 'MySportsFeeds-Node/2.1.2 (x64-win3210.0.18362)'
+}
+ and params:
+{ fordate: '20201016', force: true }
+Making API request to 'https://api.mysportsfeeds.com/v1.2/pull/nhl/2017-2018-regular/scoreboard.json'.
+  with headers:
+{
+  Authorization: 'Basic MTlCSVQwMzQ2OjE5QklUMDM0Ng==',
+  'User-Agent': 'MySportsFeeds-Node/2.1.2 (x64-win3210.0.18362)'
+}
+ and params:
+{ fordate: '20201016', force: true }
+net.js:1399
+    throw new ERR_SERVER_ALREADY_LISTEN();
+    ^
+
+Error [ERR_SERVER_ALREADY_LISTEN]: Listen method has been called more than once without closing.
+    at Server.listen (net.js:1399:11)
+    at Object.<anonymous> (C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Laboratory\Assessment 5\Question_2\SocketExample\index.js:56:6)
+    at Module._compile (internal/modules/cjs/loader.js:1137:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)
+    at Module.load (internal/modules/cjs/loader.js:985:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:878:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)
+    at internal/main/run_main_module.js:17:47 {
+  code: 'ERR_SERVER_ALREADY_LISTEN'
+}
+
+C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Laboratory\Assessment 5\Question_2\SocketExample>node index.js
+Making API request to 'https://api.mysportsfeeds.com/v1.2/pull/nhl/2017-2018-regular/scoreboard.json'.
+  with headers:
+{
+  Authorization: 'Basic MTlCSVQwMzQ2OjE5QklUMDM0Ng==',
+  'User-Agent': 'MySportsFeeds-Node/2.1.2 (x64-win3210.0.18362)'
+}
+ and params:
+{ fordate: '20201016', force: true }
+Making API request to 'https://api.mysportsfeeds.com/v1.2/pull/nhl/2017-2018-regular/scoreboard.json'.
+  with headers:
+{
+  Authorization: 'Basic MTlCSVQwMzQ2OjE5QklUMDM0Ng==',
+  'User-Agent': 'MySportsFeeds-Node/2.1.2 (x64-win3210.0.18362)'
+}
+ and params:
+{ fordate: '20201016', force: true }
+Making API request to 'https://api.mysportsfeeds.com/v1.2/pull/nhl/2017-2018-regular/scoreboard.json'.
+  with headers:
+{
+  Authorization: 'Basic MTlCSVQwMzQ2OjE5QklUMDM0Ng==',
+  'User-Agent': 'MySportsFeeds-Node/2.1.2 (x64-win3210.0.18362)'
+}
+ and params:
+{ fordate: '20201016', force: true }
+C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Laboratory\Assessment 5\Question_2\SocketExample\index.js:84
+socket.on('data', function (data) {
+^
+
+ReferenceError: socket is not defined
+    at Object.<anonymous> (C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Laboratory\Assessment 5\Question_2\SocketExample\index.js:84:1)
+    at Module._compile (internal/modules/cjs/loader.js:1137:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)
+    at Module.load (internal/modules/cjs/loader.js:985:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:878:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)
+    at internal/main/run_main_module.js:17:47
+
 C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Laboratory\Assessment 5\Question_2\SocketExample>

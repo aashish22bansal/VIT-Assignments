@@ -1,6 +1,8 @@
 var app = require('express')();
 var http = require('http').Server(app);
- 
+var io = require('socket.io')(http);
+var data = require('./data.js');
+
 app.get('/', function(req, res){
     res.sendFile(__dirname + '/index.html');
 });
@@ -34,10 +36,7 @@ msf.getData('nhl', '2017-2018-regular', 'scoreboard', 'json', {
     force: true
 });
 
-var app = require('express')();
-var http = require('http').Server(app);
-var io = require('socket.io')(http);
-var data = require('./data.js');
+
  
 // Global variable to store the latest NHL results
 var latestData;
@@ -51,10 +50,7 @@ data.getData().then((result) => {
 app.get('/', function(req, res){
     res.sendFile(__dirname + '/index.html');
 });
- 
-http.listen(3000, function(){
-    console.log('HTTP server started on port 3000');
-});
+
  
 io.on('connection', function(socket){
     // when clients connect, send the latest data
