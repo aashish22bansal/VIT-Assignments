@@ -9,7 +9,7 @@ app.use(express.static(__dirname + "/../public"));
 
 app.get('/register', function (req, res) 
 {
-    res.sendFile( __dirname + "/" + "marees_node_register.html" );
+    res.sendFile( __dirname + "/" + "index.html" );
 });
 
 app.post('/process_post',urlencodedParser, function (req, res)
@@ -28,9 +28,10 @@ app.post('/process_post',urlencodedParser, function (req, res)
         console.log("Connected to Database");
         var dbo=db.db("mydb");
         //insert document in mongodb
-        dbo.collection('customers').insert(response, function(err, result)
+        dbo.collection('customers').insertOne(response, function(err, result)
         {	
-            if(err){
+            if(err)
+            {
                 throw err;
             }
             console.log("1 document inserted in your mongodb database" ); 
@@ -41,7 +42,7 @@ app.post('/process_post',urlencodedParser, function (req, res)
 }); // display in browser window
 
 var server = app.listen(8080, function(){
-    var host = server.address().address;
-    var port = server.address().port;
-    console.log("Example app listening at http://%s:%s//register", host, port);
+    var host = server.address().address
+    var port = server.address().port
+    console.log("Example app listening at http://%s:%s//register", host, port)
 });
