@@ -1,0 +1,68 @@
+Your environment has been set up for using Node.js 12.18.4 (x64) and npm.
+
+C:\Users\aashi>C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Theory\Digital Assignment 2\mongochat-master
+'C:\Users\aashi\Documents\GitHub' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\aashi>cd C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Theory\Digital Assignment 2\mongochat-master
+
+C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Theory\Digital Assignment 2\mongochat-master>npm install
+npm WARN deprecated bson@1.0.9: Fixed a critical issue with BSON serialization documented in CVE-2019-2391, see https://bit.ly/2KcpXdo for more details
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN mongochat@1.0.0 No repository field.
+
+added 66 packages from 39 contributors and audited 66 packages in 31.661s
+found 1 high severity vulnerability
+  run `npm audit fix` to fix them, or `npm audit` for details
+
+C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Theory\Digital Assignment 2\mongochat-master>npm audit fix
+npm WARN mongochat@1.0.0 No repository field.
+
+up to date in 2.786s
+fixed 0 of 1 vulnerability in 66 scanned packages
+  1 package update for 1 vulnerability involved breaking changes
+  (use `npm audit fix --force` to install breaking changes; or refer to `npm audit` for steps to fix these manually)
+
+C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Theory\Digital Assignment 2\mongochat-master>npm audit fix --force
+npm WARN using --force I sure hope you know what you are doing.
+npm WARN mongochat@1.0.0 No repository field.
+
++ mongodb@3.6.2
+added 7 packages from 5 contributors, removed 3 packages and updated 6 packages in 16.388s
+
+1 package is looking for funding
+  run `npm fund` for details
+
+fixed 1 of 1 vulnerability in 66 scanned packages
+  1 package update for 1 vulnerability involved breaking changes
+  (installed due to `--force` option)
+
+C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Theory\Digital Assignment 2\mongochat-master>npm start
+
+> mongochat@1.0.0 start C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Theory\Digital Assignment 2\mongochat-master
+> node server.js
+
+(node:15060) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+MongoDB connected...
+C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Theory\Digital Assignment 2\mongochat-master\server.js:14
+        let chat = db.collection('chats');
+                      ^
+
+TypeError: db.collection is not a function
+    at Namespace.<anonymous> (C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Theory\Digital Assignment 2\mongochat-master\server.js:14:23)
+    at Namespace.emit (events.js:315:20)
+    at Namespace.emit (C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Theory\Digital Assignment 2\mongochat-master\node_modules\socket.io\lib\namespace.js:213:10)
+    at C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Theory\Digital Assignment 2\mongochat-master\node_modules\socket.io\lib\namespace.js:181:14
+    at processTicksAndRejections (internal/process/task_queues.js:79:11)
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! mongochat@1.0.0 start: `node server.js`
+npm ERR! Exit status 1
+npm ERR!
+npm ERR! Failed at the mongochat@1.0.0 start script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     C:\Users\aashi\AppData\Roaming\npm-cache\_logs\2020-10-22T04_46_42_631Z-debug.log
+
+C:\Users\aashi\Documents\GitHub Desktop\VIT-Assignments\ITE1002 PC Web Technologies Theory\Digital Assignment 2\mongochat-master>

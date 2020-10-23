@@ -5,10 +5,16 @@
     </head>
     <body>
         <form method="delete">
-            <span class="text">Enter Company ID: </span><input type="text" name="Company_ID" placeholder="Enter Company ID"><br>
-            <span class="text">Enter Company Name:</span><input type="text" name="Company_Name" placeholder="Enter Company Name"><br>
-            <span class="text">Enter Address:</span><input type="text" name="Company_Address" placeholder="Enter Company Address"><br>
+            <span class="text">Enter Company ID: </span><input id="Company_ID" type="text" name="Company_ID" placeholder="Enter Company ID"><br>
+            <span class="text">Enter Company Name:</span><input id="Company_Name" type="text" name="Company_Name" placeholder="Enter Company Name"><br>
+            <span class="text">Enter Address:</span><input id="Company_Address" type="text" name="Company_Address" placeholder="Enter Company Address"><br>
             <input type="submit">
         </form>
+        <p id="display">
+            <script>
+                console.log("\n");
+                console.log(document.getElementById("Company_ID").value);
+            </script>
+        </p>
     </body>
 </html>
