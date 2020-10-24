@@ -2,7 +2,9 @@ var express = require('express');
 var path = require('path');
 var mongodb = require('mongodb');
 
-var dbConn = mongodb.MongoClient.connect('mongodb://localhost:27017');
+const url = 'mongodb://localhost:27017/company_db';
+//var dbConn = mongodb.MongoClient.connect('mongodb://localhost:27017/company_db');
+const client = new mongodb.MongoClient(url,{useUnifiedTopology: true});
 
 var app = express();
 

@@ -7,11 +7,15 @@
 <body>
     <h1>Please fill data in the form below:</h1>
     <form method="POST" action="/post-feedback">
-        <label>Name:<input type="text" name="client-name" required></label>
+        <label>Employee ID:<input type="text" name="employee_id" required></label>
         <br>
-        <label>Email:<input type="text" name="client-email" required></label>
+        <label>Vehicle No.:<input type="text" name="vehicle_no" required></label>
         <br>
-        <label>Comment:<br><textarea name="comment"></textarea></label>
+        <label>Owner Name:<input type="text" name="owner_name" required></label>
+        <br>
+        <label>Brand Name:<input type="text" name="brand_name" required></label>
+        <br>
+        <label>Year Of Purchase:<input type="text" name="year_of_purchase" required></label>
         <br>
         <input type="submit" value="Submit">
     </form>

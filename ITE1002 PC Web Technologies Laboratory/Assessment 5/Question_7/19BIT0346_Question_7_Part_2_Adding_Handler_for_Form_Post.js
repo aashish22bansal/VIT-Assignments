@@ -3,7 +3,9 @@ var path = require('path');
 var bodyParser = require('body-parser');
 var mongodb = require('mongodb');
 
-var dbConn = mongodb.MongoClient(useUnifiedTopology: true).connect('mongodb://localhost:27017');
+const url = 'mongodb://localhost:27017/company_db';
+//var dbConn = mongodb.MongoClient.connect('mongodb://localhost:27017/company_db');
+const client = new mongodb.MongoClient(url,{useUnifiedTopology: true});
 
 var app = express();
 
@@ -11,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.resolve(__dirname, 'public')));
 
 app.post('/post-feedback', function (req, res) {
-    dbConn.then(function(db) {
+    client.then(function(db) {
         delete req.body._id; // for safety reasons
         db.collection('Employee_Details_Collection').insertOne(req.body);
     });    
