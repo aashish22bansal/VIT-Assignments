@@ -2,8 +2,8 @@ var express = require('express');
 var path = require('path');
 var bodyParser = require('body-parser');
 var mongodb = require('mongodb');
-
-var dbConn = mongodb.MongoClient.connect('mongodb://localhost:27017');
+//mongoose.connect(mongoConnectionString, {useNewUrlParser: true, useUnifiedTopology: true});
+var dbConn = mongodb.MongoClient.connect('mongodb://localhost:27017/company_db');
 
 var app = express();
 
