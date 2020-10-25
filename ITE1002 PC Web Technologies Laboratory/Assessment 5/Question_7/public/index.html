@@ -5,20 +5,186 @@
     <title>Client Data</title>
 </head>
 <body>
-    <h1>Please fill data in the form below:</h1>
-    <form method="POST" action="/post-feedback">
-        <label>Employee ID:<input type="text" name="employee_id" required></label>
-        <br>
-        <label>Vehicle No.:<input type="text" name="vehicle_no" required></label>
-        <br>
-        <label>Owner Name:<input type="text" name="owner_name" required></label>
-        <br>
-        <label>Brand Name:<input type="text" name="brand_name" required></label>
-        <br>
-        <label>Year Of Purchase:<input type="text" name="year_of_purchase" required></label>
-        <br>
-        <input type="submit" value="Submit">
-    </form>
-    <a href="/view-feedbacks">View feedbacks</a>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        input[type=text], select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+
+        label {
+            padding: 12px 12px 12px 0;
+            display: inline-block;
+        }
+
+        input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        .col-25 {
+            float: left;
+            width: 25%;
+            margin-top: 6px;
+        }
+
+        .col-75 {
+            float: left;
+            width: 75%;
+            margin-top: 6px;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+            .col-25, .col-75, input[type=submit] {
+                width: 100%;
+                margin-top: 0;
+            }
+        }
+
+        a:link, a:visited {
+            background-color: #f44336;
+            color: white;
+            padding: 14px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        a:hover, a:active {
+            background-color: red;
+        }
+    </style>
+    <div class="container">
+        <h1 style="text-align:center">Please fill data in the form below:</h1>
+        <h2 style="color:Tomato;">Old Data</h2>
+        <form method="POST" action="/post-feedback">
+            <div class="row">
+                <div class="col-25">
+                    <label>Old Employee ID: </label>
+                </div>
+                <div class="col-75">
+                    <input type="text" name="old_employee_id" required>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-25">
+                    <label>Old Vehicle No.: </label>
+                </div>
+                <div class="col-75">
+                    <input type="text" name="old_vehicle_no" required>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-25">
+                    <label>Old Owner Name: </label>
+                </div>
+                <div class="col-75">
+                    <input type="text" name="old_owner_name" required>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-25">
+                    <label>Old Brand Name: </label>
+                </div>
+                <div class="col-75">
+                    <input type="text" name="old_brand_name" required>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-25">
+                    <label>Old Year Of Purchase: </label>
+                </div>
+                <div class="col-75">
+                    <input type="text" name="old_year_of_purchase" required>
+                </div>
+            </div>
+            <br>
+            <h2 style="color:Tomato;">New Data</h2>
+            <br>
+            <div class="row">
+                <div class="col-25">
+                    <label>New Employee ID: </label>
+                </div>
+                <div class="col-75">
+                    <input type="text" name="new_employee_id" required>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-25">
+                    <label>New Vehicle No.: </label>
+                </div>
+                <div class="col-75">
+                    <input type="text" name="new_vehicle_no" required>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-25">
+                    <label>New Owner Name: </label>
+                </div>
+                <div class="col-75">
+                    <input type="text" name="new_owner_name" required>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-25">
+                    <label>New Brand Name: </label>
+                </div>
+                <div class="col-75">
+                    <input type="text" name="new_brand_name" required>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-25">
+                    <label>New Year Of Purchase: </label>
+                </div>
+                <div class="col-75">
+                    <input type="text" name="new_year_of_purchase" required>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+    
+    <a href="/view-feedbacks" style="align-items: center;">View feedbacks</a>
 </body>
 </html>

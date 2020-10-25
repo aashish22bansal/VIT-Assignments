@@ -8,6 +8,8 @@
 				$("#submit").click(function(){
 					email=$("#email").val();
 					pass=$("#password").val();
+					console.log(email);
+					console.log(pass);
 					/*
 					* Perform some validation here.
 					*/
@@ -21,9 +23,11 @@
 		</script>
 	</head>
 	<body>
-		Username: <input type="text" size="40" placeholder="Type your email" id="email"><br />
-		Password: <input type="password" size="40" placeholder="Type your password" id="password"><br />
-		Remember me Next time <input type="checkbox" >
-		<input type="button" value="Submit" id="submit">
+		<form>
+			Username: <input type="text" size="40" placeholder="Type your email" id="email"><br />
+			Password: <input type="text" size="40" placeholder="Type your password" id="password"><br />
+			Remember me Next time <input type="checkbox" id="checkbox"><br />
+			<input type="button" value="Submit" id="submit">
+		</form>
 	</body>
 </html>
