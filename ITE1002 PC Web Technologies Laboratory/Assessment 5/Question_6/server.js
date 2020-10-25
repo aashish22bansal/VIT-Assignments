@@ -32,23 +32,21 @@ MongoClient.connect(url, function(err,db){
 	router.post('/login',(req,res) => {
 		sess = req.session;
 		sess.email = req.body.email;
+		sess.pass = req.body.pass;
 		res.end('done');
 	});
 
 	router.get('/admin',(req,res) => {
 		sess = req.session;
 		var dbo = db.db("Question6_db");
-		var query = {username: sess.email, password: sess.password};
-		console.log(query);
-		if(dbo.collection("Question_6_Collection").find(query).toArray(function(err,result){
-			if(err){
-				throw err;
-			}
-			console.log(result);
-			return true;
-		}))
+		var query = {username: sess.email, password: sess.pass};
+		console.log(dbo.collection("Question_6_Collection").find(query));
+		if(dbo.collection("Question_6_Collection").find(query))
 		{
-			if(sess.email) {
+			//console.log(dbo.collection("Question_6_Collection").find(query));
+			console.log(sess.email);
+			console.log(sess.pass);
+			if(sess.email && sess.pass) {
 				res.write(`<h1>Hello ${sess.email} </h1><br>`);
 				res.end('<a href='+'/logout'+'>Logout</a>');
 			}
