@@ -40,7 +40,13 @@ MongoClient.connect(url, function(err,db){
 		sess = req.session;
 		var dbo = db.db("Question6_db");
 		var query = {username: sess.email, password: sess.pass};
-		console.log(dbo.collection("Question_6_Collection").find(query));
+		var query_result = dbo.collection("Question_6_Collection").find(query).toArray(function(err,result){
+			if(err){
+				throw err;
+			}
+			console.log(result);
+		});
+		console.log(query_result);
 		if(dbo.collection("Question_6_Collection").find(query))
 		{
 			//console.log(dbo.collection("Question_6_Collection").find(query));
