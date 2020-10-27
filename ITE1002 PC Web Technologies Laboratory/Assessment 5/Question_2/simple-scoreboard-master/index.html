@@ -1,0 +1,72 @@
+<html>
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="bootstrap.min.css" crossorigin="anonymous">
+    <!-- Latest compiled and minified CSS -->
+    <script src="jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="angular-min.js"></script>
+    <script src="socket.io.js"></script>
+    <script src="smart-table.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="basicsCtrl">
+    <br/>
+    <div class="container">
+        <div class="panel panel-default">
+            <div class="panel-heading">Workshop Score Board  &nbsp;&nbsp;&nbsp; username/score</div>   
+            <table st-table="rowCollection" id="tblScoreboard" class="table">
+                <tbody>
+                    <tr ng-repeat="row in rowCollection">
+                        <td width="54px" height="48px">
+                            <a href="#"><img  src={{getTwitterProfileImg(row.name)}} /></a>
+                        </td>
+                        <td style="text-align:left;padding-left:15%;">
+                            <b><h2><span class="">{{row.name}}</span></h2></b>
+                        </td>
+                        <td>
+                            <b><h2><span class="label label-default">{{row.score}}</span></h2></b>
+                        </td>
+                        <td><img src=img/{{row.trend}}.png /></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div> 
+    <script>
+        var app = angular.module('myApp', ['smart-table']);
+
+        app.controller('basicsCtrl', ['$scope', function (scope) {
+            var url=window.location.hostname;
+            url = "http://"+url.replace('watch','watch-api');
+            scope.socket = io(url);
+            scope.getTwitterProfileImg=function(handle) {
+                return "https://twitter.com/"+handle+"/profile_image?size=normal";
+            }
+            scope.getTrendIcon=function(trend) {
+            return "glyphicon glyphicon-arrow-"+trend;
+            }
+            
+            scope.sortArray=function(a,b) {
+            console.log(a,b);
+                if (a.score < b.score){
+                    a.trend='down';
+                    b.trend='up';
+                    return 1;
+                } 
+                if (a.score > b.score){
+                    a.trend='up';
+                    b.trend='down';
+                    return -1;
+                }
+            }
+            scope.socket.on('message',function(msg) {
+                console.log(msg);
+                scope.rowCollection=[];
+                scope.rowCollection=msg;
+                scope.rowCollection.sort(scope.sortArray);
+                scope.$apply();
+            });
+        }]);
+    </script> 
+</body>
+</html>

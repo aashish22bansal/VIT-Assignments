@@ -1,26 +1,30 @@
 // Import events module
 var events = require('events');
+var http = require('http');
+var fs = require('fs');
 
-// Create an eventEmitter object
-var scoreKeeper = new events.EventEmitter();
-
-// Create an event Handler function
-var shoot_a_basket = function connected(){
-    console.log('Connection Successful!');
-
-    // Fire up the data_received event
-    scoreKeeper.emit('data_received');
-}
-
-// Binding the connection event with the handler
-scoreKeeper.on('connection',shoot_a_basket);
-
-// Bind the data_received event with the anonymous function
-scoreKeeper.on('data_received',function(){
-    console.log('data received successfully.');
+var server = http.createServer(function (req, resp) {
+    // Creating a request for the file
+    if (req.url === "/scoreboard") {
+        fs.readFile("19BIT0346_Question_2_Scoreboard.html", function (error, pgResp) {
+            if (error) {
+                resp.writeHead(404);
+                resp.write('Contents you are looking are Not Found');
+            } else {
+                resp.writeHead(200, { 'Content-Type': 'text/html' });
+                resp.write(pgResp);
+            }
+             
+            resp.end();
+        });
+    } else {
+        //4.
+        resp.writeHead(200, { 'Content-Type': 'text/html' });
+        resp.write('<h1>Scoreboard Manager</h1><br /><br />To Enter the score, please enter: ' + req.url);
+        resp.end();
+    }
 });
-
-// Fire up the connection event
-scoreKeeper.emit('connection');
-
-console.log("Program Ended.");
+//5.
+server.listen(5050);
+ 
+console.log('Server Started listening on 5050');

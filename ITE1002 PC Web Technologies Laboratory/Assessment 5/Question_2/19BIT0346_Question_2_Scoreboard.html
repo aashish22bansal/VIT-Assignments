@@ -1,0 +1,101 @@
+<html>
+    <head>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="anonymous">
+        <!-- Latest compiled and minified CSS -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.1/socket.io.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-smart-table/2.1.11/smart-table.min.js"></script>
+    </head>
+    <body ng-app="myApp" ng-controller="basicsCtrl">
+        <div class="container">
+            <div class="container">
+                <div class="panel panel-default">
+                    <table st-table="rowCollection" id="tblScoreboard" class="table">
+                        <thead>
+                            <tr>
+                                <th>\</th>
+                                <th>Team A</th>
+                                <th>Team B</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Team Name</td>
+                                <td>Team A</td>
+                                <td>Team B</td>
+                            </tr>
+                            <tr>
+                                <td>Team Score</td>
+                                <td><p id="scoreA">0</p></td>
+                                <td><p id="scoreB">0</p></td>
+                            </tr>
+                            <tr>
+                                <td>1 Point</td>
+                                <td>
+                                    <button value="1" name="1_pointer" id="">1 Point</button>
+                                </td>
+                                <td>
+                                    <button>1 Point</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2 Points</td>
+                                <td>
+                                    <button>2 Pointer</button>
+                                </td>
+                                <td>
+                                    <button>2 Pointer</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3 Points</td>
+                                <td>
+                                    <button>3 Pointer</button>
+                                </td>
+                                <td>
+                                    <button>3 Pointer</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <script>
+            var app = angular.module('myApp',['smart-table']);
+
+            app.controller('basicsCtrl',['$scope',function(scope){
+                var events = require('events');
+                var http = require('http');
+                var fs = require('fs');
+
+                // Create an eventEmitter object
+                var scoreKeeper = new events.EventEmitter();
+
+                // Create an event Handler function
+                var shoot_a_basket = function connected(){
+                    console.log('Connection Successful!');
+
+                    // Fire up the data_received event
+                    scoreKeeper.emit('data_received');
+                }
+
+                // Binding the connection event with the handler
+                scoreKeeper.on('connection',shoot_a_basket);
+
+                // Bind the data_received event with the anonymous function
+                scoreKeeper.on('data_received',function(){
+                    console.log('data received successfully.');
+                });
+
+                // Fire up the connection event
+                scoreKeeper.emit('connection');
+
+                console.log("Program Ended.");
+            }]);
+        </script>
+    </body>
+</html>
