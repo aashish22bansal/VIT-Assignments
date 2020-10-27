@@ -10,6 +10,9 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-smart-table/2.1.11/smart-table.min.js"></script>
     </head>
     <body ng-app="myApp" ng-controller="basicsCtrl">
+        <script>
+            
+        </script>
         <div class="container">
             <div class="container">
                 <div class="panel panel-default">
@@ -29,13 +32,19 @@
                             </tr>
                             <tr>
                                 <td>Team Score</td>
-                                <td><p id="scoreA">0</p></td>
-                                <td><p id="scoreB">0</p></td>
+                                <td>
+                                    <p id="scoreA">
+                                        <script>
+                                            document.write(score_valA);
+                                        </script>
+                                    </p>
+                                </td>
+                                <td><p id="scoreB"></p></td>
                             </tr>
                             <tr>
                                 <td>1 Point</td>
                                 <td>
-                                    <button value="1" name="1_pointer" id="">1 Point</button>
+                                    <button value="1" name="1_pointerA" id="1_pointerA">1 Point</button>
                                 </td>
                                 <td>
                                     <button>1 Point</button>
@@ -72,6 +81,15 @@
                 var http = require('http');
                 var fs = require('fs');
 
+                var score_valA = 0;
+                var score_valB = 0;
+                
+
+                function add_1PointerA(){
+                    score_valA = score_valA+1;
+                    document.getElementById("scoreA").innerHTML = score_valA;
+                }
+
                 // Create an eventEmitter object
                 var scoreKeeper = new events.EventEmitter();
 
@@ -88,6 +106,7 @@
 
                 // Bind the data_received event with the anonymous function
                 scoreKeeper.on('data_received',function(){
+                    document.getElementById("1_pointerA").addEventListener("click",add_1PointerA);
                     console.log('data received successfully.');
                 });
 
