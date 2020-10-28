@@ -20,26 +20,26 @@ app.listen(3000, () => {
 });
 
 // Create an eventEmitter object
-            var scoreKeeper = new events.EventEmitter();
+var scoreKeeper = new events.EventEmitter();
 
-            // Create an event Handler function
-            var shoot_a_basket = function connected(){
-                console.log('Connection Successful!');
+// Create an event Handler function
+var shoot_a_basket = function connected(){
+    console.log('Connection Successful!');
 
-                // Fire up the data_received event
-                scoreKeeper.emit('data_received');
-            }
+    // Fire up the data_received event
+    scoreKeeper.emit('data_received');
+}
 
-            // Binding the connection event with the handler
-            scoreKeeper.on('connection',shoot_a_basket);
+// Binding the connection event with the handler
+scoreKeeper.on('connection',shoot_a_basket);
 
-            // Bind the data_received event with the anonymous function
-            scoreKeeper.on('data_received',function(){
-                document.getElementById("1_pointerA").innerHTML(document.getElementById("1_pointerA").addEventListener("click",add_1PointerA));
-                console.log('data received successfully.');
-            });
+// Bind the data_received event with the anonymous function
+scoreKeeper.on('data_received',function(){
+    document.getElementById("1_pointerA").innerHTML(document.getElementById("1_pointerA").addEventListener("click",add_1PointerA));
+    console.log('data received successfully.');
+});
 
-            // Fire up the connection event
-            scoreKeeper.emit('connection');
+// Fire up the connection event
+scoreKeeper.emit('connection');
 
-            console.log("Program Ended.");
+console.log("Program Ended.");
