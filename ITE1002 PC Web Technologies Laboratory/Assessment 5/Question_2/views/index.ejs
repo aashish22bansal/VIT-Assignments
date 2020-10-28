@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Index page</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="anonymous">
+    <!-- Latest compiled and minified CSS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.1/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-smart-table/2.1.11/smart-table.min.js"></script>
+
+  </head>
+  <body ng-app="myApp" ng-controller="basicsCtrl">
+    <h1>19BIT0346 Question 2</h1><br><br>
+    <div class="initial"></div>
+    <div class="container">
+        <div class="container">
+            <div class="panel panel-default">
+                <table st-table="rowCollection" id="tblScoreboard" class="table">
+                    <thead>
+                        <tr>
+                            <th>\</th>
+                            <th>Team A</th>
+                            <th>Team B</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Team Name</td>
+                            <td>Team A</td>
+                            <td>Team B</td>
+                        </tr>
+                        <tr>
+                            <td>Team Score</td>
+                            <td>
+                                <p id="scoreA">0</p>
+                            </td>
+                            <td>
+                                <p id="scoreB"></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1 Point</td>
+                            <td>
+                                <button value="1" name="1_pointerA" id="1_pointerA" onclick="add_1PointerA()">1 Point</button>
+                            </td>
+                            <td>
+                                <button>1 Point</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2 Points</td>
+                            <td>
+                                <button>2 Pointer</button>
+                            </td>
+                            <td>
+                                <button>2 Pointer</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3 Points</td>
+                            <td>
+                                <button>3 Pointer</button>
+                            </td>
+                            <td>
+                                <button>3 Pointer</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="/js/script.js"></script>
+</body>
+</html>

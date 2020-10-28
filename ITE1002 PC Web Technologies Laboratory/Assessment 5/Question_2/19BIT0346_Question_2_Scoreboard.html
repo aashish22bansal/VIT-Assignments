@@ -11,8 +11,11 @@
     </head>
     <body ng-app="myApp" ng-controller="basicsCtrl">
         <script>
-            
+            var score_valA = 0;
+            var score_valB = 0;
+            document.getElementById("initial").innerHTML = score_valA+"<br>"+score_valB;
         </script>
+        <div class="initial"></div>
         <div class="container">
             <div class="container">
                 <div class="panel panel-default">
@@ -33,7 +36,7 @@
                             <tr>
                                 <td>Team Score</td>
                                 <td>
-                                    <p id="scoreA"></p>
+                                    <p id="scoreA">0</p>
                                 </td>
                                 <td>
                                     <p id="scoreB"></p>
@@ -75,17 +78,13 @@
             var app = angular.module('myApp',['smart-table']);
 
             app.controller('basicsCtrl',['$scope',function(scope){
-                var events = require('events');
-                var http = require('http');
-                var fs = require('fs');
+                
 
-                var score_valA = 0;
-                var score_valB = 0;
-                document.getElementById("scoreA").innerHTML=score_valA;
+                document.getElementById("scoreA").nodeValue=score_valA;
 
                 function add_1PointerA(){
                     score_valA = score_valA+1;
-                    document.getElementById("scoreA").innerHTML = score_valA;
+                    document.getElementById("scoreA").nodeValue = score_valA;
                 }
 
                 // Create an eventEmitter object
