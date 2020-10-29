@@ -1,27 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"><!-- ng-app="myApp" ng-controller="basicsCtrl"-->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Index page</title>
     <link rel="stylesheet" href="/css/styles.css" />
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="anonymous">
-    <!-- Latest compiled and minified CSS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.1/socket.io.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-smart-table/2.1.11/smart-table.min.js"></script>
-
+    <script src="/js/script.js"></script>
   </head>
-  <body ng-app="myApp" ng-controller="basicsCtrl">
+  <body>
     <h1>19BIT0346 Question 2</h1><br><br>
-    <div class="initial"></div>
     <div class="container">
         <div class="container">
             <div class="panel panel-default">
-                <table st-table="rowCollection" id="tblScoreboard" class="table">
+                <table id="tblScoreboard" class="table"><!-- st-table="rowCollection"-->
                     <thead>
                         <tr>
                             <th>\</th>
@@ -38,7 +29,7 @@
                         <tr>
                             <td>Team Score</td>
                             <td>
-                                <p id="scoreA">0</p>
+                                <p id="scoreA"></p>
                             </td>
                             <td>
                                 <p id="scoreB"></p>
@@ -47,7 +38,7 @@
                         <tr>
                             <td>1 Point</td>
                             <td>
-                                <button value="1" name="1_pointerA" id="1_pointerA" onclick="add_1PointerA()">1 Point</button>
+                                <button value="1" name="1_pointerA" id="1_pointerA" onclick="scoreKeeper.emit('connection');">1 Point</button>
                             </td>
                             <td>
                                 <button>1 Point</button>
@@ -76,6 +67,6 @@
             </div>
         </div>
     </div>
-    <script src="/js/script.js"></script>
+    
 </body>
 </html>
