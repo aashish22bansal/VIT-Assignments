@@ -1,55 +1,66 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>IPL Players</title>
-        <link rel="stylesheet" href="styles.css">
-        <script src="main.js"></script>
-    </head>
-    <body>
-        <h1>19BIT0346 Aashish Bansal Question 8</h1>
-        <h2>Player Search Form</h2>
-        <div class="container">
-            <form id="find">
-                <div class="row">
-                    <div class="col-25">
-                        <label>Name: </label>
-                    </div>
-                    <div class="col-75">
-                        <input type="text" id="name" name="find" placeholder="Enter the Name of Player...">
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-25">
-                        <label>IPL Franchise: </label>
-                    </div>
-                    <div class="col-75">
-                        <input type="radio" id="IPL_Franchise">
-                    </div>
-                </div>
-                    
-                <div class="row">
-                    <div class="col-25">
-                        <label>Country: </label>
-                    </div>
-                    <div class="col-75">
-                        <input type="radio" id="Country">
-                    </div>
-                </div>
-                    
-                <div class="row">
-                    <div class="col-25">
-                        <label>Bid Amount: </label>
-                    </div>
-                    <div class="col-75">
-                        <input type="radio" id="Bid_Amount">
-                    </div>
-                </div>
-
-                <div class="row">
-                    <input type="submit" value="Submit" onclick="search()">
-                </div>
-            </form>
-        </div>
-    </body>
+  <head>
+    <title>Simple login form</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <style>
+      html, body {
+      display: flex;
+      justify-content: center;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 15px;
+      }
+      form {
+      border: 5px solid #f1f1f1;
+      }
+      input[type=text], input[type=number] {
+      width: 100%;
+      padding: 16px 8px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      }
+      button {
+      background-color: #8ebf42;
+      color: white;
+      padding: 14px 0;
+      margin: 10px 0;
+      border: none;
+      cursor: grabbing;
+      width: 100%;
+      }
+      h1 {
+      text-align:center;
+      fone-size:18;
+      }
+      button:hover {
+      opacity: 0.8;
+      }
+      .formcontainer {
+      text-align: left;
+      margin: 24px 50px 12px;
+      }
+      .container {
+      padding: 16px 0;
+      text-align:left;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="/login" method="GET">
+      <h1>IPL Form</h1>
+      <div class="formcontainer">
+      <hr/>
+      <div class="container">
+        <label for="find"><strong>Find:</strong></label>
+        <input type="text" name="find">
+        <label for="find_details"><strong>Select:</strong></label>
+        <input type="radio" name="find_details" value="IPL_Franchise">IPL
+		<input type="radio" name="find_details" value="country">Country
+		<input type="radio" name="find_details" value="bid">Bid
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </body>
 </html>

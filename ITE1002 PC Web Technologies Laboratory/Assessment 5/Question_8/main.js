@@ -5,9 +5,9 @@ function mongosearch(){
         if(err){
             throw err;
         }
-        var dbo = db.db("IPL_players");
+        var dbo = db.db("IPL");
         var query = {Name: name,IPL_Franchise: find_IPL_Franchise,Country: find_Country,bid_amount: find_Bid_Amount};
-        dbo.collection("players").find(query).toArray(function(err,result){
+        dbo.collection("ipl_player").find(query).toArray(function(err,result){
             if(err){
                 throw err;
             }

@@ -1,32 +1,32 @@
-// Import events module
-var events = require('events');
-var http = require('http');
-var fs = require('fs');
+const events = require('events');
+const scoreKeeper = new events.EventEmitter();
 
-var server = http.createServer(function (req, resp) {
-    // Creating a request for the file
-    if (req.url === "/scoreboard") {
-        fs.readFile("19BIT0346_Question_2_Scoreboard.html", function (error, pgResp) {
-            if (error) {
-                resp.writeHead(404);
-                resp.write('Contents you are looking are Not Found');
-            } else {
-                resp.writeHead(200, { 'Content-Type': 'text/html' });
-                resp.write(pgResp);
-            }
-             
-            resp.end();
-        });
-    } else {
-        //4.
-        resp.writeHead(200, { 'Content-Type': 'text/html' });
-        resp.write('<h1>Scoreboard Manager</h1><br /><br />To Enter the score, please enter: ' + req.url);
-        resp.end();
+//initlal score
+var score1 = 0;
+var score2 = 0;
+
+// function for scoring basket
+function make_basket(team){
+    if(team==="A"){
+        score1 += 1;
     }
-});
-//5.
-server.listen(5050);
- 
-console.log('Server Started listening on 5050');
+    else{
+        score2 += 1;
+    }
+    console.log("Score for Team A is: " + score1);
+    console.log("Score for team B is: " + score2);
+    console.log("--------------------------\n\n\n");
+}
 
-//resp('tfyhjiopkijhuygfcdxzsxfcghjkl;');
+scoreKeeper.on('make_basket',make_basket);
+
+function scored(team){
+    scoreKeeper.emit('make_basket',team);
+}
+
+scored("A");
+scored("B");
+scored("A");
+scored("A");
+scored("B");
+scored("A");
