@@ -1,3 +1,21 @@
+function mongosearch(){
+    var MongoClient = require('mongodb').MongoClient;
+    var url = "mongodb://localhost:27017/";
+    MongoClient.connect(url, function(err,db){
+        if(err){
+            throw err;
+        }
+        var dbo = db.db("IPL_players");
+        var query = {Name: name,IPL_Franchise: find_IPL_Franchise,Country: find_Country,bid_amount: find_Bid_Amount};
+        dbo.collection("players").find(query).toArray(function(err,result){
+            if(err){
+                throw err;
+            }
+            console.log(result);
+            db.close();
+        });
+    });
+}
 function search(){
     var name = document.getElementById("name").value;
     var IPL_Franchise = document.getElementById("IPL_Franchise").value;
