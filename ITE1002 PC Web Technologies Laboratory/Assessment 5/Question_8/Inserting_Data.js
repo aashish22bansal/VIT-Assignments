@@ -17,9 +17,7 @@ MongoClient.connect(url, function(err,db){
     var IPL_Player_8 = {Name: "Shreyas Iyer", IPL_Franchise: "DC", Country: "India", bid_amount: "7 Crore"};
     var IPL_Player_9 = {Name: "Chris Gayle", IPL_Franchise: "KXIP", Country: "West Indies", bid_amount: "2 Crore"};
     var IPL_Player_10 = {Name: "KL Rahul", IPL_Franchise: "KXIP", Country: "India", bid_amount: "11 Crore"};
-    var IPL_Player_11 = {Name: "", IPL_Franchise: , Country: , bid_amount: };
-    var IPL_Player_12 = {Name: "", IPL_Franchise: , Country: , bid_amount: };
-    dbo.collection("players").insertMany([IPL_Player_1,IPL_Player_2,IPL_Player_3,IPL_Player_4,IPL_Player_5,IPL_Player_6,IPL_Player_7,IPL_Player_8,IPL_Player_9,IPL_Player_10,IPL_Player_11,IPL_Player_12],function(err,res){
+    dbo.collection("players").insertMany([IPL_Player_1,IPL_Player_2,IPL_Player_3,IPL_Player_4,IPL_Player_5,IPL_Player_6,IPL_Player_7,IPL_Player_8,IPL_Player_9,IPL_Player_10],function(err,res){
         if(err){
             throw err;
         }

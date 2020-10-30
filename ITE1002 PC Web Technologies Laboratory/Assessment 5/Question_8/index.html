@@ -7,19 +7,49 @@
     </head>
     <body>
         <h1>19BIT0346 Aashish Bansal Question 8</h1>
-        <h2>Players Content Form</h2>
-        <table>
+        <h2>Player Search Form</h2>
+        <div class="container">
             <form id="find">
-                <tr>
-                    <td><label>Name: </label></td>
-                    <td><input type="text" id="name" placeholder="Enter the Name of the Player..."></td>
-                </tr>
-                <tr>
-                    <td><label>IPL Franchise: </label></td>
-                    <td></td>
-                </tr>
+                <div class="row">
+                    <div class="col-25">
+                        <label>Name: </label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="name" name="find" placeholder="Enter the Name of Player...">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-25">
+                        <label>IPL Franchise: </label>
+                    </div>
+                    <div class="col-75">
+                        <input type="radio" id="IPL_Franchise">
+                    </div>
+                </div>
+                    
+                <div class="row">
+                    <div class="col-25">
+                        <label>Country: </label>
+                    </div>
+                    <div class="col-75">
+                        <input type="radio" id="Country">
+                    </div>
+                </div>
+                    
+                <div class="row">
+                    <div class="col-25">
+                        <label>Bid Amount: </label>
+                    </div>
+                    <div class="col-75">
+                        <input type="radio" id="Bid_Amount">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <input type="submit" value="Submit" onclick="search()">
+                </div>
             </form>
-        </table>
-        
+        </div>
     </body>
 </html>
