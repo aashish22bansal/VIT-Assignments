@@ -1,31 +1,31 @@
 var express = require('express');
-var app = express();
+var app = express(); // Creating the initial express app
 var cookieParser = require('cookie-parser');
 
-app.use(cookieParser());
+app.use(cookieParser()); // Initialising the use of cookies for parsing
 var session = require('express-session');
 
-app.use(session({secret: "Shh, its a secret!"}));
-app.use(express.static('public'));
+app.use(session({secret: "Shh, its a secret!"})); // Encrypting the cookie session information
+app.use(express.static('public')); // Used to display static pages of the website
 
 app.use(function(req, res, next) {
-	console.log('%s %s', req.method, req.url);
-	next();
+	console.log('%s %s', req.method, req.url); // %s is being used to display the requested data in console
+	next(); // Calling this function invokes the next middleware function in the app.  The callback argument to the middleware function
 });
 
 app.get('/', function (req, res) {
-	if (req.session.rememberme=="yes")
+	if (req.session.rememberme=="yes")// If session present and rememberme is agreed
 	{
 		res.redirect('/login?username=19BIT0346&passwords=123456');
 	}
 	else
 	{
-	res.sendFile( __dirname + "/" + "index.html" );
+		res.sendFile( __dirname + "/" + "index.html" ); // if no session then just redirect to the login page.
 	}
 });
 	
 app.get('/login', function (req, res) {
-
+	// Storing the data inside cookies for the user for that session.
 	res.cookie("Username", "19BIT0346");
 	res.cookie("Password", "123456");
 	username=req.query.username;
