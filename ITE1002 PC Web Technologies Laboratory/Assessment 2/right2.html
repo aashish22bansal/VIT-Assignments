@@ -3,10 +3,27 @@
     <head>
         <script>
             function validate(){ var ticket=[];
-                var a={from:'Delhi',to:'Mumbai',train:'shatabdi',cno:'h1',date:'04-10-2019'};
-                var b={from:'Delhi',to:'Mumbai',train:'rajdhani',cno:'h1',date:'09-12-2019'}; 
-                var c={from:document.getElementById('from').value,to:document.getElementById('to').value,train:document.getElementById('drop').value,cno:document.getElementById
-                ('d').value,date:document.getElementById('date').value};
+                var a={
+                    from:'Delhi',
+                    to:'Mumbai',
+                    train:'shatabdi',
+                    cno:'h1',
+                    date:'04-10-2019'
+                };
+                var b={
+                    from:'Delhi',
+                    to:'Mumbai',
+                    train:'rajdhani',
+                    cno:'h1',
+                    date:'09-12-2019'
+                }; 
+                var c={
+                    from:document.getElementById('from').value,
+                    to:document.getElementById('to').value,
+                    train:document.getElementById('drop').value,
+                    cno:document.getElementById('d').value,
+                    date:document.getElementById('date').value
+                };
                 if(a==c){
                     document.write("Ticket is Available! ");
                 }
