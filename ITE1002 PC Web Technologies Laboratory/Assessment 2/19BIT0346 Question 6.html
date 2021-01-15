@@ -1,8 +1,8 @@
 <html>
 
 <head>
-    <script src="jquery-3.5.1.min.js"></script>
-    <style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!--style>
         table tr:nth-child(odd) {
             background-color: white;
             border: none;
@@ -16,11 +16,20 @@
         table tr:nth-child(even) {
             background-color: grey;
         }
-    </style>
+    </style-->
+    <script>
+        $(document).ready(function(){
+            $("tr:nth-child(even)").on({
+                mouseenter:function(){
+                    $(this).css("background-color","grey");
+                }
+            });
+        });
+    </script>
 </head>
 
 <body>
-    <h1>Aashish Bansal 19BIT0346 Question 4</h1>
+    <h1>Aashish Bansal 19BIT0346 Question 6</h1>
     <big>
         <table id="tab" align="center" topmargin="50" cellpadding="10" cellspacing="0.5" border="1">
             <tr id="hd">

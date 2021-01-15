@@ -15,7 +15,7 @@
                     "#but9", "#but10"
                 ];
                 for (var i = 0; i < but_id.length; i++) {
-                    if ($(but_id[i]).text() % $("#in").val() == 0) {
+                    if ((($(but_id[i]).val()) % ($("#in").val())) == 0) {
                         $(but_id[i]).remove();
                     }
                 }
@@ -35,16 +35,16 @@
             </tr>
         </table>
         Click a button:
-        <button type="button" id="but1">11</button>
-        <button type="button" id="but2">22</button>
-        <button type="button" id="but3">34</button>
-        <button type="button" id="but4">42</button>
-        <button type="button" id="but5">50</button>
-        <button type="button" id="but6">63</button>
-        <button type="button" id="but7">71</button>
-        <button type="button" id="but8">85</button>
-        <button type="button" id="but9">94</button>
-        <button type="button" id="but10">103</button>
+        <button type="button" id="but1" value="11">11</button>
+        <button type="button" id="but2" value="22">22</button>
+        <button type="button" id="but3" value="34">34</button>
+        <button type="button" id="but4" value="42">42</button>
+        <button type="button" id="but5" value="50">50</button>
+        <button type="button" id="but6" value="63">63</button>
+        <button type="button" id="but7" value="71">71</button>
+        <button type="button" id="but8" value="85">85</button>
+        <button type="button" id="but9" value="94">94</button>
+        <button type="button" id="but10" value="103">103</button>
     </form>
 </body>
 
