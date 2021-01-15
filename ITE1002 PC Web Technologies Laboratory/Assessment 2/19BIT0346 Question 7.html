@@ -5,8 +5,8 @@
     <title>19BIT0346 Question 7</title>
     <script src="jquery-3.5.1.min.js"></script>
     <script>
-        $("document").ready(function() {
-            ("#del").onclick(function() {
+        $(document).ready(function(){
+            ("#del").onclick(function(){
                 var but_id = [
                     "#but1", "#but2",
                     "#but3", "#but4",
@@ -15,7 +15,7 @@
                     "#but9", "#but10"
                 ];
                 for (var i = 0; i < but_id.length; i++) {
-                    if ((($(but_id[i]).val()) % ($("#in").val())) == 0) {
+                    if( (($(but_id[i]).val()) % ($("#in").val())) == 0) {
                         $(but_id[i]).remove();
                     }
                 }
@@ -31,7 +31,7 @@
             <tr>
                 <td>Divisible by:</td>
                 <td><input type="text" id="in" /></td>
-                <td><button type="button" id="del">Delete</button></td>
+                <td><input type="submit" id="del" value="Delete"></td>
             </tr>
         </table>
         Click a button:

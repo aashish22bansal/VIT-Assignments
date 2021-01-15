@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Question 1</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#submit").click(function(){
+                    var data = [
+                        { 
+                            "student_name":document.getElementById("student_name").value,
+                            "dob": 
+                            {
+                                "date":document.getElementById("date").value,
+                                "month":document.getElementById("month").value,
+                                "year":document.getElementById("year").value
+                            },
+                            "parents":
+                            {
+                                "fathers_name":document.getElementById("father_name").value,
+                                "mothers_name":document.getElementById("mother_name").value
+                            },
+                            //"blood_group_type":document.getElementById("blood_group").value,
+                            "email":document.getElementById("email").value,
+                            "phone":
+                            {
+                                "landline":document.getElementById("landline").value,
+                                "mobile":document.getElementById("mobile").value
+                            },
+                            "address":
+                            {
+                                "door_no":document.getElementById("address_door_no").value,
+                                "street_name":document.getElementById("address_street_no").value,
+                                "place_name":document.getElementById("address_place_name").value,
+                                "pincode":document.getElementById("address_pincode").value,
+                                "country":document.getElementById("address_country").value
+                            },
+                            "degree":
+                            {
+                                "ug":document.getElementById("degree_ug").value,
+                                "pg":document.getElementById("degree_pg").value,
+                                "other":document.getElementById("degree_other").value
+                            }
+                        }
+                    ];
+                    console.log(data);
+                    var data2 = JSON.stringify(data);
+                    var full = [];
+                    full = JSON.stringify(full);
+                    var full_data = JSON.parse(full);
+                    full_data.push(data);
+                    var display_data = JSON.stringify(full_data);
+                    console.log(full_data);
+                    console.log(display_data);
+                });
+            });
+            function start(){
+                
+            }
+        </script>
+    </head>
+    <body>
+		<h1>Aashish Bansal 19BIT0346 Question 1</h1>
+		<table style="border: 1px solid black;" id="detail_table">
+			<form id="form1" class="form1class" action="">
+				<tr>
+					<td rowspan="7" style="background-color: #4CAF50;">Personal Details</td>
+					<td><label for="student_name">Enter Name: </label></td>
+					<td><input type="text" id="student_name" placeholder="Enter your name..." required></td>
+				</tr>
+				<tr>
+					<td><label for="dob">Enter Date of Birth: </label></td>
+					<td><input type="number" id="date" required></td>
+					<td><input type="number" id="month" required></td>
+					<td><input type="number" id="year" required></td>
+				</tr>
+
+				<tr>
+					<td><label for="father_name">Enter Father's Name: </label></td>
+					<td><input type="text" name="father_name" id="father_name" placeholder="Enter Father name..." required></td>
+				</tr>
+				<tr>
+					<td><label for="mother_name">Enter Mother's Name: </label></td>
+					<td><input type="text" name="mother_name" id="mother_name" placeholder="Enter Mother name..." required></td>
+				</tr>
+				<!--tr>
+					<td><label for="blood_group">Enter Blood Group: </label></td>
+					<td>
+						<select name="blood_group_type">
+							<option value="Choose_Blood_Group">--choose--</option>
+							<option value="A -ve">A -ve</option>
+							<option value="A +ve">A +ve</option>
+							<option value="B -ve">B -ve</option>
+							<option value="B +ve">B +ve</option>
+							<option value="o -ve">O -ve</option>
+							<option value="O +ve">O +ve</option>
+							<option value="AB -ve">AB -ve</option>
+							<option value="AB +ve">AB +ve</option>
+						</select>
+					</td>
+				</tr-->
+				<tr>
+					<td><label for="email">Enter your Email: </label></td>
+					<td><input type="text" name="email" id="email" placeholder="Enter your email..." required></td>
+				</tr>
+				<tr>
+					<td><label for="landline">Enter your Landline Number: </label></td>
+					<td><input type="number" name="landline" id="landline" placeholder="Enter your landline..." required></td>
+				</tr>
+				<tr>
+					<td><label for="mobile">Enter your Mobile Number: </label></td>
+					<td><input type="number" name="mobile" id="mobile" placeholder="Enter your mobile..." required></td>
+				</tr>
+				<tr>
+					<td rowspan="5" style="background-color: #4CAF50;"><label for="address">Address Details</label></td>
+					<td><label for="address_door_no">Enter Door No.: </label></td>
+					<td><input type="text" name="address_door_no" id="address_door_no" placeholder="Enter your Door No..." required/></td>
+				</tr>
+				<tr>
+					<td><label for="address_street_no">Enter Street No.: </label></td>
+					<td><input type="text" name="address_street_no" id="address_street_no" placeholder="Enter your Street..." required/></td>
+				</tr>
+				<tr>
+					<td><label for="address_place_name">Enter the Area: </label></td>
+					<td><input type="text" name="address_place_name" id="address_place_name" placeholder="Enter the Area" required/></td>
+				</tr>
+				<tr>
+					<td><label for="address_pincode">Enter the Pin Code: </label></td>
+					<td><input type="number" name="address_pincode" id="address_pincode" placeholder="Enter the PIN Code..." required/></td>
+				</tr>
+				<tr>
+					<td><label for="address_country">Enter the Country: </label></td>
+					<td><input type="text" name="address_country" id="address_country" placeholder="Enter the Country..." required/></td>
+				</tr>
+				<tr>
+					<td rowspan="3" style="background-color: #4CAF50;">Educational Details</td>
+					<td><label for="degree_ug">Enter Undergraduate Qualification: </label></td>
+					<td><input type="text" name="degree_ug" id="degree_ug" placeholder="Enter UG Qualification..." required/></td>
+				</tr>
+				<tr>
+					<td><label for="degree_pg">Enter Postgraduation Qualification: </label></td>
+					<td><input type="text" name="degree_pg" id="degree_pg" placeholder="Enter PG Qualification..." required/></td>
+				</tr>
+				<tr>
+					<td><label for="degree_other">Enter Other Qualifications: </label></td>
+					<td><input type="text" name="degree_other" id="degree_other" placeholder="Enter other Qualifications...[Enter NA if None]" required/></td>
+				</tr>
+			
+				<tr style="align-items: center;">
+					<td colspan="3"><input type="button" value="Submit" id="submit" name="submitbutton"></td>
+				</tr>
+			</form>
+		</table>
+		<p id="display"></p>
+		<div id="div1"></div>
+	</body>
+</html>
