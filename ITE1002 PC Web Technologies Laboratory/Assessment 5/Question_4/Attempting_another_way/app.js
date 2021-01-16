@@ -42,7 +42,7 @@ app.post('/process_post',urlencodedParser,function(req,res){
     res.end(JSON.stringify(response));
 });
 
-app.post('/update_data',function(req,res){
+app.post('/update_data',urlencodedParser,function(req,res){
     MongoClient.connect("mongodb://localhost:27017/",function(err,db){
         if(err){
             throw err;
@@ -68,9 +68,6 @@ app.post('/update_data',function(req,res){
         else if(update_on_the_basis_of === "YoA"){
             myQuery = { YoA: req.body.YoA }
         }
-        else{
-            alert("Select an option for the basis of updation!");
-        }
         var newValues = { $set: {
                 name: response.name,
                 age: response.age,
@@ -84,8 +81,32 @@ app.post('/update_data',function(req,res){
             }
             console.log("DATABASE DOCUMENT UPDATED!");
         });
+        console.log(newValues);
         db.close();
     });
+});
+
+app.post('/document_entry_checking',urlencodedParser,function(req,res){
+    var max = 4;
+    MongoClient.connect("mongodb://localhost:27017/",function(err,db){
+        if(err){
+            throw err;
+        }
+        var dbo = db.db("employee_db");
+        dbo.collection("customers").find().toArray(function(err,result){
+            if(err){
+                throw err;
+            }
+            if(result.length >= max){
+                console.log("NO MORE DOCUMENTS ARE ALLOWED TO BE INSERTED!");
+            }
+            else{
+                var num = max - result.length;
+                console.log("WE CAN INSERT ONLY "+ num + " MORE DOCUMENTS INTO THE DATABASE");
+            }
+        });
+        db.close();
+    })
 });
 
 var server = app.listen(8080,function(){
