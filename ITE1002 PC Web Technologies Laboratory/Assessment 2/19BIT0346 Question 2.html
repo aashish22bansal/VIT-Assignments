@@ -3,9 +3,7 @@
     <head>
         <title>19BIT0346 Question 2</title>
         <meta charset="UTF-8" /> 
-        <meta name="viewport" content= 
-            "width=device-width,  
-            initial-scale=1.0" /> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
     
         <title>Digital Clock</title> 
         <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"> </script> 
@@ -49,11 +47,9 @@
                     min = min < 10 ? "0" + min : min; 
                     sec = sec < 10 ? "0" + sec : sec; 
         
-                    let currentTime = hour + ":"  
-                        + min + ":" + sec + am_pm; 
+                    let currentTime = hour + ":" + min + ":" + sec + am_pm; 
         
-                    document.getElementById("clock") 
-                        .innerHTML = currentTime; 
+                    document.getElementById("clock").innerHTML = currentTime; 
                 } 
         
                 showTime(); 
@@ -109,7 +105,9 @@
                             x[i].style.display = "none";
                         }
                         slideIndex++;
-                        if (slideIndex > x.length) {slideIndex = 1}
+                        if (slideIndex > x.length){
+                            slideIndex = 1
+                        }
                         x[slideIndex-1].style.display = "block";
                         setTimeout(carousel, 2000); // Change image every 2 seconds
                     }
