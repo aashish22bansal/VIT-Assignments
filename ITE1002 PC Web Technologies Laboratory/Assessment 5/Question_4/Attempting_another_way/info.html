@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <form action="/process_post" method="POST">
+            Name: <input type="text" name="name" id="name" />
+            Age:  <input type="text" name="age" id="age" />
+            DoB:  <input type="date" name="DoB" id="DoB" />
+            YoA:  <input type="text" name="YoA" id="YoA" />
+            <input type="submit" name="submit" value="Submit" id="submit" />
+        </form>
+        <h1>Updation Form Below</h1>
+        <form action="/update_data" method="POST">
+            Update on the basis of [The old and new value for the selected option should be same]:
+            <select id="update_on_the_basis_of" name="update_on_the_basis_of">
+                <option value="name">Name</option>
+                <option value="age">Age</option>
+                <option value="DoB">DoB</option>
+                <option value="YoA">YoA</option>
+            </select>
+            Name: <input type="text" name="name" id="name" />
+            Age:  <input type="text" name="age" id="age" />
+            DoB:  <input type="date" name="DoB" id="DoB" />
+            YoA:  <input type="text" name="YoA" id="YoA" />
+            <input type="submit" name="submit" value="Submit" id="submit" />
+        </form>
+    </body>
+</html>
